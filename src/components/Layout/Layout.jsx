@@ -2,7 +2,7 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../NavBar/Navbar';
-import Settings from '../settings/Settings';
+import Settings from '../Settings/Settings';
 
 export default function Layout() {
     const location = useLocation();
