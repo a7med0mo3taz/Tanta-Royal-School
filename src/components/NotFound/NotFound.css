@@ -1,0 +1,7 @@
+
+.errorMsg {
+  display: table;
+  font-size: 38px;
+  font-weight: bold;
+  margin: -140px auto 0;
+}

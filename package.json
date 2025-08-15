@@ -1,0 +1,52 @@
+{
+  "name": "package.json",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/almarai": "^5.2.6",
+    "@fontsource/tajawal": "^5.2.6",
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.3",
+    "@tailwindcss/vite": "^4.1.11",
+    "flowbite": "^3.1.2",
+    "flowbite-react": "^0.12.6",
+    "formik": "^2.4.6",
+    "framer-motion": "^12.23.11",
+    "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "react": "^19.1.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.0",
+    "react-intersection-observer": "^9.16.0",
+    "react-router-dom": "^7.7.0",
+    "react-slick": "^0.31.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.19",
+    "tailwindcss-rtl": "^0.9.0",
+    "yup": "^1.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.4"
+  }
+}

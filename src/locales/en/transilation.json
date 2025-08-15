@@ -1,0 +1,633 @@
+{
+  "home": "Home",
+
+  "about": "About",
+  "vision": "Our Vision",
+  "mission": "Our Mission",
+  "values": "Our Values",
+
+  "admission": "Admission",
+
+  "faq": "FAQ's",
+  "faq2": "FAQ's",
+  "learning": "Learning",
+
+  "gallery": "Gallery",
+  "Photos": "Photos",
+  "Videos": "Videos",
+
+  "Careers": "Careers",
+
+  "Blog": "Blog",
+  "Articles": "Articles",
+  "News & Event": "News & Event",
+
+  "Uniform": "Uniform",
+
+  "contact": "Contact",
+
+  "call": "call",
+
+  "whatsapp": "Whatsapp",
+
+  "footer": "Tanta Royal international schools © Copyright 2025",
+
+  "ترجمه الفوتر": "footer transilation",
+
+  "Footer": "Tanta Royal international schools © Copyright by IT Concept 2025",
+
+  "policy": "Privacy Policy",
+
+  "ترجمه الهوم": "home transilation",
+
+  "title1": "Tanta Royal international schools",
+
+  "title2": "Inspiring Minds, Shaping Futures",
+
+  "p1": "Education is more than just lessons—it’s about building character, fostering creativity,",
+  "p2": "and preparing students for a successful future. At Tanta Royal international schools,",
+  "p3": "we create a dynamic learning environment where excellence meets innovation.",
+
+  "adBtn": "Apply to Admission",
+
+  "Curriculum": "Modern Curriculum",
+  "CurriculumP": "We apply advanced curricula that foster critical thinking and creativity.",
+
+  "Educators": "Qualified Educators",
+  "EducatorsP": "Our expert team is dedicated to supporting, mentoring, and guiding students academically .",
+
+  "Activities": "Diverse Activities",
+  "ActivitiesP": "We offer sports and cultural programs that refine skills and character.",
+
+  "Learning": "Interactive Learning",
+  "LearningP": "Classrooms with cutting-edge technology for an outstanding experience.",
+
+  "key": "Education is the Key to Success",
+
+  "belive": "At Tanta Royal international schools, we believe education goes beyond books—it’s about character building, creativity, and life skills development.",
+
+  "why": "WHY",
+
+  "SELECT": "SELECT",
+  "CHOOSE": "CHOOSE",
+  "PREFER": "PREFER",
+
+  "schools": "OUR SCHOOLS?",
+
+  "p-1": "Among the many educational institutions,",
+  "p-2": "distinguishes itself through four fundamental pillars.",
+
+  "mark-1": "Innovative Education,",
+  "p-3": "because the future depends on creativity and critical thinking.  ",
+
+  "mark-2": "Global Citizenship",
+
+  "p-4": " as we live in a connected world that requires open-minded and culturally aware generations. ",
+
+  "mark-3": "National Identity,",
+
+  "p-5": "because true success is rooted in embracing one’s heritage and values. And finally, ",
+
+  "mark-4": "Interactive Learning,",
+
+  "p-6": "as modern technology has become an essential part of education, providing our students with a more engaging and effective learning experience.",
+
+  "years": "Years of Experience",
+  "alf": "K",
+  "Graduated": "Graduated Students",
+  "Awards": "Educational Awards",
+  "Teachers": "Qualified Teachers",
+  "Programs": "Academic Programs",
+
+  "Guide": "Guide Your Child’s Passion - Shape Their Future",
+  "aboutTanta": "About ",
+  "schoolName": "Tanta Royal Schools",
+  "guideP": "At Tanta Royal international schools, we believe that education is the foundation for building future generations. We are committed to providing a modern learning environment that fosters creativity, critical thinking, and essential life skills for our students.",
+  "more": "Read More",
+
+  "eng": "ENG",
+  "founderName": "- MAHMOUD EL SAWAF",
+  "founder": "Founder’s",
+  "Msg": "Message",
+  "founderMsg": "Our school is project-oriented, stimulating students to be curious, creative, and responsible learners able to combine their strengths and talents with those of others through constructive teamwork. We encourage students to develop their learning preferences, talents, interests, and personal identity. Our mission is not only to prepare for a challenging and complex future but to actively participate in shaping it. At Tanta Royal international schools, we are excited to have laughter, cheers, and smiles filling the school halls and look forward to welcoming you to our royal family!",
+
+  "ourGallery": "Our Gallery",
+  "moments": "Moments That",
+  "inspire": "Inspire the Future",
+
+  "ViewMore": "View more",
+  "photo": "Photo",
+  "video": "Video",
+
+  "contactUs": "Contact Us for More ",
+  "info": "Information",
+  "contactP": "We're here to assist you and answer all your questions promptly and easily.",
+  "contctBtn": " Contact Us Now",
+
+  "check": "Check out our news and updates",
+  "latest": "Latest News",
+  "Updates": " and Updates",
+  "news1": "How Do We Prepare Students for the Future?",
+  "news2": "Technology in Education",
+  "news3": "The Importance of School Activities",
+  "news4": "Interactive Learning’s Key Role in Enhancing Student Abilities",
+
+  "AboutPage": "ترجمه صفحه About ",
+
+  "aboutTitle": "About Us",
+
+  "Who": "Who we are ...",
+  "building": "Building the Future, ",
+  "Student": "One Student at a Time",
+  "WhoP": "At Tanta Royal international schools, we believe that education is the foundation for shaping the future generations. Since our establishment, we have been committed to delivering a holistic learning experience that inspires students to be creative, confident, and globally engaged leaders. We don’t just offer advanced academic curricula—we create an educational environment that fosters critical thinking, innovation, and essential life skills.",
+
+  "who2": "Who we works ...",
+  "core": "Our Core ",
+  "Pillars": "Pillars",
+  "whoP2": "At Tanta Royal international schools, we believe that effective education is built on a clear vision, a strong mission, and solid values. We are committed to providing a holistic learning experience that fosters academic excellence, personal development, and social responsibility, empowering our students to achieve their aspirations with confidence.",
+
+  "visionTitle": "Our Vision",
+  "visionP": "Our vision is to be a leading educational institution that inspires and empowers students with the knowledge and skills needed to embrace their future with confidence. We strive to build a generation of creative thinkers and inspiring leaders by providing a cutting-edge learning environment that fosters academic excellence and continuous innovation, enabling every student to explore their full potential and achieve their dreams.",
+
+  "missionTitle": "Our Mission",
+  "missionP": "Our mission is to deliver world-class education that promotes creativity and independent thinking. We are dedicated to equipping students with academic and personal skills that enable them to navigate future challenges with confidence. Additionally, we strive to instill strong ethical values and a deep sense of national identity while fostering a global mindset that embraces diversity and collaboration.",
+
+  "valuesTitle": "Our Values",
+  "valuesP": "We believe that integrity is the foundation of our educational environment, where we uphold transparency and honesty in all our interactions. We continuously encourage innovation and development, allowing our students to experience modern and inspiring learning methods. We value the power of collaboration, both in classrooms and through community partnerships, as it fosters teamwork and helps achieve collective success.",
+
+  "PillarsP": "Responsibility is a core value we instill in our students, teaching them the importance of being accountable to themselves, their peers, and their community. Lastly, we always strive for excellence in everything we offer, whether through advanced curricula, diverse extracurricular activities, or the continuous support we provide to help our students reach their highest potential.",
+
+  "lead": "We Lead in Education",
+  "Excellence": "Years of Excellence",
+  "Academic": "High-Quality Academic Learning",
+  "Artistic": "Creative & Artistic Activities",
+  "Sports": "Sports & Training Programs",
+
+  "Curricula": "Advanced Curricula :",
+  "CurriculaP": "We implement modern, internationally recognized teaching.",
+
+  "Engaging": "Engaging Learning Environment :",
+  "EngagingP": "Interactive classrooms with the latest technology.",
+
+  "Qualified": "Qualified Educators :",
+  "QualifiedP": "A team of experienced and passionate teachers.",
+
+  "Comprehensive": "Comprehensive Development :",
+  "ComprehensiveP": "Academic, athletic, and artistic programs to refine student skills.",
+
+  "Supportive": "Supportive Community :",
+  "SupportiveP": "A collaborative learning environment between students, teachers, and parents.",
+
+  "FAQ'S TR": "ترجمه صفحه الاسئله الشائعه ",
+
+  "FAQTitle": "Frequently Asked Questions",
+
+  "freeContact": "Feel free to contact us",
+  "question": "Do You Have ",
+  "questions": "Any Questions?",
+  "questionP": "Please read questions bellow and if you can not find your answer, please send us your question, we will answer you as soon as possible.",
+
+  "FAQ": "F.A.Qs",
+  "FAQSubT": "Frequently asked questions",
+
+  "q1": " 1. What is the required age for KG1 admission ?",
+  "q1P": " The student must be 4 years old by the beginning of October.",
+
+  "q2": "  2. What are the tuition fees for each stage ?",
+  "q2P": " The fees have not been determined yet. Please contact the PR department for the 2024/2025 tuition details.",
+
+  "q3": "3. What are the admission requirements ?",
+  "q3P1": "- Placement Test is required.",
+  "q3P2": "- A copy of the student’s birth certificate must be submitted upon application.",
+
+  "q4": "4. What are the conditions for student acceptance ?",
+  "q4P": "Students must pass the Placement Test.",
+
+  "q5": "5. Is there an interview process?",
+  "q5P": "Yes, an interview is conducted with the student in the presence of a parent and the school principal.",
+
+  "q6": "6. What educational tracks are available at Tanta Royal School?",
+  "q6P1": "- International",
+  "q6P2": "- American Diploma",
+  "q6P3": "- National",
+
+  "q7": "7. Can students transfer between National and International sections?",
+  "q7P": "Yes, transfers are available.",
+
+  "q8": "8. Is a second language taught?",
+  "q8P": "Yes, students start learning a second language from KG2, choosing between :",
+  "q8P1": "- French",
+  "q8P2": "- German",
+
+  "q9": "9. Does the school offer secondary education?",
+  "q9P": "Yes, all education levels are available: KG / Primary / Preparatory / Secondary.",
+
+  "q10": "10. Are there sibling discounts?",
+  "q10P": "Yes, discounts are available as follows :",
+  "q10P1": "- 5% for the eldest sibling",
+  "q10P2": "- 5% for the middle sibling & 10% for the eldest if there are three siblings",
+
+  "q11": "11. Can tuition be paid in installments?",
+  "q11P": "Yes, tuition can be paid in three installments.",
+
+  "q12": "12. Can installments be divided into more than three payments?",
+  "q12P": "Please contact the accounting department for details.",
+
+  "q13": "13. What curriculum is taught?",
+  "q13P": "For a detailed presentation, please contact the PR department.",
+
+  "q14": "14. When does admission for the next academic year start?",
+  "q14P": "Admissions for 2024/2025 begin in April.",
+
+  "q15": "15. What are the school hours?",
+  "q15P": "- Primary, Preparatory & Secondary: 7:30 AM – 2:30 PM",
+  "q15P1": "- KG Stage: 8:30 AM – 1:30 PM",
+
+  "q16": "16. What bus routes are available?",
+  "q16P": "For details, please contact the PR department.",
+
+  "q17": "17. What is the last date for admissions?",
+  "q17P": "Until seats are filled.",
+
+  "q18": "18. Are international students accepted?",
+  "q18P": "Yes, international students are welcome.",
+
+  "q19": "19. Can students transfer from public schools?",
+  "q19P": "Yes, only for primary levels.",
+
+  "q20": "20. Is online admission available?",
+  "q20P": "Yes, online admission and Placement Tests are available.",
+
+  "q21": "21. Is online learning available?",
+  "q21P": "Yes, online learning is available, but students from Primary 1 onwards must attend in-person for mid-year and final exams.",
+
+  "q22": "22. Does the school have a medical team?",
+  "q22P": "Yes, a medical team is available for daily student care.",
+
+  "q23": "23. Can tuition be paid via Vodafone Cash or InstaPay?",
+  "q23P": "NO, Not just fawry",
+
+  "q24": "24. What activities are available?",
+  "q24P": "- Swimming (Main sport)",
+  "q24P1": "- Football",
+  "q24P2": "- Basketball",
+  "q24P3": "- Skating",
+  "q24P4": "- Gymnastics",
+  "q24P5": "- Ballet",
+  "q24P6": "- Chess",
+  "q24P7": "- STEM",
+  "q24P8": "- Math & Media",
+  "q24P9": "- Music",
+  "q24P10": "- Home Economics",
+  "q24P11": "- Theater",
+
+  "ask": "Ask Us",
+  "quick": "Quick contact form",
+  "name": "Name ",
+  "namePlace": "Enter Your Name",
+
+  "email": "Email Address ",
+  "emailPlace": "Enter Your Email Address",
+
+  "phone": "Phone Number ",
+  "phonePlace": "Enter Your Phone number",
+
+  "msg": "Message ",
+  "msgPlace": "Enter Message",
+
+  "send": "Send Message",
+
+  "Gallery TR": " ترجمه صفحه المعرض ",
+
+  "galleryTitle": "Gallery",
+
+  "partyVideo": "New Year party video",
+
+  "partyPhotos": "New Year’s Party 2025",
+
+  "Video TR": " ترجمه صفحه الفيديوهات ",
+
+  "videoTitle": "Videos",
+
+  "photos TR": " ترجمه صفحه الصور ",
+
+  "photosTitle": "Photos",
+
+  "party TR": "  ترجمه صفحه الصور الحفله  ",
+
+  "partyTitle": "New Year’s Party 2025",
+  "share": "Share It",
+  "next": "Next",
+
+  "carrers Tr": " ترجمه صفحه الوظائف ",
+
+  "join": "Join Our Team of Excellence!",
+  "carer": "Career",
+  "Opportunities": "Opportunities",
+  "carerP": "At Tanta Royal international schools, we are always looking for talented individuals who are passionate about making a real difference in education. If you are qualified, enthusiastic, and eager to work in an environment that fosters creativity and professional growth, we invite you to be part of our team!",
+
+  "require": "Required field",
+
+  "optional": "(Optional)",
+
+  "form1T": "Personal Information :",
+  "Address": "Address",
+  "Gender": "Gender",
+  "Male": "Male",
+  "Female": "Female",
+  "DateOfBirth": "Date of Birth ",
+
+  "form2T": "Academic Information :",
+  "Qualification": "Qualification",
+  "GPA": "GPA",
+
+  "form3T": "Job Details :",
+  "GraduationDate": "Graduation Date",
+  "ApplyingForPosition": "Applying for Position",
+  "PreviousSalary": "Previous Salary",
+
+  "form4T": "Skills & Experience :",
+  "TrainingCourses/ComputerSkills": "Training Courses/Computer Skills",
+  "Languages/ProficiencyLevel ": "Languages/Proficiency Level ",
+  "Languages/PreviousExperience ": "Previous Experience",
+
+  "form5T": "Documents :",
+  "PersonalPhoto": "Personal Photo",
+  "ChooseFile": "Choose File",
+  "noChooseFile": "No File Chosen ",
+
+  "CV(CurriculumVitae)": "CV (Curriculum Vitae)",
+
+  "Submit": "Submit",
+
+  "hiring": "We're Hiring, Join",
+  "joinTeam": "Our Team of Excellence",
+  "explore": " Explore our openings and start your career journey with us today!",
+
+
+
+
+
+
+
+"blog Tr" : "ترجمه صفحه المقالات ",
+"BlogTitle" : "Blog",
+
+"blog1Title" : "How Do We Prepare Students for the Future ?",
+"blog1P" : "Preparing students for the future requires more than just academic knowledge; it involves fostering critical thinking, creativity, and problem-solving skills. Schools must ...",
+"readMoreBtn" :"Read More",
+
+
+
+"blog2Title" : "Technology in Education",
+"blog2P" : "Technological advancements have transformed modern teaching methods, with digital tools such as smart boards and e-learning becoming integral to education. Technology provides ...",
+
+
+
+
+"blog3Title" : "The Importance of School Activities",
+"blog3P" : "A school’s role is not limited to providing academic knowledge; it also extends to activities that enhance students’ personal and social growth. ...",
+
+
+
+"blog4Title" : "Interactive Learning’s Key Role in Enhancing Student Abilities",
+"blog4P" : "In a rapidly changing world, traditional education is no longer sufficient to equip students for future demands. Interactive learning has become the ...",
+
+
+"search" : "Search...",
+"searchBtn" : "Search",
+
+"Categories" : "Categories",
+
+"blogArticles" : "- Articles",
+"blogNews" : "- News & Event",
+"blogTutorials" : "- Tutorials",
+"Tutorials" : "Tutorials",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "Uniform TR": " ترجمه صفحه اليونيفورم ",
+
+  "uniformTitle": "Uniform Policy",
+  "uniformP": "we believe that the school uniform reflects discipline, professionalism, and a sense of belonging. Wearing the correct uniform creates a focused learning environment where students can excel academically",
+  "stuInfo": "Student Information",
+  "fill": " Please fill in the basic details of the student",
+
+  "StudentName": "Student Name",
+  "StudentNamePlace": "Name",
+  "stuId": " Student national ID No",
+  "Parent’sEmail": " Parent’s Email ",
+  "Parent’sEmailPlace": "Email Address",
+  "Parent’sPhoneNumber": " Parent’s Phone Number ",
+  "Parent’sPhoneNumberPlace": "Phone Number ",
+
+  "contct Tr": "ترجمه التواصل ",
+
+  "contactTitle": "Contact Us",
+  "Admissions": "Admissions Email",
+  "Support": "Support Email",
+  "InfoEmail": "Info Email",
+  "Keep": "Keep In Touch",
+  "WithUs": "With Us",
+  "contactPageP": "At Tanta Royal international schools, we welcome all your inquiries and are happy to assist you with any questions regarding our academic programs, admissions, and activities. You can visit our school, call us, or reach out via email, and our team will be delighted to help.",
+  "contactPagePin": "We’re here to support you every step of the way!",
+  "ComplaintsAndProposals": "Complaints and proposals",
+  "hotline": "Hot line",
+  "OfficeAddress": "School Address",
+
+  "British Tr": "ترجمه صفحه النظام البريطانى ",
+
+  "britishTitle": "British",
+  "britishBenefits": "Benefits of the British IG Education",
+  "inEgypt": " in Egypt !",
+  "britishBenefitsP": " The British IG education in Egypt offers numerous advantages, making it an attractive choice for many students and parents. Key benefits include :",
+
+  "britishP0": "- International Recognition :",
+  "britishP1": "- The IGCSE certificate is recognized globally, opening doors for students to pursue higher education at prestigious international universities.",
+  "britishP2": "- This system helps students acquire skills and knowledge that align with international standards.",
+  "britishP3": "- Focus on Understanding and Analysis :",
+  "britishP4": "- The IG system emphasizes deep comprehension of subject matter and its application, rather than rote memorization.",
+  "britishP5": "- It encourages critical thinking and the development of analytical and problem-solving skills.",
+  "britishP6": "- Flexibility in Subject Selection :",
+  "britishP7": "- Students can choose subjects that match their interests and abilities, enabling them to excel in their preferred fields.",
+  "britishP8": "- A wide range of subjects is available, providing students with opportunities to explore diverse areas.",
+  "britishP9": "- Development of Personal Skills :",
+  "britishP10": "- It contributes to the development of students' personal skills, such as effective communication, teamwork, time management, and self-reliance.",
+  "britishP11": "- It helps students develop into independent and responsible individuals.",
+  "britishP12": "- Preparation for Global Universities :",
+  "britishP13": "- It prepares students effectively for admission to global universities, equipping them with the necessary skills and knowledge for success in higher education.",
+  "britishP14": "- Students are trained in research and academic writing methods, aiding their academic excellence.",
+  "britishP15": "- Accurate Student Assessment :",
+  "britishP16": "- The IG assessment system utilizes various tools, including written and practical exams, providing a comprehensive and accurate evaluation of student performance.",
+  "britishP17": "In general, the British IG education in Egypt offers a distinguished educational experience that helps students achieve their academic and professional goals.",
+
+  "Comparison": "Comparison Between the British and American,",
+  "EducationSystems": "Education Systems",
+  "Introduction": "Introduction....",
+  "IntroductionP": "Education is the foundation for shaping the future, and different systems offer unique approaches to learning and development. In Egypt, both the British (IGCSE) and American systems are widely adopted, each offering distinct benefits. This page provides an in-depth comparison to help students and parents understand their key differences.",
+
+  "Affects": "How Each System Affects University Admissions",
+  "BritishSystem": "British System (IGCSE)",
+  "BritishSystem1P1": "- Universities value deep academic specialization, making students eligible for advanced academic programs.",
+  "BritishSystem1P2": "- IGCSE and A-Level certificates enhance global university admission prospects.",
+  "BritishSystem1P3": "- British system graduates are usually well-prepared for university due to their rigorous final exams.",
+
+  "AmericanSystem": "American System",
+  "AmericanSystem1P1": "- Universities appreciate students with strong critical thinking and teamwork skills, which the American system fosters.",
+  "AmericanSystem1P2": "- Continuous assessment through GPA provides a comprehensive academic record.",
+  "AmericanSystem1P3": "- SAT exams serve as a key criterion for university admissions, alongside coursework performance.",
+
+  "CurriculumOverview": "Curriculum Overview",
+  "BritishSystem2P1": "- Primary Stage : Core subjects include English, Mathematics, Science, and History.",
+  "BritishSystem2P2": "- Middle Stage : Students begin selecting specialized subjects such as Physics, Chemistry, and Biology.",
+  "BritishSystem2P3": "- Secondary Stage : Advanced subjects like Economics and Literature are included, with assessments via GCSE and A-Level exams.",
+  "BritishSystem2P4": "- Extracurriculars : Includes sports, arts, and music to develop personal and social skills.",
+
+  "AmericanSystem2P1": "- Elementary Stage: Core subjects include English, Math, Science, and Social Studies.",
+  "AmericanSystem2P2": "- Middle Stage: Additional subjects such as Technology, Arts, and Foreign Languages are introduced.",
+  "AmericanSystem2P3": "- High School Stage: Advanced subjects like Physics, Chemistry, and American History are studied. Students are assessed via GPA and SAT exams.",
+  "AmericanSystem2P4": "- Extracurriculars: Includes sports, arts, and community projects to enhance students’ practical and theoretical knowledge.",
+
+  "Choosing": "Choosing the",
+  "RightSystem": "Right System",
+  "RightSystemP1": "When selecting an educational path, students and parents should consider :",
+  "RightSystemP2": "✔️  British System : Ideal for students who prefer structured academic rigor and specialization.",
+  "RightSystemP3": "✔️ American System : Best suited for those who value continuous assessment and skill-based learning.",
+  "RightSystemP4": "Both systems offer strong academic foundations and global opportunities, and the choice depends on the student’s learning style and future aspirations.",
+  "RightSystemP5": "📌  For more guidance on selecting the best system for your child, contact our admissions team today!",
+
+  "American Tr": "ترجمه صفحه النظام الامريكى ",
+
+  "AmericanTitle": "American",
+  "AmericanEducation": "American Education",
+  "AmericanP1": "American education in Egypt offers numerous advantages, making it an attractive option for many students and parents. Key benefits include : ",
+  "AmericanP2": "Internationally Recognized Diploma: Upon completing high school, students receive an accredited diploma equivalent to the Egyptian Thanaweya Amma, opening doors to American and global universities",
+
+  "americanP0": "- Critical Thinking Development: The American system emphasizes critical and analytical thinking skills, encouraging research and inquiry rather than rote memorization.",
+  "americanP1": "- Focus on Extracurricular Activities: The American system fosters well-rounded student development by encouraging participation in diverse extracurricular activities, such as sports, arts, and music.",
+  "americanP2": "- English Language Proficiency: With English as the primary language of instruction, students achieve excellent English proficiency.",
+  "americanP3": "- University Preparation: Students are well-prepared for university through a focus on developing research, presentation, and communication skills.",
+  "americanP4": "- Flexible Course Selection: The American system offers flexibility in course selection, allowing students to choose subjects that align with their interests and abilities.",
+  "americanP5": "- Standardized Tests: The American system relies on standardized tests like the SAT or EST, which measure students' readiness for university.",
+  "americanP6": "In summary, American education in Egypt provides a distinguished educational experience that focuses on developing students' skills and preparing them for future challenges",
+
+  "National Tr": "ترجمه صفحه النظام المصرى ",
+
+  "NationalTitle": "National",
+  "NationalSchools": "Overview of National Schools",
+  "NationalP1": "In the midst of the rapid developments the world is witnessing, the need for quality education that helps future generations keep up with changes and deal with future challenges becomes evident. Within this framework, National Schools in Egypt play an important role in providing distinguished global education that meets the needs of students at various educational stages. In this article, we will highlight National Schools in Egypt, discuss their features, and what they offer to students. We will conclude by providing some tips for parents who wish to enroll their children in these schools. To learn more, follow the article.",
+
+  "nationalP0": "What are National Schools ?",
+  "nationalP1": "The term is used to refer to private language schools, official language schools, and distinguished official language schools that teach the Egyptian curriculum in English. These schools are also under the direct supervision of the Ministry of Education and Technical Education. They are considered a better alternative to regular public schools. Additionally, students in National Schools study the curriculum applied in public schools, but in a language other than Arabic.",
+
+  "nationalP2": "What are the types of National Schools ?",
+  "nationalP3": "There is no official classification of the types of National Schools in Egypt, but they can generally be divided into two main types:",
+
+  "nationalP4": "Regular National Schools (Arabic) : ",
+  "nationalP5": "These schools offer the Ministry of Education curriculum in Arabic and add another language such as English, which is studied more extensively than in public schools. However, in Regular National Schools (Arabic), there is more focus on religious education subjects, similar to Islamic schools and convent schools.",
+
+  "nationalP6": "Language National Schools:",
+  "nationalP7": "These schools teach the Ministry of Education curriculum in English. They ensure that students learn English from the moment they enter school, considering English as a primary language, in addition to Arabic. After a period, students choose a second language to study alongside English and Arabic. The schools offer educational programs specifically designed to develop students' skills in both languages.",
+  "nationalP8": "Features of National Schools : ",
+  "nationalP9": "Here, one might ask what is special about these schools to enroll my child in them. National Schools in Egypt have many features that attract many students and parents. Some of the most important features include :",
+  "nationalP10": "Excellent English Language Education",
+  "nationalP11": "Mastery of the English language is one of the most sought-after skills by employers worldwide.",
+  "nationalP12": "National Schools offer intensive programs to teach English to students, helping them master it excellently.",
+  "nationalP13": "English is used as the primary language of instruction in some National Schools, while it is used as a second language in others.",
+  "nationalP14": "Bilingual Educational Environment",
+  "nationalP15": "The bilingual educational environment in National Schools helps students acquire strong language skills in both Arabic and English.",
+  "nationalP16": "Students become capable of communicating effectively in both languages, thinking critically, and using language creatively.",
+  "nationalP17": "High Academic Standards",
+  "nationalP18": "National Schools have high academic standards and focus on developing students' critical thinking and problem-solving skills.",
+  "nationalP19": "Students' results in National Schools are generally outstanding, helping them enroll in prestigious universities inside and outside Egypt.",
+  "nationalP20": "Emphasis on selecting highly competent teachers to benefit students, support them, and understand them.",
+  "nationalP21": "Safe and Supportive Educational Environment",
+  "nationalP22": "National Schools provide a safe and supportive educational environment for students.",
+  "nationalP23": "These schools focus on building students' personalities, boosting their self-confidence, and helping them succeed in all fields.",
+  "nationalP24": "Variety of Activities",
+  "nationalP25": "National Schools offer a wide range of activities such as sports, arts, music, and theater. These activities help students develop their skills and talents and showcase their creative abilities.",
+  "nationalP26": "Curricula taught in National Schools Since students are taught according to the Ministry of Education curricula, the Egyptian",
+  "nationalP27": "curricula are the most widespread. However, they are taught in a very distinctive way to meet the different needs of students:",
+  "nationalP28": "These curricula are taught in English with a focus on teaching Arabic as a second language, of course.",
+  "nationalP29": "Some schools offer the Egyptian curricula approved by the Ministry of Education, while others offer developed Egyptian curricula with the addition of some extra subjects.",
+  "nationalP30": "These curricula help students obtain the Egyptian General Secondary Education Certificate, which qualifies them to enroll in Egyptian universities.",
+  "nationalP31": "How are students evaluated in National Schools? National Schools in Egypt use a variety of methods to evaluate students' academic level and progress. These methods include:",
+  "nationalP32": "Exams",
+  "nationalP33": "Written and oral exams are used to assess students' knowledge of various subjects.",
+  "nationalP34": "Exams are conducted periodically during the semester and at the end of each semester.",
+  "nationalP35": "The types of exams used vary from school to school and from one educational stage to another.",
+  "nationalP36": "Homework",
+  "nationalP37": "Homework is used to assess students' ability to apply what they have learned in the classroom.",
+  "nationalP38": "Students are required to complete homework regularly and submit it on time.",
+  "nationalP39": "Projects",
+  "nationalP40": "Projects are used to assess students' research, critical thinking, and communication skills.",
+  "nationalP41": "Students are required to complete individual or group projects in various subjects.",
+  "nationalP42": "Class Participation",
+  "nationalP43": "Class participation is used to assess students' interaction with the teacher and their classmates.",
+  "nationalP44": "Students' participation in discussions, asking questions, and answering the teacher's questions.",
+
+  "Policy Tr": "ترحمه صفحه الخصوصيه ",
+
+  "policyTitle": "Privacy Policy",
+
+  "IntroductionT": "1. Introduction",
+  "IntroductionPolicyP": "At Tanta Royal international schools, we highly value the privacy of our website visitors, parents, and students. This policy explains how we collect, use, and protect your personal data when browsing our website or using our services.",
+
+  "infoCollect": "2. Information We Collect",
+  "infoCollectP": "When using our website or submitting your data, we may collect the following information :",
+  "infoCollectP1": "- Personal Information: Name, email, phone number, and academic registration details.",
+  "infoCollectP2": "- Technical Information: IP address, device type, and operating system.",
+  "infoCollectP3": "- Usage Data: Pages visited and time spent on the website.",
+
+  "howUseInfo": "3. How We Use the Information",
+  "howUseInfoP": "We use the collected information for the following purposes:",
+  "howUseInfoP1": "- Processing registration requests and communicating with parents and students.",
+  "howUseInfoP2": "- Enhancing user experience and improving our educational services.",
+  "howUseInfoP3": "- Sending notifications, news, and school updates.",
+  "howUseInfoP4": "- Complying with legal requirements and maintaining cybersecurity.",
+
+  "infoSharing": "4. Information Sharing with Third Parties",
+  "infoSharingP": "We do not sell or share your personal data with third parties without your consent, except:",
+  "infoSharingP1": "- Government authorities when legally required.",
+  "infoSharingP2": "- Service providers assisting in website operations and educational services (e.g., e-learning platforms).",
+
+  "DataProtection": "5. Data Protection",
+  "DataProtectionP": "We take all necessary measures to protect your data from unauthorized access or misuse, including:",
+  "DataProtectionP1": "- Encrypting and securing data with the latest technologies.",
+  "DataProtectionP2": "- Restricting access to sensitive information to authorized personnel only.",
+  "DataProtectionP3": "- Regularly reviewing security systems to ensure data protection.",
+
+  "CookiesPolicy": "6. Cookies Policy",
+  "CookiesPolicyP": "Our website uses cookies to enhance user experience, such as:",
+  "CookiesPolicyP1": "- Remembering your preferences for future visits.",
+  "CookiesPolicyP2": "- Analyzing website performance and improving our services.",
+  "CookiesPolicyP3": "You can adjust your browser settings to disable cookies if you prefer not to use them.",
+
+  "UserRights": "7. User Rights",
+  "UserRightsP": "You have the right to:",
+  "UserRightsP1": "- Request access to and correction of your personal data.",
+  "UserRightsP2": "- Request deletion of your data if no longer needed.",
+  "UserRightsP3": "- Withdraw consent for data processing at any time.",
+  "UserRightsP4": "For inquiries regarding your personal data, please contact us at [info@tanta-royal.com].",
+
+  "PrivacyPolicyUpdates": "8. Privacy Policy Updates",
+  "PrivacyPolicyUpdatesP": "We may update this Privacy Policy periodically, and any changes will be posted on this page. We encourage you to review this policy regularly to stay informed of any updates.",
+
+  "notFound Tr": "404",
+
+  "notFoundTitle": "Not Found Page",
+  "PageNotFound": "Page not found!",
+  "homeBtn": "Back to Homepage"
+}

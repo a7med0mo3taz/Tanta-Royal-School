@@ -1,0 +1,391 @@
+.custom-navbar {
+  position: absolute;
+  overflow: hidden;
+  background-color: transparent;
+  
+}
+.bottomNav{
+  left: 0px;
+  right: 0px;
+}
+
+.exitBtn {
+  top: 20px;
+  transform: translateX(-40px);
+}
+.arExitBtn{
+  top: 30px;
+  transform: translateX(-400px);
+}
+.langExitBtn{
+  top: 80px;
+  transform: translateX(180px);
+}
+.langExitBtnSm{
+  top: 80px;
+  transform: translateX(250px);
+}
+.hiDDen {
+  transform: translateX(360px);
+}
+
+.FBIcon:hover {
+  color: #0866ff;
+  transition: transform 0.5s ease;
+  transform: rotateY(360deg);
+}
+.FBSIcon:hover {
+  background-color: #0866ff;
+  transition: transform 0.5s ease;
+  .FBIcon2 {
+    color: white;
+    transition: transform 0.5s ease;
+    transform: rotateY(360deg);
+  }
+}
+.LIIcon:hover {
+  color: #007bb6;
+  transition: transform 0.5s ease;
+  transform: rotateY(360deg);
+}
+.LISIcon:hover {
+  background-color: #007bb6;
+  transition: transform 0.5s ease;
+  .LIIcon2 {
+    color: white;
+    transition: transform 0.5s ease;
+    transform: rotateY(360deg);
+  }
+}
+.INIcon:hover {
+  color: #c4178c;
+  transition: transform 0.5s ease;
+  transform: rotateY(360deg);
+}
+.INSIcon:hover {
+  background-image: radial-gradient(
+      circle farthest-corner at 35% 100%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle farthest-corner at 10% 140%,
+      #feda7e,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e42e66 50%,
+      #fa5332 70%,
+      #ffdc80 100%
+    ) !important;
+  transition: transform 0.5s ease;
+  .INIcon2 {
+    color: white;
+    transition: transform 0.5s ease;
+    transform: rotateY(360deg);
+  }
+}
+.WAIcon:hover {
+  color: #60dd8a;
+  transition: transform 0.5s ease;
+  transform: rotateY(360deg);
+}
+.WASIcon:hover {
+  background-color: #60dd8a;
+  transition: transform 0.5s ease;
+  .WAIcon2{
+    color: white;
+  transition: transform 0.5s ease;
+  transform: rotateY(360deg);
+  }
+}
+
+/* searchBar */
+.searchBar {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-right: -26px;
+  margin-left: -26px;
+  top: 30px;
+  right: 15px;
+  position: absolute;
+}
+.searchBar::before {
+  content: no-close-quote;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -4px;
+  right: 19px;
+  background: inherit;
+  background-image: none;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.arSearchBar {
+  background-color: white;
+  padding: 20px;
+  margin-right: -26px;
+  margin-left: -26px;
+  top: 30px;
+  right: -180px;
+  position: absolute;
+}
+.arSearchBar::before {
+  content: no-close-quote;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -4px;
+  right: 210px;
+  background: inherit;
+  background-image: none;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+#dropdownPoint {
+  position: absolute;
+  inset: auto auto 0px 0px;
+  margin: 0px;
+  transform: translate3d(808px, 140px, 0px);
+}
+
+@media (max-width: 639px) {
+  .custom-navbar{
+    width: 100%;
+  }
+  .bottomNav{
+  left: 0px;
+  right: 0px;
+  top: 100px;
+  padding: 0px 10px;
+}
+  .searchBar {
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    right: 50px;
+    top: 20px;
+  }
+
+  .searchBar::before {
+    top: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}
+.arSearchBar {
+  background-color: white;
+  padding: 20px;
+  margin-right: -26px;
+  margin-left: -26px;
+  top: 30px;
+  right: -80px;
+  position: absolute;
+}
+.arSearchBar::before {
+  content: no-close-quote;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -4px;
+  right: 210px;
+  background: inherit;
+  background-image: none;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .custom-navbar{
+    width: 100%;
+  }
+  .searchBar {
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    right: 55px;
+    top: 25px;
+  }
+  .searchBar::before {
+    top: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .custom-navbar{
+    width: 100%;
+  }
+  
+  .searchBar {
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    right: 50px;
+    top: 30px;
+  }
+
+  .searchBar::before {
+    top: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .searchBar {
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    right: 40px;
+    top: 30px;
+  }
+
+  .searchBar::before {
+    top: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .arSearchBar {
+  background-color: white;
+  padding: 20px;
+  margin-right: -26px;
+  margin-left: -26px;
+  top: 30px;
+  right: -180px;
+  position: absolute;
+}
+.arSearchBar::before {
+  content: no-close-quote;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -4px;
+  right: 210px;
+  background: inherit;
+  background-image: none;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+}
+@media (min-width: 1280px){
+  
+  .searchBar {
+    padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+    right: 40px;
+    top: 30px;
+  }
+
+  .searchBar::before {
+    top: 0;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .arSearchBar {
+  background-color: white;
+  padding: 20px;
+  margin-right: -26px;
+  margin-left: -26px;
+  top: 30px;
+  right: -180px;
+  position: absolute;
+}
+.arSearchBar::before {
+  content: no-close-quote;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -4px;
+  right: 210px;
+  background: inherit;
+  background-image: none;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+}
+/* From Uiverse.io by satyamchaudharydev */ 
+/* The switch - the box around the slider */
+.switch {
+  display: block;
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider:before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
