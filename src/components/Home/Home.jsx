@@ -52,6 +52,13 @@ export default function Home() {
     // Language
     const { t } = useLanguageContext();
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     // counter
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -160,7 +167,8 @@ export default function Home() {
                         initial={{ x: -200, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="font-almarai font-bold text-3xl rtl:text-4xl mb-15 text-white
+                        className="font-almarai font-bold text-xl rtl:text-3xl mb-15 text-white
+                        sm:text-3xl rtl:sm:text-4xl
                         md:text-4xl rtl:md:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
@@ -172,7 +180,8 @@ export default function Home() {
                         initial={{ x: 1100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
-                        className={`font-tajawal font-bold text-xl  mb-7 transition-all duration-500 ease-in-out
+                        className={`font-tajawal font-bold text-lg  mb-7 transition-all duration-500 ease-in-out
+                            sm:text2xl
                             md:text-3xl
                             lg:text-4xl
                             xl:text-5xl
@@ -230,15 +239,12 @@ export default function Home() {
                         lg:relative lg:-top-30 lg:z-20  lg:h-[612px] lg:col-span-3 lg:p-4 rtl:lg:h-[580px] 
                         rtl:xl:p-17 
                         2xl:col-span-4  2xl:ml-26 2xl:w-[397px] 2xl:p-13 rtl:2xl:mr-26
-                        
                         ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
                         `}>
-                        <span className='text-[#666666] text-xl font-tajawal font-bold mb-9 text-center px-1 rtl:text-2xl rtl:px-0
-                            
+                        <span className={`${darkMode ? "text-[#091048]" : "text-[#2b2873] "} text-xl font-tajawal font-bold mb-9 text-center px-1 rtl:text-2xl rtl:px-0
                             lg:px-0 lg:text-start lg:text-lg
-                            
                             xl:px-0 xl:text-start
-                            '> {t("title1")} </span>
+                            `}> {t("title1")} </span>
                         <div className="key flex flex-col justify-center items-center  relative mb-5 text-center px-5 rtl:px-20
                             lg:text-start lg:px-0 rtl:lg:px-0
                             ">
@@ -250,8 +256,7 @@ export default function Home() {
                                 `}>
                                 {t("key")}
                             </span>
-                            <span className={`  w-[70px] h-[4px]  
-                                    
+                            <span className={`  w-[70px] h-[4px] 
                                     lg:top-24 lg:left-0 lg:absolute
                                     lg:rtl:right-0 lg:rtl:top-28
                                     ${darkMode ? "bg-[#091048]" : "bg-[#2b2873] "}
@@ -275,9 +280,10 @@ export default function Home() {
                 lg:flex lg:flex-wrap lg:justify-between ${item.lgClasses} lg:w-[395px] lg:h-[161px] lg:col-span-5`}
                             >
                                 <img
-                                    className="w-20 h-20 mr-7 hover:rotate-y-360 transition-all duration-500 ease-in-out"
+                                    className="w-20 h-20 lg:mr-7  transition-all duration-500 ease-in-out"
                                     src={item.img}
                                     alt={item.key}
+                                    loading='lazy'
                                 />
                                 <div className="content px-1">
                                     <h2
@@ -307,8 +313,7 @@ export default function Home() {
             {/* section 3 */}
             <section
                 className={`py-20 px-2.5 transition-all duration-500 ease-in-out
-    ${darkMode ? "bg-[#030712]" : "bg-white "}
-  `}
+    ${darkMode ? "bg-[#030712]" : "bg-white "}`}
             >
                 <div className="container mx-auto">
                     <div className="flex flex-col justify-center items-center gap-5">
@@ -316,52 +321,56 @@ export default function Home() {
                             src={tag}
                             alt="Why choose our school"
                             className="w-[135px] h-[81px]"
+                            loading='lazy'
                         />
 
                         {/* Main heading */}
                         <h2
-                            className={`text-4xl font-bold mt-6 mx-10 px-3 text-center flex flex-wrap gap-3 rtl:gap-0 leading-relaxed transition-all duration-500 ease-in-out
-                                        md:px-0
+                            className={`text-3xl font-bold mt-6  px-3 text-center flex flex-wrap gap-3 rtl:gap-0 leading-relaxed transition-all duration-500 ease-in-out
+                                    sm:mx-auto  
+                                    md:px-0
                                     ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
                         >
-                            <span className="ml-5 lg:ml-3 rtl:mr-10 rtl:lg:mr-0">
-                                {t("why")}
+                            <span className="flex justify-center items-center gap-2 mx-auto">
+                                <span className=" ">
+                                    {t("why")}
+                                </span>
+                                <span
+                                    className={`block relative w-30 h-12.5 rtl:w-23 rtl:h-13 overflow-hidden m-0  rtl:ml-2 transition-all duration-500 ease-in-out 
+                                                md:w-30 md:rtl:w-25
+                                                ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
+                                >
+                                    <span className="animate animation-1">{t("SELECT")}</span>
+                                    <span className="animate animation-2">{t("CHOOSE")}</span>
+                                    <span className="animate animation-3">{t("PREFER")}</span>
+                                </span>
                             </span>
-                            <span
-                                className={`block relative h-16 overflow-hidden m-0 w-36 rtl:ml-2 transition-all duration-500 ease-in-out 
-            md:w-35 md:rtl:w-27.5
-            ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
-                            >
-                                <span className="animate animation-1">{t("SELECT")}</span>
-                                <span className="animate animation-2">{t("CHOOSE")}</span>
-                                <span className="animate animation-3">{t("PREFER")}</span>
-                            </span>
-                            <span className="rtl:mx-auto">{t("schools")}</span>
+                            <span className="mx-auto">{t("schools")}</span>
                         </h2>
 
                         {/* Paragraph */}
                         <p
-                            className="text-[16px] text-[#848484] px-10 text-center
+                            className="text-[16px] text-[#848484] px-3 text-center
                                         md:px-17.5
                                         lg:px-37.5">
                             {t("p-1")}
-                            <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+                            <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("title1")}
                             </span>
                             {t("p-2")}
-                            <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+                            <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("mark-1")}
                             </span>
                             {t("p-3")}
-                            <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+                            <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("mark-2")}
                             </span>
                             {t("p-4")}
-                            <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+                            <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("mark-3")}
                             </span>
                             {t("p-5")}
-                            <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+                            <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("mark-4")}
                             </span>
                             {t("p-6")}
@@ -594,7 +603,7 @@ export default function Home() {
 
                         {/* Titles */}
                         <div className="guideTitle flex flex-col gap-1">
-                            <h3 className="text-[#aaaaaa] text-lg text-center px-10 font-tajawal font-bold lg:px-0 lg:text-start">
+                            <h3 className="text-white text-lg text-center px-10 font-tajawal font-bold lg:px-0 lg:text-start">
                                 {t("Guide")}
                             </h3>
                             <h2
@@ -622,9 +631,10 @@ export default function Home() {
                         {/* More Button */}
                         <div className="moreBtn">
                             <Link
-                                to="/about-us#headSection"
+                                to={"/about-us"}
+                                onClick={() => scrollToTop()}
                                 rel="noopener noreferrer"
-                                className={`p-5 rounded-xl transition-all duration-500 ease-in-out ${darkMode
+                                className={`p-5 rounded-xl font-tajawal font-bold transition-all duration-500 ease-in-out ${darkMode
                                     ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
                                     : "text-[#2b2873] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"
                                     }`}
@@ -705,19 +715,17 @@ export default function Home() {
                         {/* Titles */}
                         <div className="flex flex-col gap-1">
                             <h3
-                                className={`text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"
-                                    }`}
+                                className={` text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
                             >
-                                {t("eng")}{" "}
-                                <span className="text-[#aaaaaa] text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl">
+                                {t("eng")}
+                                <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"} text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl`}>
                                     {t("founderName")}
                                 </span>
                             </h3>
 
                             <h2
                                 id="founder-message-heading"
-                                className={`text-[40px] text-center font-tajawal font-bold lg:text-[44px] ${darkMode ? "text-white" : "text-black"
-                                    }`}
+                                className={`text-[40px] text-center font-tajawal font-bold lg:text-[44px] ${darkMode ? "text-white" : "text-black"}`}
                             >
                                 {t("Msg")}{" "}
                                 <span
@@ -763,7 +771,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex flex-col gap-1">
-                            <h3 id="gallery-section-heading" className='text-[#aaaaaa] text-lg text-center px-10 font-tajawal font-bold lg:px-0'>
+                            <h3 id="gallery-section-heading" className='text-white text-lg text-center px-10 font-tajawal font-bold lg:px-0'>
                                 {t("ourGallery")}
                             </h3>
                             <h2 className='text-white text-[40px] text-center font-tajawal font-bold'>
@@ -803,13 +811,15 @@ export default function Home() {
                         <h3 className='text-[#aaaaaa] text-lg text-center px-10 font-tajawal font-bold lg:px-0'>{t("ViewMore")}</h3>
                         <div className='relative flex justify-center items-center gap-5'>
                             <Link
-                                to="gallery/photo"
+                                to={"/gallery/photos"}
+                                onClick={() => scrollToTop()}
                                 className={`photos font-tajawal font-bold px-5 py-4 rounded-lg transition-all duration-500 ease-in-out ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:bg-[#ffcc00]" : "text-[#2b2873] bg-[#ffcc00] hover:bg-[#f4af0f]"}`}
                             >
                                 {t("photo")}
                             </Link>
                             <Link
-                                to="gallery/video"
+                                to={"/gallery/videos"}
+                                onClick={() => scrollToTop()}
                                 className={`photos font-tajawal font-bold px-5 py-4 rounded-lg transition-all duration-500 ease-in-out ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:bg-[#ffcc00]" : "text-[#2b2873] bg-[#ffcc00] hover:bg-[#f4af0f]"}`}
                             >
                                 {t("video")}
@@ -875,7 +885,7 @@ export default function Home() {
                                 id="contact-section-heading"
                                 className="text-black text-[40px] text-center font-tajawal font-bold lg:text-start"
                             >
-                                {t("contactUs")}{" "}
+                                {t("contactUs")}
                                 <span
                                     className={`font-tajawal font-bold transition-all duration-500 ease-in-out ${darkMode ? "text-[#24246d]" : "text-[#333399]"
                                         }`}
@@ -904,10 +914,10 @@ export default function Home() {
                     >
                         <div className="contactBtn">
                             <Link
-                                to="contact-us"
+                                to={"/contact-us"}
+                                onClick={() => scrollToTop()}
                                 className={`p-5 font-tajawal font-bold rounded-xl transition-all duration-500 ease-in-out
-            ${darkMode
-                                        ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
+            ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
                                         : "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"
                                     }`}
                                 aria-label={`${t("contctBtn")} - ${t("contactUs")}`}
@@ -944,7 +954,7 @@ export default function Home() {
                         {/* Heading & Subtitle */}
                         <div className="flex flex-col gap-1 text-center">
                             <p
-                                className="text-[#aaaaaa] text-lg px-10 font-tajawal font-bold lg:px-0"
+                                className={`${darkMode ? "text-white" : "text-black"} text-lg px-10 font-tajawal font-bold lg:px-0 transition-all duration-500 ease-in-out`}
                                 id="latest-updates-subtitle"
                             >
                                 {t("check")}
@@ -956,8 +966,7 @@ export default function Home() {
                             >
                                 {t("latest")}{" "}
                                 <span
-                                    className={`font-tajawal font-bold ${darkMode ? "text-white" : "text-black"
-                                        }`}
+                                    className={`font-tajawal font-bold ${darkMode ? "text-white" : "text-black"} transition-all duration-500 ease-in-out`}
                                 >
                                     {t("Updates")}
                                 </span>

@@ -37,19 +37,19 @@ export default function Navbar() {
     return (
         <>
             <div className="custom-navbar mx-auto z-10
-            lg:mb-2 lg:ml-15 lg:mt-4 lg:translate-y-20px lg:right-0 lg:left-0 
+            lg:ml-15 lg:mt-4 lg:translate-y-20px lg:right-0 lg:left-0 
             xl:ml-20
             2xl:ml-52
             ">
-                <div className={`topNav   lg:rounded-l-full  p-7 grid grid-cols-8 rtl:grid-cols-8 items-center transition-all duration-500 ease-in-out
+                <div className={`topNav  lg:rounded-l-full  py-7  grid grid-cols-8 rtl:grid-cols-8 items-center transition-all duration-500 ease-in-out
                 ${darkMode ? "bg-[#f4af0f] lg:bg-[#091048] " : "bg-[#ffcc00] lg:bg-[#2b2873]"}
                 `}>
-                    <div className="leftNav1 hidden gap-4
+                    <div className="leftNav1 hidden gap-4 ml-10 rtl:ml-0 
                     md:hidden
-                    lg:flex lg:justify-center  lg:col-span-3  rtl:lg:justify-start   rtl:lg:col-end-4 lg:items-center
+                    lg:flex lg:justify-center   lg:col-span-3    rtl:lg:justify-center   rtl:lg:col-span-4 lg:items-center
                     rtl:2xl:col-end-5 xl: 2xl:col-span-3   ">
                         <Link to={""}>
-                            <img src={logo} alt="schoolLogo" style={{ width: '233px', height: '87px' }} />
+                            <img loading='lazy' src={logo} alt="schoolLogo" className='w-58 h-22 mb-3' />
                         </Link>
                         <div className='Lang flex justify-center items-center lg:gap-7'>
                             <div onClick={() => changeLanguage('en')} className={` p-2  rounded-lg transition-all duration-500 ease-in-out
@@ -57,7 +57,7 @@ export default function Navbar() {
                             ${currentLang === 'en' ? 'text-black ' : 'text-white bg-transparent'}
                             ${currentLang && darkMode ? "bg-[#f4af0f]" : "bg-[#ffcc00]"}
                             `}>
-                                <img src={En} alt="englishLan" />
+                                <img loading='lazy' src={En} alt="englishLan" />
                                 <span >English</span>
                             </div>
                             <div onClick={() => changeLanguage('ar')} className={` p-2 rounded-lg transition-all duration-500 ease-in-out
@@ -65,20 +65,20 @@ export default function Navbar() {
                             ${currentLang === 'ar' ? 'text-black ' : 'text-white bg-transparent'}
                             ${currentLang && darkMode ? "bg-[#f4af0f]" : "bg-[#ffcc00]"}
                             `}>
-                                <img src={Ar} alt="arabicLan" />
+                                <img loading='lazy' src={Ar} alt="arabicLan" />
                                 <span >العربية</span>
                             </div>
                         </div>
                     </div>
-                    <div className="rightNav1 gap-2 col-span-8 md:col-span-8 lg:col-span-5 xl:grid-cols-4 rtl:xl:col-end-10  2xl:col-span-4 flex justify-center items-center md:gap-10">
+                    <div className="rightNav1  col-span-8 md:col-span-8 lg:col-span-5 xl:grid-cols-4 rtl:xl:col-end-10  2xl:col-span-4 flex justify-center items-center md:gap-10">
                         <Link to={"british"}>
-                            <img src={BRLogo} alt="britishLogo" className='w-30 h-11 sm:w-40 sm:h-13 ' />
+                            <img src={BRLogo} alt="britishLogo" loading='lazy' className='w-30 h-11 sm:w-40 sm:h-13 ' />
                         </Link>
                         <Link to={"american-systems"}>
-                            <img src={USALogo} alt="schoolLogo" className='w-30 h-11 sm:w-40 sm:h-13' />
+                            <img src={USALogo} alt="schoolLogo" loading='lazy' className='w-30 h-11 sm:w-40 sm:h-13' />
                         </Link>
                         <Link to={"national"}>
-                            <img src={NATLogo} alt="schoolLogo" className='w-30 h-11 sm:w-40 sm:h-13' />
+                            <img src={NATLogo} alt="schoolLogo" loading='lazy' className='w-30 h-11 sm:w-40 sm:h-13' />
                         </Link>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export default function Navbar() {
 
 
 
-            <nav className={`bottomNav top-27 bg-[#2b2873] absolute  z-10 transition-all duration-500 ease-in-out
+            <nav className={`bottomNav lg:mt-3 top-27 bg-[#2b2873] absolute  z-10 transition-all duration-500 ease-in-out
             ${darkMode ? "bg-[#091048] lg:bg-[#f4af0f] " : "bg-[##2b2873] lg:bg-[#ffcc00] "}
             lg:mr-15 lg:rounded-r-full lg:top-42 lg:right-0 lg:left-0 lg:translate-y-0
             xl:mr-10 
@@ -103,10 +103,10 @@ export default function Navbar() {
                         <a href="https://www.facebook.com/trs2030/" target='_blank'><FontAwesomeIcon icon={faInstagram} size="xl" className='INIcon' /></a>
                         <a href="https://api.whatsapp.com/send/?phone=201090196772&text&type=phone_number&app_absent=0" target='_blank'><FontAwesomeIcon icon={faWhatsapp} size="xl" className='WAIcon' /></a>
                     </div>
-                    <div className="flex items-center justify-around md:gap-100 gap-30 py-2 sm:py-1 md:order-2">
+                    <div className="flex items-center justify-center md:gap-100 gap-19 sm:gap-85 py-2 sm:py-1 md:order-2">
                         <div className="logo lg:hidden">
                             <Link to={""}>
-                                <img src={logo} alt="schoolLogo" style={{ width: '140px', height: '52px' }} />
+                                <img src={logo} alt="schoolLogo"  loading='lazy' className='w-full h-10 mb-2' />
                             </Link>
                         </div>
                         <div className="icons relative flex items-center">
