@@ -29,12 +29,12 @@ export default function Photos() {
             <section className={` relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
                         md:h-[700px]
                         xl:h-[515px] `}>
-                <img src={mainPhoto} alt="mainPhoto" loading='lazy' className="mainPhoto absolute  w-full object-contain h-[600px] 
+                <img src={mainPhoto} alt="mainPhoto" loading='lazy' className="mainPhoto absolute  w-full object-contain h-[550px] 
                             md:h-[800px]
                             xl:object-cover xl:h-[515px] xl:object-top"/>
                 {/* Heading */}
                 <div
-                    className="relative z-11 flex flex-col justify-center items-center text-center top-62
+                    className="relative z-11 flex flex-col justify-center items-center text-center top-58
                                 md:top-80
                                 lg:top-70
                                 "
@@ -47,7 +47,7 @@ export default function Photos() {
                                 ">
                         {t("photosTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-lg flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -63,7 +63,7 @@ export default function Photos() {
             </section>
 
             <section className={`relative  transition-all duration-500 ease-in-out`}>
-                <div className="container grid  mx-auto p-10  inset-0  z-20 relative mb-20
+                <div className="container grid  mx-auto p-5  inset-0  z-20 relative mb-20
                                                                 lg:px-5
                                                                 xl:px-15">
                     <div className=" mx-auto grid grid-cols-12 max-w-[853px] relative  gap-3   ">

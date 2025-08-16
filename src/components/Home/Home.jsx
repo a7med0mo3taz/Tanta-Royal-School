@@ -52,6 +52,7 @@ export default function Home() {
     // Language
     const { t } = useLanguageContext();
 
+    // scroll to top
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,

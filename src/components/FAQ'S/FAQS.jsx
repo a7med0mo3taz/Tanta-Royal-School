@@ -116,14 +116,14 @@ export default function FAQS() {
             <section className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
             md:h-[700px]
             xl:h-[515px] `}>
-                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[600px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
+                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
 
 
 
                 {/* Heading */}
 
                 <div
-                    className="relative z-11 flex flex-col justify-center items-center text-center top-62
+                    className="relative z-11 flex flex-col justify-center items-center text-center top-57
                     md:top-80
                     lg:top-70
                     "
@@ -136,7 +136,7 @@ export default function FAQS() {
                     ">
                         {t("FAQTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-lg flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -149,7 +149,7 @@ export default function FAQS() {
 
             {/* FAQ section  */}
             <section className={`relative min-h-screen  transition-all duration-500 ease-in-out`}>
-                <div className="container grid  mx-auto p-15  inset-0  z-20 relative
+                <div className="container grid  mx-auto p-3  inset-0  z-20 relative
                             lg:grid-cols-12  lg:px-5
                             xl:px-15
                             ">
@@ -159,21 +159,20 @@ export default function FAQS() {
                                     2xl:col-span-8 
                                     ">
                         <div className="imgDiv flex justify-center items-center lg:justify-start  h-20">
-                            <img src={tag} alt="School selection tag" className='w-18' />
+                            <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
                         </div>
                         {/* first */}
                         <div className=" flex flex-col gap-3 px-3 lg:p-0">
-                            <span className='text-[#666666] text-lg  text-center px-10 font-tajawal font-bold
-                                                lg:px-0 lg:text-start
-                                                '> {t("freeContact")} </span>
-                            <span className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                            lg:text-start
+                            <span className={`${darkMode ? "text-white" : "text-black "}   text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                                lg:px-0 lg:text-start`}> {t("freeContact")} </span>
+                            <span className={` text-3xl text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                            lg:text-start lg:text-[38px]
                                             ${darkMode ? "text-white" : "text-black "}
                                             `}> {t("question")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                             ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
                                             `}> {t("questions")} </span> </span>
                         </div>
-                        <div className="WhoP  mb-5">
+                        <div className="mb-5">
                             <p className='text-[#666666] text-center font-tajawal font-bold w-full 
                                             lg:text-start
                                             '> {t("questionP")} </p>
@@ -181,8 +180,7 @@ export default function FAQS() {
 
                         {/* second */}
                         <div className="flex flex-col justify-center items-center gap-3
-                    lg:flex-row
-                    ">
+                        lg:flex-row">
                             <div className={`lampImg w-18 h-20 flex justify-center items-center rounded-2xl p-2
                             ${darkMode ? "bg-[#091048]" : "bg-[#2b2873]"}
                             `}>
@@ -194,9 +192,10 @@ export default function FAQS() {
                                             ${darkMode ? "text-white" : "text-black "}
                                             `}> {t("FAQ")}  </span>
                                 <div className="WhoP  mb-5">
-                                    <p className='text-[#666666] text-center font-tajawal font-bold w-full 
-                                            lg:text-start
-                                            '> {t("FAQSubT")} </p>
+                                    <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full  transition-all duration-500 ease-in-out
+                                            lg:text-start`}>
+                                        {t("FAQSubT")}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -209,16 +208,17 @@ export default function FAQS() {
                                 <div key={key} className="mb-3 w-full">
 
                                     <div
-                                        className={`p-5  font-tajawal  font-bold transition-all duration-500 ease-in-out
+                                        onClick={() =>
+                                            setOpenCard(isOpen ? null : key)
+                                        }
+                                        className={`p-5 text-sm sm:text-xl font-tajawal cursor-pointer font-bold transition-all duration-500 ease-in-out
                                     ${darkMode ? "bg-[#091048] text-[#f4af0f]" : "bg-[#2b2873] text-white"}
                                 `}
                                     >
                                         <h2 className="flex justify-between items-center">
                                             {t(key)}
-                                            <FontAwesomeIcon className="cursor-pointer" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
-                                                onClick={() =>
-                                                    setOpenCard(isOpen ? null : key)
-                                                }
+                                            <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
+
                                             />
                                         </h2>
                                     </div>
@@ -226,11 +226,11 @@ export default function FAQS() {
                                     <div
                                         className={`w-full overflow-hidden transition-all duration-500
                                     ${isOpen
-                                                ? "p-5 text-[16px] font-tajawal font-bold  border-2 border-black max-h-screen opacity-100"
+                                                ? "p-5 text-sm sm:text-lg font-tajawal font-bold  border-2 border-black max-h-screen opacity-100"
                                                 : "max-h-0 opacity-0"
                                             }
                                     ${isOpen && darkMode
-                                                ? "p-5 bg-[#69686f] text-[#f4af0f] text-[16px] font-tajawal font-bold  border-2 border-black max-h-screen opacity-100"
+                                                ? "p-5 bg-[#69686f] text-[#f4af0f] text-sm sm:text-lg font-tajawal font-bold  border-2 border-black max-h-screen opacity-100"
                                                 : " bg-white max-h-0 opacity-0"
                                             }
                                 `}
@@ -255,9 +255,9 @@ export default function FAQS() {
                                     lg:col-span-6  lg:m-0 lg:mt-20  rtl:lg:col-span-6 lg:mx-auto 
                                     xl:col-span-6 xl:mx-auto 
                                     2xl:col-span-4  ">
-                        <div className={` w-[280px] rtl:w-[325px] h-[340px] rtl:h-[380px] rounded-lg absolute  top-5 left-5 rtl:right-3 transition-all duration-500 ease-in-out lg:mb-10
-                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:left-30 rtl:md:top-7 rtl:md:right-10
-                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10
+                        <div className={` w-[250px]  h-[310px] top-5 left-10    rtl:w-[270px] rtl:h-[315px]  rtl:right-5 rounded-lg absolute  transition-all duration-500 ease-in-out 
+                                    sm:left-50
+                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:right-10 rtl:md:top-7 rtl:md:right-15                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
                                     xl:left-5 
                                     2xl:left-5 
                                     ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
@@ -266,7 +266,8 @@ export default function FAQS() {
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}
                             className="schoolImg   mx-auto ">
-                            <img src={faq} style={style} alt="school" className={`w-[395px] mx-auto h-full object-cover rounded-xl border-5 
+                            <img src={faq} style={style} alt="school" loading='lazy' className={`w-[250px] mx-auto h-full object-cover rounded-xl border-5 
+                                md:w-[395px]
                                 ${darkMode ? "border-[#091048]" : "border-[#2b2873]"}
                                 `} />
                         </div>
@@ -286,9 +287,10 @@ export default function FAQS() {
                                             ${darkMode ? "text-white" : "text-black "}
                                             `}> {t("ask")}  </span>
                                 <div className="WhoP  mb-5">
-                                    <p className='text-[#666666] text-center font-tajawal font-bold w-full 
-                                            lg:text-start
-                                            '> {t("quick")} </p>
+                                    <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full 
+                                            lg:text-start`}>
+                                        {t("quick")}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -324,7 +326,7 @@ export default function FAQS() {
                                     {/* Phone number */}
                                     <div className="relative z-0 w-full mb-5 group">
                                         <label htmlFor="Phone" className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("phone")}</label>
-                                        <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.Phone} type="text" name="Phone" id="Phone" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg  max-w-4xl block w-full p-2.5"  required />
+                                        <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.Phone} type="text" name="Phone" id="Phone" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg  max-w-4xl block w-full p-2.5" required />
                                     </div>
 
                                     {/* textarea */}
@@ -342,7 +344,7 @@ export default function FAQS() {
                                         <span className={`${darkMode ? "text-white" : "text-black "} font-tajawal font-bold transition-all duration-500 ease-in-out`}> {remainingChars}</span>
                                     </div>
                                     <div className="formBtn ">
-                                        <button type='submit' className={` p-5  cursor-pointer rounded-xl transition-all duration-500 ease-in-out
+                                        <button type='submit' className={` p-5 font-tajawal font-bold cursor-pointer rounded-xl transition-all duration-500 ease-in-out
                                                 ${darkMode ? "text-[#f4af0f] bg-[#091048] hover:text-[#091048] hover:bg-[#f4af0f] " :
                                                 "text-[#ffcc00] bg-[#2b2873] hover:text-[#2b2873] hover:bg-[#ffcc00]"}
                             `} >  {t("send")} </button>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useModeContext } from '../../context/modeContext';
 import { useLanguageContext } from '../../context/langContext';
 import tag from "../../assets/Photos/pho/svg.webp"
-import { faHouse, faChevronUp, faChevronDown, faPhoneVolume, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneVolume, faUser } from '@fortawesome/free-solid-svg-icons';
 import mainPhoto from "../../assets/Photos/pho/Carreers.webp"
 import * as Yup from "yup"
 import { useFormik } from 'formik'
@@ -22,7 +22,16 @@ export default function Photos() {
   // darkMode
   const { darkMode } = useModeContext();
   // Language
-  const { t, currentLang } = useLanguageContext();
+  const { t, } = useLanguageContext();
+
+ // scroll to top
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
 
   const [personalPhotoName, setPersonalPhotoName] = useState(t("ChooseFile"));
   const [cvName, setCvName] = useState(t("ChooseFile"));
@@ -55,33 +64,32 @@ export default function Photos() {
       <section className={` relative w-full overflowHidden  h-[400px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
                         md:h-[600px]
                         xl:h-[650px]  `}>
-        <img src={mainPhoto} alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[600px] 
+        <img src={mainPhoto} loading='lazy' alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[550px]  
                             md:h-[700px]
                             xl:object-cover xl:h-full "/>
         {/* Heading */}
         <div
-          className="relative z-11 flex flex-col justify-center items-center text-center top-46
-                                md:top-60
-                                lg:top-70 
-                                "
+          className="relative z-11 flex flex-col justify-center items-center text-center top-48
+          sm:top-50 
+          lg:top-70 "
         >
           <div className="container mx-auto xl:px-15">
-            <div className=" mx-auto   flex flex-col  justify-center items-center">
-              <div className="imgDiv flex justify-center items-center  h-20">
-                <img src={tag} alt="School selection tag" className='w-18' />
+            <div className=" mx-auto  flex flex-col  justify-center items-center">
+              <div className="imgDiv flex justify-center items-center  h-10">
+                <img loading='lazy' src={tag} alt="School selection tag" className='w-10 sm:w-15 mb-5' />
               </div>
 
               <div className=" flex flex-col gap-1">
-                <span className='text-white text-xs md:text-lg text-center px-10 font-tajawal font-bold
+                <span className='text-white text-[10px] md:text-lg text-center px-10 font-tajawal font-bold
                           lg:px-0 '>
                   {t("join")} </span>
-                <span className='text-white text-xl md:text-[40px] text-center font-tajawal font-bold'> {t("carer")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
+                <span className='text-white text-lg sm:text-[30px] md:text-[40px] text-center font-tajawal font-bold'> {t("carer")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                   ${darkMode ? "text-[#f4af0f]" : " text-[#ffcc00] "}`}>
                   {t("Opportunities")} </span> </span>
               </div>
 
               <div className="  mb-5">
-                <p className='text-white text-[13px] md:text-lg text-center font-tajawal font-bold w-full'>
+                <p className='text-white text-[10px] sm:text-sm md:text-lg text-center font-tajawal px-3 w-full'>
                   {t("carerP")} </p>
               </div>
 
@@ -95,7 +103,7 @@ export default function Photos() {
       {/* careers Section */}
 
       <section className=' py-20'>
-        <div className="container  mx-auto p-15 
+        <div className="container  mx-auto p-5 
                             lg:px-5
                             xl:px-15
                             ">
@@ -454,7 +462,7 @@ export default function Photos() {
                           2xl:col-span-5 2xl:mx-auto
                           ">
             <div className="contactBtn ">
-              <Link to={"contact-us"} className={` p-5 font-tajawal font-bold rounded-xl transition-all duration-500 ease-in-out
+              <Link to={"/contact-us"} onClick={() => scrollToTop()} className={` p-5 font-tajawal font-bold rounded-xl transition-all duration-500 ease-in-out
                                   ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048] " :
                   "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"}
                                   `} > <FontAwesomeIcon icon={faPhoneVolume} className='pr-3 rtl:pl-2' /> {t("contctBtn")} </Link>

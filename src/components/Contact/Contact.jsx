@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useModeContext } from '../../context/modeContext';
 import { useLanguageContext } from '../../context/langContext';
-import { faHouse, faArrowRight, faArrowLeft, faMessage, faEnvelope, faLocation, faLocationDot, faPhoneVolume, } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faArrowRight, faArrowLeft, faEnvelope,  faLocationDot, faPhoneVolume, } from '@fortawesome/free-solid-svg-icons';
 import mainPhoto from "../../assets/Photos/pho/15.webp"
 import tag from "../../assets/Photos/pho/svg.webp"
 import * as Yup from "yup"
@@ -53,12 +53,12 @@ export default function Contact() {
             <section className={` relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
                         md:h-[700px]
                         xl:h-[515px] `}>
-                <img src={mainPhoto} alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[600px] 
+                <img src={mainPhoto} loading='lazy' alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[550px] 
                             md:h-[800px]
                             xl:object-cover xl:h-[515px] xl:object-top"/>
                 {/* Heading */}
                 <div
-                    className="relative z-11 flex flex-col justify-center items-center text-center top-62
+                    className="relative z-11 flex flex-col justify-center items-center text-center top-58
                                 md:top-80
                                 lg:top-70
                                 "
@@ -71,7 +71,7 @@ export default function Contact() {
                                 ">
                         {t("contactTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-lg flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -82,7 +82,7 @@ export default function Contact() {
             </section>
 
             <section className={`relative  transition-all duration-500 ease-in-out`}>
-                <div className="container   mx-auto p-10  inset-0  z-20 relative mb-20
+                <div className="container   mx-auto p-5  inset-0  z-20 relative mb-20
                                                                 lg:px-5
                                                                 xl:px-15
                                                                 ">
@@ -100,8 +100,8 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={faEnvelope} size="2xl" />
                             </div>
                             <div className="flex flex-col justify-center items-center ">
-                                <h2 className='text-2xl'> {t("Admissions")} </h2>
-                                <a href="mailto:studentaffairsdepartment@tantaroyalschools.edu.eg" className='p-2 text-sm lg:text-[16px] '> studentaffairsdepartment@tantaroyalschools.edu.eg </a>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl'> {t("Admissions")} </h2>
+                                <a href="mailto:studentaffairsdepartment@tantaroyalschools.edu.eg" className='p-2 text-[12px] sm:text-[16px]  md:text-2xl lg:text-[15px] '> studentaffairsdepartment@tantaroyalschools.edu.eg </a>
                             </div>
 
 
@@ -117,8 +117,8 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={faEnvelope} size="2xl" />
                             </div>
                             <div className="flex flex-col justify-center items-center ">
-                                <h2 className='text-2xl'> {t("Support")} </h2>
-                                <a href="mailto:pr@tantaroyalschools.edu.eg" className='p-2 text-sm lg:text-[16px] '> pr@tantaroyalschools.edu.eg </a>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl '> {t("Support")} </h2>
+                                <a href="mailto:pr@tantaroyalschools.edu.eg" className='p-2 text-sm sm:text-[16px]  md:text-2xl lg:text-[15px]'> pr@tantaroyalschools.edu.eg </a>
                             </div>
 
 
@@ -134,8 +134,8 @@ export default function Contact() {
                                 <FontAwesomeIcon icon={faEnvelope} size="2xl" />
                             </div>
                             <div className="flex flex-col justify-center items-center ">
-                                <h2 className='text-2xl'> {t("InfoEmail")} </h2>
-                                <a href="mailto:info@tantaroyalschools.edu.eg%20" className='p-2 text-sm lg:text-[16px] '> info@tantaroyalschools.edu.eg%20 </a>
+                                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-3xl'> {t("InfoEmail")} </h2>
+                                <a href="mailto:info@tantaroyalschools.edu.eg%20" className='p-2 text-sm sm:text-[16px]  md:text-2xl lg:text-[15px]'> info@tantaroyalschools.edu.eg%20 </a>
                             </div>
 
 
@@ -147,11 +147,11 @@ export default function Contact() {
                         {/* left */}
                         <div className={` flex flex-col  justify-center  col-span-12 lg:col-span-6 p-5 rounded-2xl border-2  ${darkMode ? " bg-[#091048] " : " bg-[#2b2873]"} transition-all duration-500 ease-in-out `}>
                             <div className="imgDiv flex flex-row justify-center lg:justify-start items-center lg:items-center  h-20">
-                                <img src={tag} alt="School selection tag" className='w-18' />
+                                <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
                             </div>
                             {/* first */}
                             <div className=" flex flex-col  gap-3 px-3 lg:p-0">
-                                <span className='text-[#aaaaaa] text-lg  text-center px-10 font-tajawal font-bold
+                                <span className='text-white text-lg  text-center px-10 font-tajawal font-bold
                                                                                 lg:px-0 lg:text-start 
                                                                                 '> {t("freeContact")} </span>
                                 <span className={` text-[38px] text-white text-center font-tajawal font-bold transition-all duration-500 ease-in-out
@@ -160,7 +160,7 @@ export default function Contact() {
                                                                             ${darkMode ? "text-[#f4af0f]" : "text-[#ffcc00] "}
                                                                             `}> {t("WithUs")} </span> </span>
                             </div>
-                            <div className="WhoP  mb-5">
+                            <div className="  mb-5">
                                 <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full mb-3
                                                                             lg:text-start
                                                                             '> {t("contactPageP")} </p>
@@ -220,7 +220,7 @@ export default function Contact() {
                                         <span className={`${darkMode ? "text-white" : "text-black "} font-tajawal font-bold transition-all duration-500 ease-in-out`}> {remainingChars}</span>
                                     </div>
                                     <div className="formBtn ">
-                                        <button type='submit' className={` p-5  cursor-pointer rounded-xl transition-all duration-500 ease-in-out
+                                        <button type='submit' className={` p-5 font-tajawal font-bold cursor-pointer rounded-xl transition-all duration-500 ease-in-out
                                                 ${darkMode ? "text-[#f4af0f] bg-[#091048]  " :
                                                 "text-[#ffcc00] bg-[#2b2873] "}
                             `} >  {t("send")} </button>

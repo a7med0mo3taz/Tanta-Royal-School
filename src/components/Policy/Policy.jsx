@@ -39,14 +39,14 @@ export default function Policy() {
       <section id='headSection' className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
             md:h-[700px]
             xl:h-[515px] `}>
-        <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[600px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
+        <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
 
 
 
         {/* Heading */}
 
         <div
-          className="relative z-11 flex flex-col justify-center items-center text-center top-62
+          className="relative z-11 flex flex-col justify-center items-center text-center top-58
                     md:top-80
                     lg:top-70
                     "
@@ -59,7 +59,7 @@ export default function Policy() {
                     ">
             {t("policyTitle")}
           </h1>
-          <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+          <div className="Breadcrumb text-white text-lg flex justify-center  ">
             <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
             {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
               (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -70,7 +70,7 @@ export default function Policy() {
 
       <section className={`transition-all duration-500 ease-in-out lg:py-20 ${darkMode ? "bg-[#030712]" : "bg-white "}`}>
         <div className="container w-full mx-auto p-3 lg:p-5 xl:px-30">
-          <div className="gap-5 flex flex-col justify-center items-center py-20 lg:py-0 lg:items-start">
+          <div className="gap-5 flex flex-col justify-center items-center pb-18.5 lg:py-0 lg:items-start">
             {PolicyData.map((item) => (
               <div key={item.key} className="flex flex-col gap-2 w-full lg:px-5">
                 

@@ -30,7 +30,13 @@ export default function About() {
     { key: "Comprehensive", content: "ComprehensiveP" },
     { key: "Supportive", content: "SupportiveP" },
   ];
-
+// scroll to top
+const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 
   // scroll to section
   const location = useLocation();
@@ -84,17 +90,17 @@ export default function About() {
   return (
     <div className='About Page'>
       {/* heading section */}
-      <section id='headSection' className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
+      <section className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
             md:h-[700px]
             xl:h-[515px] `}>
-        <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[600px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
+        <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
 
 
 
         {/* Heading */}
 
         <div
-          className="relative z-11 flex flex-col justify-center items-center text-center top-62
+          className="relative z-11 flex flex-col justify-center items-center text-center top-60
                     md:top-80
                     lg:top-70
                     "
@@ -107,7 +113,7 @@ export default function About() {
                     ">
             {t("aboutTitle")}
           </h1>
-          <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+          <div className="Breadcrumb text-white text-lg flex justify-center  ">
             <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
             {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
               (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -120,7 +126,8 @@ export default function About() {
 
       {/* section 1 */}
       <section className={` relative overflow-hidden min-h-[1050px] transition-all duration-500 ease-in-out
-                  lg:min-h-[616px]
+                  sm:min-h-[850px]
+                  lg:min-h-[600px]
                   ${darkMode ? "bg-[#030712]" : "bg-white "}
                   `}>
         <div className="container grid  mx-auto p-3  inset-0  z-20 absolute
@@ -130,16 +137,17 @@ export default function About() {
           <div className="left mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                           lg:col-span-6 lg:items-start
                       ">
-            <div className={` w-full h-[400px] rounded-lg absolute top-5 right-3 transition-all duration-500 ease-in-out
-                          md:top-25 md:right-10 rtl:md:top-27
-                          lg:top-20 lg:rounded-2xl  rtl:lg:top-20  rtl:lg:-right-10 
+            <div className={` w-full h-[300px] rounded-lg absolute top-13 right-5 rtl:top-23 transition-all duration-500 ease-in-out
+                          sm:top-20 rtl:sm:top-25
+                          md:top-25 md:right-10 rtl:md:top-30
+                          lg:top-30 lg:rounded-2xl  rtl:lg:top-30  rtl:lg:-right-10 
                           ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
                           `}></div>
             <div onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               style={{ perspective: "1000px" }}
               className="schoolImg   mx-auto ">
-              <img src={school} style={style} alt="school" className="w-full h-full object-cover rounded-xl " loading="lazy" />
+              <img src={school} style={style} alt="school" className="w-[300px] h-full object-cover rounded-xl " loading="lazy" />
             </div>
 
           </div>
@@ -152,11 +160,12 @@ export default function About() {
             </div>
 
             <div className=" flex flex-col gap-3 px-3 lg:p-0">
-              <h3 className='text-[#aaaaaa] text-lg  text-center px-10 font-tajawal font-bold
-                                  lg:px-0 lg:text-start
-                                  '> {t("Who")} </h3>
-              <h2 className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                  lg:text-start
+              <h3 className={`${darkMode ? "text-white " : "text-black"} text-lg  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  lg:px-0 lg:text-start`}>
+                {t("Who")}
+              </h3>
+              <h2 className={`text-3xl  text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  lg:text-start lg:text-[38px]
                                   ${darkMode ? "text-white" : "text-black "}
                                   `}> {t("building")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                   ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
@@ -188,22 +197,22 @@ export default function About() {
                             lg:items-start
                         ">
             <div className="imgDiv flex justify-center items-center lg:justify-start   h-20">
-              <img src={tag} alt="School selection tag" className='w-18' />
+              <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
             </div>
 
             <div className=" flex flex-col gap-1 w-full
                                 ">
-              <span className='text-[#aaaaaa] text-lg  text-center px-10 font-tajawal font-bold
+              <span className='text-white text-lg  text-center px-10 font-tajawal font-bold
                                     lg:px-0 lg:text-start
                                     '> {t("who2")} </span>
-              <span className='text-white text-[40px] text-center font-tajawal font-bold
-                                    lg:text-start
+              <span className='text-white  text-3xl text-center font-tajawal font-bold
+                                    lg:text-start lg:text-[40px]
                                     '> {t("core")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                     ${darkMode ? "text-[#f4af0f]" : " text-[#ffcc00] "}
                                     `}> {t("Pillars")} </span> ! </span>
             </div>
 
-            <div className="text-xl mb-5">
+            <div className=" mb-5">
               <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
                                     lg:text-start
                                     '> {t("whoP2")} </p>
@@ -213,7 +222,7 @@ export default function About() {
               <div className=" flex flex-col justify-center items-center gap-5  my-5
                                 lg:flex-row lg:justify-between lg:gap-0 ">
                 <FontAwesomeIcon icon={faEye} size="2xl" title="Vision"
-                  className={`w-20 h-20  py-6 rtl:ml-0   border-2 rounded-full hover:rotate-y-360 transition-all duration-500 ease-in-out
+                  className={`w-20 h-20  py-6 rtl:ml-0   border-2 rounded-full  transition-all duration-500 ease-in-out
                             lg:mr-7 lg:mb-20 lg:px-5 lg:py-6 rtl:lg:ml-7 rtl:lg:py-7
                             ${darkMode ? "text-[#f4af0f] border-[#f4af0f]" : " text-[#ffcc00] border-[#ffcc00] "}
                             `} />
@@ -231,7 +240,7 @@ export default function About() {
               <div className=" flex flex-col justify-center items-center gap-5  my-5
                                 lg:flex-row lg:justify-between lg:gap-0 ">
                 <FontAwesomeIcon icon={faBullseye} size="2xl" title='Mission'
-                  className={`w-20 h-20  py-6 rtl:ml-0   border-2 rounded-full hover:rotate-y-360 transition-all duration-500 ease-in-out
+                  className={`w-20 h-20  py-6 rtl:ml-0   border-2 rounded-full  transition-all duration-500 ease-in-out
                             lg:mr-7 lg:mb-20 lg:px-6 lg:py-6 rtl:lg:ml-7 rtl:lg:py-7
                             ${darkMode ? "text-[#f4af0f] border-[#f4af0f]" : " text-[#ffcc00] border-[#ffcc00] "}
                             `} />
@@ -249,7 +258,7 @@ export default function About() {
               <div className=" flex flex-col justify-center items-center gap-5  my-5
                                 lg:flex-row lg:justify-between lg:gap-0 ">
                 <FontAwesomeIcon icon={faGem} size="2xl" title='Values'
-                  className={`w-20 h-20  py-6 rtl:ml-0  border-2 rounded-full hover:rotate-y-360 transition-all duration-500 ease-in-out
+                  className={`w-20 h-20  py-6 rtl:ml-0  border-2 rounded-full  transition-all duration-500 ease-in-out
                             lg:mr-7 lg:mb-20 lg:px-6 lg:py-6 rtl:lg:ml-7 rtl:lg:py-7
                             ${darkMode ? "text-[#f4af0f] border-[#f4af0f]" : " text-[#ffcc00] border-[#ffcc00] "}
                             `} />
@@ -288,19 +297,20 @@ export default function About() {
                                 lg:col-span-6 lg:items-start
                             ">
             <div className="imgDiv  h-20">
-              <img src={tag} alt="School selection tag" className='w-18' />
+              <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
             </div>
 
             <div className=" flex flex-col gap-3 px-3 lg:p-0">
-              <span className='text-[#aaaaaa] text-lg  text-center px-10 font-tajawal font-bold
-                                  lg:px-0 lg:text-start
-                                  '> {t("lead")} </span>
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-lg  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  lg:px-0 lg:text-start`}> {t("lead")} </span>
               <span className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
                                   lg:text-start
                                   text-black
                                   `}> +25  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
-                                  ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
-                                  `}> {t("Excellence")} </span> </span>
+                                  ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}>
+                  {t("Excellence")}
+                </span>
+              </span>
             </div>
 
             <div className="w-full mb-5">
@@ -318,25 +328,23 @@ export default function About() {
                 <div key={key} className="mb-3">
 
                   <div
-                    className={`p-5 font-tajawal font-bold transition-all duration-500 ease-in-out
-                ${darkMode ? "bg-[#091048]" : "bg-[#2b2873]"}
-                ${isOpen ? "bg-[#e8e7f0] p-7 text-[#2b2873] border-x-2 border-t-2 border-black" : "text-white"}
-              `}
+                    onClick={() =>
+                      setOpenCard(isOpen ? null : key)
+                    }
+                    className={`p-5  font-tajawal cursor-pointer font-bold transition-all duration-500 ease-in-out
+                                    ${darkMode ? "bg-[#091048] text-[#f4af0f]" : "bg-[#2b2873] text-white"}
+                                `}
                   >
-                    <h2 className="flex justify-between items-center">
+                    <h2 className="flex text-sm sm:text-xl justify-between items-center">
                       {t(key)}
-                      <FontAwesomeIcon className="cursor-pointer" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
-                        onClick={() =>
-                          setOpenCard(isOpen ? null : key)
-                        }
+                      <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
                       />
                     </h2>
                   </div>
-
                   <div
                     className={`w-full overflow-hidden transition-all duration-500
                 ${isOpen
-                        ? "p-5 text-[16px] font-tajawal font-bold bg-[#e8e7f0] text-[#2b2873] border-2 border-black max-h-screen opacity-100"
+                        ? "p-5 text-sm sm:text-xl font-tajawal font-bold bg-[#e8e7f0] text-[#2b2873] border-2 border-black max-h-screen opacity-100"
                         : "max-h-0 opacity-0"
                       }
               `}
@@ -359,8 +367,7 @@ export default function About() {
       {/* section 4 */}
       <section
         className={`py-20 px-2.5 transition-all duration-500 ease-in-out
-          ${darkMode ? "bg-[#030712]" : "bg-white "}
-        `}
+          ${darkMode ? "bg-[#030712]" : "bg-white "}`}
       >
         <div className="container mx-auto">
           <div className="flex flex-col justify-center items-center gap-5">
@@ -368,52 +375,56 @@ export default function About() {
               src={tag}
               alt="Why choose our school"
               className="w-[135px] h-[81px]"
+              loading='lazy'
             />
 
             {/* Main heading */}
             <h2
-              className={`text-4xl font-bold mt-6 mx-10 px-3 text-center flex flex-wrap gap-3 rtl:gap-0 leading-relaxed transition-all duration-500 ease-in-out
-                                              md:px-0
+              className={`text-3xl font-bold mt-6  px-3 text-center flex flex-wrap gap-3 rtl:gap-0 leading-relaxed transition-all duration-500 ease-in-out
+                                          sm:mx-auto  
+                                          md:px-0
                                           ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
             >
-              <span className="ml-5 lg:ml-3 rtl:mr-10 rtl:lg:mr-0">
-                {t("why")}
+              <span className="flex justify-center items-center gap-2 mx-auto">
+                <span className=" ">
+                  {t("why")}
+                </span>
+                <span
+                  className={`block relative w-30 h-12.5 rtl:w-23 rtl:h-13 overflow-hidden m-0  rtl:ml-2 transition-all duration-500 ease-in-out 
+                                                      md:w-30 md:rtl:w-25
+                                                      ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
+                >
+                  <span className="animate animation-1">{t("SELECT")}</span>
+                  <span className="animate animation-2">{t("CHOOSE")}</span>
+                  <span className="animate animation-3">{t("PREFER")}</span>
+                </span>
               </span>
-              <span
-                className={`block relative h-16 overflow-hidden m-0 w-36 rtl:ml-2 transition-all duration-500 ease-in-out 
-                  md:w-35 md:rtl:w-27.5
-                  ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
-              >
-                <span className="animate animation-1">{t("SELECT")}</span>
-                <span className="animate animation-2">{t("CHOOSE")}</span>
-                <span className="animate animation-3">{t("PREFER")}</span>
-              </span>
-              <span className="rtl:mx-auto">{t("schools")}</span>
+              <span className="mx-auto">{t("schools")}</span>
             </h2>
 
             {/* Paragraph */}
             <p
-              className="text-[16px] text-[#848484] px-10 text-center
+              className="text-[16px] text-[#848484] px-3 text-center
                                               md:px-17.5
                                               lg:px-37.5">
               {t("p-1")}
-              <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("title1")}
               </span>
               {t("p-2")}
-              <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("mark-1")}
               </span>
               {t("p-3")}
-              <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("mark-2")}
               </span>
               {t("p-4")}
-              <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("mark-3")}
               </span>
               {t("p-5")}
-              <span className="text-[#7a7a7a] text-[16px] font-tajawal font-bold">
+              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("mark-4")}
               </span>
               {t("p-6")}
@@ -644,19 +655,17 @@ export default function About() {
             {/* Titles */}
             <div className="flex flex-col gap-1">
               <h3
-                className={`text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"
-                  }`}
+                className={` text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
               >
-                {t("eng")}{" "}
-                <span className="text-[#aaaaaa] text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl">
+                {t("eng")}
+                <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"} text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl`}>
                   {t("founderName")}
                 </span>
               </h3>
 
               <h2
                 id="founder-message-heading"
-                className={`text-[40px] text-center font-tajawal font-bold lg:text-[44px] ${darkMode ? "text-white" : "text-black"
-                  }`}
+                className={`text-[40px] text-center font-tajawal font-bold lg:text-[44px] ${darkMode ? "text-white" : "text-black"}`}
               >
                 {t("Msg")}{" "}
                 <span
@@ -690,7 +699,7 @@ export default function About() {
 
       {/* Section 7 */}
       <section
-        className={`py-20 transition-all duration-500 ease-in-out ${darkMode ? "bg-[#69686f]" : "bg-[#e8e7f0]"
+        className={`py-20 lg:py-10 transition-all duration-500 ease-in-out ${darkMode ? "bg-[#69686f]" : "bg-[#e8e7f0]"
           }`}
         aria-labelledby="contact-section-heading"
       >
@@ -726,7 +735,7 @@ export default function About() {
                 id="contact-section-heading"
                 className="text-black text-[40px] text-center font-tajawal font-bold lg:text-start"
               >
-                {t("contactUs")}{" "}
+                {t("contactUs")}
                 <span
                   className={`font-tajawal font-bold transition-all duration-500 ease-in-out ${darkMode ? "text-[#24246d]" : "text-[#333399]"
                     }`}
@@ -755,10 +764,10 @@ export default function About() {
           >
             <div className="contactBtn">
               <Link
-                to="contact-us"
+                to={"/contact-us"}
+                onClick={() => scrollToTop()}
                 className={`p-5 font-tajawal font-bold rounded-xl transition-all duration-500 ease-in-out
-                  ${darkMode
-                    ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
+                  ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
                     : "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"
                   }`}
                 aria-label={`${t("contctBtn")} - ${t("contactUs")}`}

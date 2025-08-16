@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-import { faHouse, faArrowRight, faArrowLeft, faChevronUp, faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faArrowRight, faArrowLeft, faUser } from '@fortawesome/free-solid-svg-icons';
 import mainPhoto from "../../assets/Photos/pho/15.webp"
 import uniform from "../../assets/Photos/pho/uniform.webp";
-import msg from "../../assets/Photos/pho/chat.png"
-import lamp from "../../assets/Photos/pho/lamp.png"
 import { useModeContext } from '../../context/modeContext';
 import * as Yup from "yup"
 import { useFormik } from 'formik'
@@ -83,14 +81,14 @@ export default function Uniform() {
             <section className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
             md:h-[700px]
             xl:h-[515px] `}>
-                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[600px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
+                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
 
 
 
                 {/* Heading */}
 
                 <div
-                    className="relative z-11 flex flex-col justify-center items-center text-center top-62
+                    className="relative z-11 flex flex-col justify-center items-center text-center top-58
                     md:top-80
                     lg:top-70
                     "
@@ -103,7 +101,7 @@ export default function Uniform() {
                     ">
                         {t("uniformTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-lg flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -116,7 +114,7 @@ export default function Uniform() {
 
             {/* Uniform section  */}
             <section className={`relative min-h-screen  transition-all duration-500 ease-in-out`}>
-                <div className="container grid  mx-auto p-15  inset-0  z-20 relative
+                <div className="container grid  mx-auto p-5  inset-0  z-20 relative
                             lg:grid-cols-12  lg:px-5
                             xl:px-15
                             ">
@@ -247,13 +245,14 @@ export default function Uniform() {
                     </div>
 
 
-                    <div className="right mb-20 m-5 col-span-12  relative  top-0   rtl:mx-auto
+                    <div className="right mb-30 m-5 col-span-12  relative  top-0   rtl:mx-auto
                                     lg:col-span-6  lg:m-0   rtl:lg:col-span-6 lg:mx-auto 
                                     xl:col-span-6 xl:mx-auto 
                                     2xl:col-span-4  ">
-                        <div className={` w-[280px] rtl:w-[325px] h-[340px] rtl:h-[380px] rounded-lg absolute  top-5 left-5 rtl:right-3 transition-all duration-500 ease-in-out lg:mb-10
-                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:left-30 rtl:md:top-7 rtl:md:right-10
-                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10
+                        <div className={` w-[250px]  h-[310px] top-5 left-10    rtl:w-[270px] rtl:h-[315px]  rtl:right-5 rounded-lg absolute  transition-all duration-500 ease-in-out 
+                                    sm:left-50
+                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:right-10 rtl:md:top-7 rtl:md:right-15
+                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
                                     xl:left-5 
                                     2xl:left-5 
                                     ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
@@ -262,9 +261,10 @@ export default function Uniform() {
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}
                             className=" mx-auto ">
-                            <img src={uniform} style={style} alt="school" className={`w-[395px] mx-auto h-full object-cover rounded-xl border-5 
-                                ${darkMode ? "border-[#091048]" : "border-[#2b2873]"}
-                                `} />
+                            <img src={uniform} style={style} alt="school" loading='lazy' className={`w-[250px] mx-auto h-full object-cover rounded-xl border-5 
+                                                            md:w-[395px]
+                                                            ${darkMode ? "border-[#091048]" : "border-[#2b2873]"}
+                                                            `} />
                         </div>
 
                         {/* second */}

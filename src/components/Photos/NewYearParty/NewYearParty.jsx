@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { faHouse, faArrowRight, faArrowLeft, faXmark, faAward, faFolderOpen, faEnvelope, faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faXTwitter, faWhatsapp, faPinterest, faReddit, faDelicious, } from '@fortawesome/free-brands-svg-icons';
 import mainPhoto from "../../../assets/Photos/pho/15.webp"
-import img1 from "../../../assets/Photos/gellary/newYearParty/1.webp"
-import img2 from "../../../assets/Photos/gellary/newYearParty/2.webp"
 import img3 from "../../../assets/Photos/gellary/newYearParty/3.webp"
 import img4 from "../../../assets/Photos/gellary/newYearParty/4.webp"
 import img5 from "../../../assets/Photos/gellary/newYearParty/5.webp"
@@ -82,16 +80,14 @@ export default function NewYearParty() {
             <section className={` relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
                         md:h-[700px]
                         xl:h-[515px] `}>
-                <img src={mainPhoto} alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[600px] 
+                <img src={mainPhoto} alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[550px] 
                             md:h-[800px]
                             xl:object-cover xl:h-[515px] xl:object-top"/>
                 {/* Heading */}
                 <div
-                    className="relative z-11 flex flex-col justify-center items-center text-center top-62
+                    className="relative z-11 flex flex-col justify-center items-center text-center top-57
                                 md:top-80
-                                lg:top-70
-                                "
-                >
+                                lg:top-70">
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
                                     md:text-4xl rtl:md:text-5xl
@@ -100,7 +96,7 @@ export default function NewYearParty() {
                                 ">
                         {t("partyTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-[12px] sm:text-xl flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -121,7 +117,7 @@ export default function NewYearParty() {
             </section>
 
             <section className={`relative  transition-all duration-500 ease-in-out`}>
-                <div className="container   mx-auto p-10  inset-0  z-20 relative mb-20
+                <div className="container pb-10  mx-auto p-0  inset-0  z-20 relative mb-20
                                                                 lg:px-5
                                                                 xl:px-15
                                                                 ">

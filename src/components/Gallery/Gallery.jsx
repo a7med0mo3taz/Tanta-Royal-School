@@ -33,7 +33,7 @@ export default function Gallery() {
             <section className={`relative w-full overflowHidden  h-[500px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
             md:h-[700px]
             xl:h-[515px] `}>
-                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[600px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
+                <img src={mainPhoto} alt="International School Main Building" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[800px] xl:object-cover xl:h-[515px]" loading="lazy" />
 
 
 
@@ -53,7 +53,7 @@ export default function Gallery() {
                     ">
                         {t("galleryTitle")}
                     </h1>
-                    <div className="Breadcrumb text-[#aaaaaa] text-lg flex justify-center  ">
+                    <div className="Breadcrumb text-white text-lg flex justify-center  ">
                         <Link to={"/"}><FontAwesomeIcon icon={faHouse} className=' my-auto ' /></Link>
                         {currentLang === 'en' ? (<FontAwesomeIcon icon={faArrowRight} className='font-light my-auto mx-3' />) :
                             (<FontAwesomeIcon icon={faArrowLeft} className='font-light my-auto mx-3' />)}
@@ -65,7 +65,7 @@ export default function Gallery() {
 
 
             <section className={`relative   transition-all duration-500 ease-in-out`}>
-                <div className="container grid  mx-auto p-15  inset-0  z-20 relative mb-20
+                <div className="container grid  mx-auto p-5  inset-0  z-20 relative mb-20
                                         lg:px-5
                                         xl:px-15
                                         ">

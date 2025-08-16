@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
 import 'flowbite/dist/flowbite.min.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { } from '@fortawesome/free-regular-svg-icons';
 import logo from "../../assets/Photos/pho/Logo.webp"
 import BRLogo from "../../assets/Photos/pho/UK.webp"
@@ -31,6 +31,14 @@ export default function Navbar() {
 
     // dark mode
     const { darkMode, toggleTheme } = useModeContext();
+
+// scroll to top
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 
     // small navbar animation
 
@@ -544,7 +552,7 @@ export default function Navbar() {
                                     <a className='bg-[#3c397e] p-3 text-white rounded-lg WASIcon' href="https://api.whatsapp.com/send/?phone=201090196772&text&type=phone_number&app_absent=0" target='_blank'><FontAwesomeIcon icon={faWhatsapp} size="xl" className='WAIcon2' /></a>
                                 </div>
                                 <p className=' text-[10px] px-5 sm:px-15  text- text-white'> {t("footer")} </p>
-                                <Link to={"/privacy-policy"} className={`text-white ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"} transition-all duration-500 ease-in-out`} > {t("policy")} </Link>
+                                <Link to={"/privacy-policy"} onClick={() => setOpenNav(prev => !prev)} className={`text-white ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"} transition-all duration-500 ease-in-out`} > {t("policy")} </Link>
                             </li>
                         </ul>
                     </div>
@@ -552,51 +560,51 @@ export default function Navbar() {
             </nav >
 
 
-            <div className={`fixed flex bottom-0  left-0 z-8 w-full justify-start items-center  overflow-hidden h-22 bg-[#2b2873] lg:hidden  transition-all duration-500 ease-in-out
+            <div className={`fixed flex bottom-0  border-t border-white left-0 z-8 w-full justify-start items-center  overflow-hidden h-22 bg-[#2b2873] lg:hidden  transition-all duration-500 ease-in-out
             ${darkMode ? "bg-[#091048] " : "bg-[##2b2873]"}
             `}>
-                <div className=" flex justify-center items-center sm:gap-5  w-full overflow-hidden h-22 font-medium ">
-                    <NavLink to={""} className={({ isActive }) =>
-                        `inline-flex flex-col items-center  justify-center h-full w-[147px] px-4 py-7 group transition-colors duration-300
-                        ${isActive ? `${darkMode ? "text-black bg-[#f4af0f]" : "text-black bg-[#ffcc00]"}`
-                            : `text-white hover:text-black ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#ffcc00]"}`
+                <div className=" flex justify-center items-center sm:gap-10 md:gap-18 w-full overflow-hidden h-22 font-medium ">
+                    <NavLink to={""} onClick={() => scrollToTop()} className={({ isActive }) =>
+                        `inline-flex flex-col items-center  justify-center h-full px-3.75 py-7 group transition-colors duration-500
+                        ${isActive ? `${darkMode ? "text-[#f4af0f] " : "text-[#ffcc00] "}`
+                            : `text-white hover:text-[#ffcc00] ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"}`
                         }`
                     }>
-                        <FontAwesomeIcon icon={faHouse} className="w-5 h-5 mb-2 text-current transition-colors duration-300" />
+                        <FontAwesomeIcon icon={faHouse} className="text-lg sm:text-2xl  w-5 h-5 mb-2 text-current transition-colors duration-500" />
 
-                        <span className="text-sm text-current transition-colors duration-300">{t("home")}</span>
+                        <span className="text-[12px] sm:text-lg  text-current transition-colors duration-500">{t("home")}</span>
                     </NavLink>
 
                     <a href="https://sms.tantaroyalschools.edu.eg/admission_webform" target='_blank'
-                        className={`inline-flex w-[147px] px-4 py-7 flex-col items-center justify-center    
-                    ${darkMode ? "text-white hover:bg-[#f4af0f] hover:text-black" : "text-white hover:bg-[#ffcc00] hover:text-black"}
+                        className={`inline-flex px-3.75 py-7 flex-col items-center justify-center    
+                    ${darkMode ? "text-white hover:text-[#f4af0f] " : "text-white hover:text-[#ffcc00] "}
                     `}>
-                        <FontAwesomeIcon icon={faUpRightFromSquare} className="w-5 h-5 mb-2 text-whi transition-colors duration-300" />
-                        <span className="text-sm text-current transition-colors duration-300"> {t("admission")}</span>
+                        <FontAwesomeIcon icon={faUpRightFromSquare} className="text-lg sm:text-2xl  w-5 h-5 mb-2  transition-colors duration-500" />
+                        <span className="text-[12px] sm:text-lg  text-current transition-colors duration-500"> {t("admission")}</span>
                     </a>
 
-                    <NavLink to={"faq"} className={({ isActive }) =>
-                        `inline-flex flex-col items-center justify-center h-full w-[147px] px-4 py-7 group transition-colors duration-300
-                        ${isActive ? `${darkMode ? "text-black bg-[#f4af0f]" : "text-black bg-[#ffcc00]"}`
-                            : `text-white hover:text-black ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#ffcc00]"}`
+                    <NavLink to={"faq"} onClick={() => scrollToTop()} className={({ isActive }) =>
+                        `inline-flex flex-col items-center justify-center h-full px-3.75 py-7 group transition-colors duration-500
+                        ${isActive ? `${darkMode ? "text-[#f4af0f] " : "text-[#ffcc00] "}`
+                            : `text-white hover:text-[#ffcc00] ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"}`
                         }`
                     }>
-                        <FontAwesomeIcon icon={faQuestion} className="w-5 h-5 mb-2 text-current transition-colors duration-300" />
-                        <span className="text-sm text-current transition-colors duration-300">{t("faq2")}</span>
+                        <FontAwesomeIcon icon={faQuestion} className="text-lg sm:text-2xl  w-5 h-5 mb-2 text-current transition-colors duration-500" />
+                        <span className="text-[12px] sm:text-lg  text-current transition-colors duration-500">{t("faq2")}</span>
                     </NavLink>
                     <a href="tel:17418" target='_blank'
-                        className={`inline-flex flex-col items-center justify-center w-[147px] px-4 py-7 
-                    ${darkMode ? "text-white hover:bg-[#f4af0f] hover:text-black" : "text-white hover:bg-[#ffcc00] hover:text-black"}
+                        className={`inline-flex flex-col items-center justify-center px-3.75 py-7 
+                    ${darkMode ? "text-white hover:text-[#f4af0f] " : "text-white hover:text-[#ffcc00] "}
                     `}>
-                        <FontAwesomeIcon icon={faPhoneVolume} className="w-5 h-5 mb-2 text-whi transition-colors duration-300" />
-                        <span className="text-sm text-current transition-colors duration-300"> {t("call")} </span>
+                        <FontAwesomeIcon icon={faPhoneVolume} className="text-lg sm:text-2xl  w-5 h-5 mb-2  transition-colors duration-500" />
+                        <span className="text-[12px] sm:text-lg  text-current transition-colors duration-500"> {t("call")} </span>
                     </a>
                     <a href="https://api.whatsapp.com/send/?phone=201090196772&text&type=phone_number&app_absent=0" target='_blank'
-                        className={`inline-flex flex-col items-center justify-center w-[147px] px-5 py-7 
-                    ${darkMode ? "text-white hover:bg-[#f4af0f] hover:text-black" : "text-white hover:bg-[#ffcc00] hover:text-black"}
+                        className={`inline-flex flex-col items-center justify-center px-3.75 py-7 
+                    ${darkMode ? "text-white hover:text-[#f4af0f]" : "text-white hover:text-[#ffcc00] "}
                     `}>
-                        <FontAwesomeIcon icon={faWhatsapp} size="xl" className="w-5 h-5 mb-2 text-whi transition-colors duration-300" />
-                        <span className="text-sm text-current transition-colors duration-300">{t("whatsapp")}</span>
+                        <FontAwesomeIcon icon={faWhatsapp}  className="text-lg sm:text-2xl  w-5 h-5 mb-2  transition-colors duration-300" />
+                        <span className="text-[12px] sm:text-lg  text-current transition-colors duration-300">{t("whatsapp")}</span>
                     </a>
                 </div>
             </div >
