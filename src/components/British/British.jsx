@@ -128,7 +128,7 @@ export default function British() {
       </section>
 
       {/* section 1 */}
-      <section className={` relative overflow-hidden min-h-[850px] transition-all duration-500 ease-in-out
+      <section className={` relative overflow-hidden min-h-[700px] transition-all duration-500 ease-in-out
                   md:min-h-[800px] 
                   lg:min-h-[616px]
                   ${darkMode ? "bg-[#030712]" : "bg-white "}
@@ -145,8 +145,8 @@ export default function British() {
               <img src={tag} alt="School selection tag" className='w-18' loading="lazy" />
             </div>
             <div className=" flex flex-col gap-3 px-3 lg:p-0">
-              <h2 className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                  lg:text-start
+              <h2 className={`text-3xl mb-5  text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  lg:text-start lg:text-[38px]
                                   ${darkMode ? "text-white" : "text-black "}
                                   `}> {t("britishBenefits")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                   ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
@@ -161,15 +161,17 @@ export default function British() {
           <div className="right mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                           lg:col-span-7 lg:items-start
                       ">
-            <div className={` w-full h-[400px] rounded-lg absolute top-12  right-3 rtl:top-15 rtl:-right-3 transition-all duration-500 ease-in-out
-                          md:top-15 md:right-10 rtl:md:top-17 rtl:md:-right-10
-                          lg:top-20 lg:rounded-2xl  rtl:lg:top-20  rtl:lg:-right-10 
-                          ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                          `}></div>
+            <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
+                                    sm:left-5 sm:top-17  rtl:sm:top-17
+                                    md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
+                                    xl:left-5 
+                                    2xl:left-5 
+                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
+                                    `}></div>
             <div onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               style={{ perspective: "1000px" }}>
-              <img src={international2} style={style} alt="international" className="w-full h-full object-cover rounded-xl border" loading="lazy" />
+              <img src={international2} style={style} alt="international" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl border" loading="lazy" />
             </div>
           </div>
         </div>
@@ -188,7 +190,7 @@ export default function British() {
             {britishBenefits.map((item) => (
               <div key={item.key} className="flex flex-col gap-1 w-full  lg:px-5">
                 <p
-                  className="text-[#aaaaaa] text-lg text-center px-10 font-tajawal font-bold
+                  className="text-white text-lg text-center px-10 font-tajawal font-bold
                   lg:px-0 lg:text-start"
                 >
                   {t(item.key)}
@@ -232,16 +234,18 @@ export default function British() {
           <div className="left my-20 mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                               lg:col-span-6 lg:items-start
                           ">
-            <div className={` w-full h-[400px] rounded-lg absolute top-8 right-3 rtl:top-8 rtl:-right-3 transition-all duration-500 ease-in-out
-                              md:top-25 md:right-7 rtl:md:top-27
-                              lg:top-7 lg:rounded-2xl  rtl:lg:top-7  rtl:lg:-right-7 
-                              ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                              `}></div>
+            <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
+                                    sm:left-5 sm:top-17  rtl:sm:top-17
+                                    md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
+                                    xl:left-5 
+                                    2xl:left-5 
+                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
+                                    `}></div>
             <div onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               style={{ perspective: "1000px" }}
               className="schoolImg   mx-auto ">
-              <img src={international1} style={style} alt="school" className="w-full h-full object-cover rounded-xl " loading='lazy' />
+              <img src={international1} style={style} alt="school" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl " loading='lazy' />
             </div>
 
           </div>
@@ -255,7 +259,7 @@ export default function British() {
 
             <div className=" flex flex-col gap-3 px-3 lg:p-0">
 
-              <h3 className={` text-4xl text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+              <h3 className={` text-4xl text-center mb-5 font-tajawal font-bold transition-all duration-500 ease-in-out
                                       lg:text-start
                                       ${darkMode ? "text-white" : "text-black "}
                                       `}>{t("Comparison")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
@@ -263,10 +267,11 @@ export default function British() {
                                       `}>{t("EducationSystems")} </span> </h3>
             </div>
 
-            <div className="  mb-1">
-              <p className='text-[#838383] text-center font-tajawal font-bold w-full 
-                                      lg:text-start
-                                      '> {t("Introduction")} </p>
+            <div className="  mb-5">
+              <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full 
+                                      lg:text-start`}>
+                {t("Introduction")}
+              </p>
             </div>
             <div className="  mb-5">
               <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
@@ -306,50 +311,50 @@ export default function British() {
 
             {/* British System */}
             <div className="  mb-1">
-              <h3 className='text-[#838383] text-2xl text-center font-tajawal font-bold w-full 
+              <h3 className='text-white text-2xl text-center font-tajawal font-bold w-full 
                                       lg:text-start'>
                 {t("BritishSystem")}
               </h3>
             </div>
             <div className="BritishSystem">
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start
                                       '> {t("BritishSystem1P1")} </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start
                                       '> {t("BritishSystem1P2")} </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start
                                       '> {t("BritishSystem1P3")} </p>
               </div>
             </div>
             {/* American System */}
             <div className="  mb-1">
-              <h3 className='text-[#838383] text-2xl text-center font-tajawal font-bold w-full 
+              <h3 className='text-white text-2xl text-center font-tajawal font-bold w-full 
                                       lg:text-start'>
                 {t("AmericanSystem")}
               </h3>
             </div>
             <div className="AmericanSystem">
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("AmericanSystem1P1")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("AmericanSystem1P2")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("AmericanSystem1P3")}
                 </p>
@@ -377,32 +382,32 @@ export default function British() {
 
             {/* British System */}
             <div className="  my-5">
-              <h3 className='text-[#838383] text-2xl text-center font-tajawal font-bold w-full 
+              <h3 className='text-white text-2xl text-center font-tajawal font-bold w-full 
                                       lg:text-start'>
                 {t("BritishSystem")}
               </h3>
             </div>
             <div className="BritishSystem">
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("BritishSystem2P1")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("BritishSystem2P2")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("BritishSystem2P3")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal  w-full 
                                       lg:text-start'>
                   {t("BritishSystem2P4")}
                 </p>
@@ -410,32 +415,32 @@ export default function British() {
             </div>
             {/* American System */}
             <div className="  mb-5">
-              <h3 className='text-[#838383] text-2xl text-center font-tajawal font-bold w-full 
+              <h3 className='text-white text-2xl text-center font-tajawal font-bold w-full 
                                       lg:text-start'>
                 {t("AmericanSystem")}
               </h3>
             </div>
             <div className="AmericanSystem">
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal w-full 
                                       lg:text-start'>
                   {t("AmericanSystem2P1")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal w-full 
                                       lg:text-start'>
                   {t("AmericanSystem2P2")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal w-full 
                                       lg:text-start'>
                   {t("AmericanSystem2P3")}
                 </p>
               </div>
               <div className="  mb-5">
-                <p className='text-white text-center font-tajawal font-bold w-full 
+                <p className='text-white text-center font-tajawal w-full 
                                       lg:text-start'>
                   {t("AmericanSystem2P4")}
                 </p>

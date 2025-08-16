@@ -18,6 +18,13 @@ export default function National() {
     };
     usePageTitle("National")
 
+     // scroll to top
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
     // img animation
     const [style, setStyle] = useState({});
 
@@ -185,15 +192,17 @@ export default function National() {
                     </div>
                     <div className="right mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                         lg:col-span-7 lg:items-start">
-                        <div className={` w-full h-[400px] rounded-lg absolute top-8  right-8 rtl:top-8 rtl:-right-5 transition-all duration-500 ease-in-out
-                        md:top-15 md:right-10 rtl:md:top-17 rtl:md:-right-10
-                        lg:top-10 lg:rounded-2xl  rtl:lg:top-7  rtl:lg:-right-10 
-                        ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                        `}></div>
+                        <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
+                                    sm:left-5 sm:top-17  rtl:sm:top-17
+                                    md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
+                                    xl:left-5 
+                                    2xl:left-5 
+                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
+                                    `}></div>
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}>
-                            <img src={school} style={style} alt="international" className="w-full h-full object-cover rounded-xl border" loading='lazy' />
+                            <img src={school} style={style} alt="international" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl border" loading='lazy' />
                         </div>
 
                     </div>
@@ -215,7 +224,7 @@ export default function National() {
                         {NationalBenefits.map((item) => (
                             <div key={item.key} className="flex flex-col gap-1 w-full  ">
                                 <p
-                                    className="text-[#aaaaaa] text-lg text-center px-10 font-tajawal font-bold
+                                    className="text-white text-lg text-center px-5 font-tajawal font-bold
                 lg:px-0 lg:text-start"
                                 >
                                     {t(item.key)}
@@ -249,22 +258,22 @@ export default function National() {
 
             {/* section 4 */}
             <section
-                className={`py-10 transition-all duration-500 ease-in-out ${darkMode ? "bg-[#69686f]" : "bg-[#e8e7f0]"
+                className={`pb-20 pt-10 transition-all duration-500 ease-in-out ${darkMode ? "bg-[#69686f]" : "bg-[#e8e7f0]"
                     }`}
                 aria-labelledby="contact-section-heading"
             >
                 <div
                     className="container grid mx-auto p-3 inset-0 z-20 
-                            lg:grid-cols-12 lg:p-5
-                            2xl:py-15 2xl:px-20"
+                           lg:grid-cols-12 lg:p-5
+                           2xl:py-15 2xl:px-20"
                 >
                     {/* Icon */}
                     <div
                         className={`msgIcon max-h-[120px] mx-auto flex justify-center items-center text-[20px] p-5 transition-all duration-500 ease-in-out rounded-2xl
-                    lg:col-span-1 lg:m-0
-                    xl:col-span-1 xl:m-0
-                    2xl:col-span-1
-                    ${darkMode
+                   lg:col-span-1 lg:m-0
+                   xl:col-span-1 xl:m-0
+                   2xl:col-span-1
+                   ${darkMode
                                 ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
                                 : "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"
                             }`}
@@ -276,16 +285,16 @@ export default function National() {
                     {/* Text Content */}
                     <div
                         className="left mx-auto max-w-[640px] gap-5 flex flex-col justify-center items-center
-                            lg:col-span-8
-                            xl:col-span-7
-                            2xl:col-span-6 2xl:items-start 2xl:flex-wrap"
+                           lg:col-span-8
+                           xl:col-span-7
+                           2xl:col-span-6 2xl:items-start 2xl:flex-wrap"
                     >
                         <div className="flex flex-col gap-1">
                             <h2
                                 id="contact-section-heading"
                                 className="text-black text-[40px] text-center font-tajawal font-bold lg:text-start"
                             >
-                                {t("contactUs")}{" "}
+                                {t("contactUs")}
                                 <span
                                     className={`font-tajawal font-bold transition-all duration-500 ease-in-out ${darkMode ? "text-[#24246d]" : "text-[#333399]"
                                         }`}
@@ -308,16 +317,16 @@ export default function National() {
                     {/* Contact Button */}
                     <div
                         className="right m-5 mx-auto 
-                            lg:col-span-3 lg:m-0 lg:my-auto lg:mx-auto
-                            xl:col-span-4 xl:mx-auto
-                            2xl:col-span-5 2xl:mx-auto"
+                           lg:col-span-3 lg:m-0 lg:my-auto lg:mx-auto
+                           xl:col-span-4 xl:mx-auto
+                           2xl:col-span-5 2xl:mx-auto"
                     >
                         <div className="contactBtn">
                             <Link
-                                to="contact-us"
+                                to={"/contact-us"}
+                                onClick={() => scrollToTop()}
                                 className={`p-5 font-tajawal font-bold rounded-xl transition-all duration-500 ease-in-out
-                        ${darkMode
-                                        ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
+                       ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]"
                                         : "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"
                                     }`}
                                 aria-label={`${t("contctBtn")} - ${t("contactUs")}`}
