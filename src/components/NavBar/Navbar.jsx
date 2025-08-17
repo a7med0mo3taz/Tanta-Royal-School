@@ -94,7 +94,7 @@ export default function Navbar() {
 
 
 
-            <nav className={`bottomNav lg:mt-3 top-27 bg-[#2b2873] absolute  z-10 transition-all duration-500 ease-in-out
+            <nav className={`bottomNav  lg:mt-3 top-27 bg-[#2b2873] absolute  z-10 transition-all duration-500 ease-in-out
             ${darkMode ? "bg-[#091048] lg:bg-[#f4af0f] " : "bg-[##2b2873] lg:bg-[#ffcc00] "}
             lg:mr-15 lg:rounded-r-full lg:top-42 lg:right-0 lg:left-0 lg:translate-y-0
             xl:mr-10 
