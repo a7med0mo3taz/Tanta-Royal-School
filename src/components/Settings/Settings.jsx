@@ -13,7 +13,7 @@ export default function Settings() {
     const { darkMode, toggleTheme } = useModeContext();
 
     // language
-    const { currentLang, changeLanguage } = useLanguageContext();
+    const { currentLang, changeLanguage, isArabic } = useLanguageContext();
 
 
     // open settings
@@ -43,8 +43,9 @@ export default function Settings() {
 
 
     return (
-        <div className="fixed flex flex-col items-center gap-3 z-50 bottom-24 right-2
-        lg:bottom-6 lg:right-6  ">
+        <div className={`fixed flex flex-col items-center gap-3 z-50 bottom-24
+                        ${isArabic ? "right-2 lg:right-6 left-auto" : "left-2 lg:left-6 right-auto"}
+`}>
 
             {isSettingsOpen && (
                 <>

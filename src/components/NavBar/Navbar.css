@@ -15,7 +15,7 @@
 }
 .arExitBtn{
   top: 30px;
-  transform: translateX(-400px);
+  transform: translateX(50px);
 }
 .langExitBtn{
   top: 80px;
@@ -171,12 +171,12 @@
   .custom-navbar{
     width: 100%;
   }
-  .bottomNav{
+  /* .bottomNav{
   left: 0px;
   right: 0px;
   top: 100px;
   padding: 0px 10px;
-}
+} */
   .searchBar {
     padding: 10px;
     margin-right: -10px;

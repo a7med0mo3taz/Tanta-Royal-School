@@ -221,9 +221,7 @@ export default function FAQS() {
                                     >
                                         <h2 className="flex justify-between items-center">
                                             {t(key)}
-                                            <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
-
-                                            />
+                                            <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"/>
                                         </h2>
                                     </div>
 

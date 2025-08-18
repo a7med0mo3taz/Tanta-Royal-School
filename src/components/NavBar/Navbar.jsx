@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import 'flowbite/dist/flowbite.min.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun, faSearch, faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { } from '@fortawesome/free-regular-svg-icons';
 import logo from "../../assets/Photos/pho/Logo.webp"
 import BRLogo from "../../assets/Photos/pho/UK.webp"
@@ -24,6 +24,33 @@ export default function Navbar() {
     const [openLearn, setOpenLearn] = useState(false)
     const [openGallery, setOpenGallery] = useState(false)
     const [openBlog, setOpenBlog] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // fixed navbar
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // no scrolling when side nav opened 
+    useEffect(() => {
+        if (openNav) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [openNav]);
 
 
     // language
@@ -40,7 +67,7 @@ export default function Navbar() {
         });
     }
 
-    // small navbar animation
+
 
     return (
         <>
@@ -94,11 +121,11 @@ export default function Navbar() {
 
 
 
-            <nav className={`bottomNav  lg:mt-3 top-27 bg-[#2b2873] absolute  z-10 transition-all duration-500 ease-in-out
-            ${darkMode ? "bg-[#091048] lg:bg-[#f4af0f] " : "bg-[##2b2873] lg:bg-[#ffcc00] "}
-            lg:mr-15 lg:rounded-r-full lg:top-42 lg:right-0 lg:left-0 lg:translate-y-0
-            xl:mr-10 
-            2xl:mr-38 `} >
+            <nav className={`bottomNav z-10 transition-all duration-500 ease-in-out border-b border-white 
+                            lg:mr-15 lg:rounded-r-full lg:top-42 lg:right-0 lg:left-0 lg:mt-3 lg:border-0
+                            xl:mr-10 2xl:mr-38
+                            ${darkMode ? "bg-[#091048] lg:bg-[#f4af0f]" : "bg-[#2b2873] lg:bg-[#ffcc00]"}
+                            ${isScrolled ? "fixed top-0 left-0 right-0  lg:absolute" : "absolute top-25 lg:top-42"}`}>
                 <div className="max-w-screen-2xl mx-auto
                 lg:flex lg:items-center lg:gap-2 lg:justify-around lg:pl-2  lg:py-1 lg:ml-28 rtl:lg:ml-0
                 xl:gap-5 xl:py-1 xl:justify-center rtl:xl:gap-3 rtl:xl:ml-25
@@ -114,7 +141,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-center md:gap-100 gap-19 sm:gap-85 py-2 sm:py-1 md:order-2">
                         <div className="logo lg:hidden">
                             <Link to={""}>
-                                <img src={logo} alt="schoolLogo" loading='lazy' className='w-full h-10 mb-2' />
+                                <img src={logo} alt="schoolLogo" loading='lazy' className='w-full h-10  sm:h-15 mb-2' />
                             </Link>
                         </div>
                         <div className="icons relative flex items-center">
@@ -175,7 +202,7 @@ export default function Navbar() {
                             )}
                             {/* search */}
                             <button type="button" onClick={() => setShowSearch(!showSearch)} data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className=" lg:text-black  text-[#ffcc00] cursor-pointer text-sm p-2.5 me-1">
-                                <FontAwesomeIcon icon={faSearch} size="lg"/>
+                                <FontAwesomeIcon icon={faSearch} size="lg" />
                                 <span className="sr-only">Search</span>
                             </button>
                             {showSearch && (
@@ -183,13 +210,13 @@ export default function Navbar() {
                                     className={`mt-10 top-4 flex justify-center items-center gap-2 px-4 py-2 rounded-lg shadow-sm w-64 absolute
                                     ${isArabic ? 'arSearchBar' : 'searchBar'}`}
                                 >
-                                    
+
                                     <input
                                         type="text"
                                         className="p-2 w-full sm:w-auto flex-1 ring ring-[#2b2873] focus:ring-amber-300 outline-none rounded-lg"
                                         placeholder={t("search")}
                                     />
-                                    <FontAwesomeIcon icon={faSearch} size="lg" className='px-1'/>
+                                    <FontAwesomeIcon icon={faSearch} size="lg" className='px-1' />
                                 </div>
                             )}
                             {/* White/Dark mode */}
@@ -219,10 +246,14 @@ export default function Navbar() {
                         />
                     )}
                     {/* SideNav & nav links */}
-                    <div className={` fixed top-0 right-0 w-70 sm:w-90 h-screen flex flex-col  border-0 gap-70  lg:bg-transparent bg-[#2b2873]  z-50 transform transition-all duration-500 ease-in-out
-                    ${darkMode ? "bg-[#091048]  " : "bg-[#2b2873] "}
-                    ${openNav ? "translate-x-0 opacity-100 pointer-events-auto" : "translate-x-full opacity-0 pointer-events-none"}
-                    lg:static lg:translate-x-0 lg:opacity-100 lg:pointer-events-auto lg:w-auto lg:h-auto lg:flex lg:items-center`}
+                    <div className={`fixed top-0 h-screen flex flex-col border-0 gap-70 z-50 transform transition-all duration-500 ease-in-out
+                        ${darkMode ? "bg-[#091048]" : "bg-[#2b2873]"}
+                        ${openNav ?
+                            "translate-x-0 opacity-100 pointer-events-auto"
+                            : `${isArabic ? "-translate-x-full" : "translate-x-full"} opacity-0 pointer-events-none`}
+                        ${isArabic
+                            ? "left-0 w-70 sm:w-90 lg:static lg:right-auto lg:left-0"
+                            : "right-0 w-70 sm:w-90 lg:static lg:left-auto lg:right-0"}`}
                     >
                         {/* nav links */}
                         <div className={`lg:hidden text-3xl  absolute  ${isArabic ? 'arExitBtn' : 'exitBtn'}`}><FontAwesomeIcon icon={faXmark} className='cursor-pointer text-white' onClick={() => setOpenNav(prev => !prev)} />
@@ -263,9 +294,10 @@ export default function Navbar() {
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 ${isActive ? ' text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
-                                    }>{t("about")} <svg onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenDropdown(!openDropdown) }} className="w-4.5 h-4.5 ms-2.5 lg:w-3.5 lg:h-3.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
-                                        </svg></NavLink>
+                                    }>{t("about")}
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenDropdown(!openDropdown) }} className=""
+                                            icon={openDropdown ? faChevronUp : faChevronDown} size="lg" />
+                                    </NavLink>
 
                                     {/* Dropdown menu */}
                                     <ul className={`w-full  transition-all duration-500
@@ -334,9 +366,10 @@ export default function Navbar() {
                                         xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2 
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 `
-                                    }>{t("learning")} <svg className="w-4.5 h-4.5 ms-2.5 lg:w-3.5 lg:h-3.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
-                                        </svg></NavLink>
+                                    }>{t("learning")}
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenLearn(!openLearn) }} className=""
+                                            icon={openLearn ? faChevronUp : faChevronDown} size="lg" />
+                                    </NavLink>
                                     {/* Dropdown menu */}
                                     <div id="dropdownLearning" className={` lg:py-0 lg:text-sm lg:text-yellow-400 w-full transition-all duration-500 `}>
                                         <ul className={`w-full  transition-all duration-500
@@ -371,9 +404,8 @@ export default function Navbar() {
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 ${isActive ? ' text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
-                                    }>{t("gallery")} <svg onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenGallery(!openGallery) }} className="w-4.5 h-4.5 ms-2.5 lg:w-3.5 lg:h-3.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
-                                        </svg></NavLink>
+                                    }>{t("gallery")} <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenGallery(!openGallery) }} className=""
+                                            icon={openGallery ? faChevronUp : faChevronDown} size="lg" /></NavLink>
                                     {/* Dropdown menu */}
                                     <div className={`lg:py-0 lg:text-sm lg:text-yellow-400 w-full  transition-all duration-500 ${openGallery ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 hiDDen lg:hidden'
                                         }`}>
@@ -471,9 +503,10 @@ export default function Navbar() {
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 ${isActive ? 'text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
-                                    }>{t("Blog")} <svg onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenBlog(!openBlog) }} className="w-4.5 h-4.5 ms-2.5 lg:w-3.5 lg:h-3.5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
-                                        </svg></NavLink>
+                                    }>{t("Blog")} 
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenBlog(!openBlog) }} className=""
+                                            icon={openBlog ? faChevronUp : faChevronDown} size="lg" />
+                                        </NavLink>
                                     {/* Dropdown menu */}
                                     <div className={`w-full  transition-all duration-500
                                     xl:py-0 xl:text-sm xl:text-yellow-400

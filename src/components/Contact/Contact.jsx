@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useModeContext } from '../../context/modeContext';
 import { useLanguageContext } from '../../context/langContext';
-import { faHouse, faArrowRight, faArrowLeft, faEnvelope,  faLocationDot, faPhoneVolume, } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faArrowRight, faArrowLeft, faEnvelope, faLocationDot, faPhoneVolume, } from '@fortawesome/free-solid-svg-icons';
 import mainPhoto from "../../assets/Photos/pho/15.webp"
 import tag from "../../assets/Photos/pho/svg.webp"
 import * as Yup from "yup"
@@ -151,20 +151,24 @@ export default function Contact() {
                             </div>
                             {/* first */}
                             <div className=" flex flex-col  gap-3 px-3 lg:p-0">
-                                <span className='text-white text-lg  text-center px-10 font-tajawal font-bold
-                                                                                lg:px-0 lg:text-start 
-                                                                                '> {t("freeContact")} </span>
-                                <span className={` text-[38px] text-white text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                                                            lg:text-start
-                                                                            `}> {t("Keep")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
+                                <span className='text-white text-xl   text-center px-10 font-tajawal font-bold
+                                                lg:px-0 lg:text-start '>
+                                    {t("freeContact")}
+                                </span>
+                                <span className={` text-3xl mb-5 text-white text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                                sm:text-4xl 
+                                                lg:text-start lg:text-[38px]
+                                                `}> {t("Keep")}
+                                    <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                                                             ${darkMode ? "text-[#f4af0f]" : "text-[#ffcc00] "}
                                                                             `}> {t("WithUs")} </span> </span>
                             </div>
                             <div className="  mb-5">
                                 <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full mb-3
+                                                                            sm:px-1 sm:text-lg
                                                                             lg:text-start
                                                                             '> {t("contactPageP")} </p>
-                                <p className={`  font-tajawal font-bold text-center lg:text-start  transition-all duration-500 ease-in-out text-[#aaaaaa] `}> 📌 {t("contactPagePin")} </p>
+                                <p className={`  font-tajawal sm:px-1 sm:text-lg font-bold text-center lg:text-start  transition-all duration-500 ease-in-out text-[#aaaaaa] `}> 📌 {t("contactPagePin")} </p>
                             </div>
 
                         </div>
@@ -178,7 +182,7 @@ export default function Contact() {
                                 <form action="#" className="space-y-8">
                                     {/* name */}
                                     <div className="relative z-0 w-full mb-5 group ">
-                                        <label htmlFor="name" className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("name")} </label>
+                                        <label htmlFor="name" className={`block mb-2 text-sm sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("name")}  <span className='text-red-500'>* </span></label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.name} type="text" name="name" id="name" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg max-w-4xl block w-full p-2.5" placeholder={` ${t("namePlace")} `} required />
                                         {
                                             formic.errors.name && (
@@ -189,7 +193,7 @@ export default function Contact() {
 
                                     {/* email */}
                                     <div className="relative z-0 w-full mb-5 group">
-                                        <label htmlFor="email" className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("email")}</label>
+                                        <label htmlFor="email" className={`block mb-2 text-sm sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("email")} <span className='text-red-500'>* </span></label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.email} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full max-w-4xl p-2.5" placeholder={` ${t("emailPlace")} `} required />
                                     </div>
                                     {
@@ -201,12 +205,12 @@ export default function Contact() {
 
                                     {/* Phone number */}
                                     <div className="relative z-0 w-full mb-5 group">
-                                        <label htmlFor="Phone" className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("phone")}</label>
+                                        <label htmlFor="Phone" className={`block mb-2 text-sm sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("phone")} <span className='text-red-500'>* </span></label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.Phone} type="text" name="Phone" id="Phone" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg  max-w-4xl block w-full p-2.5" required />
                                     </div>
 
                                     {/* textarea */}
-                                    <label htmlFor="message" className={`block mb-2 text-sm font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("msg")}</label>
+                                    <label htmlFor="message" className={`block mb-2 text-sm sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("msg")} <span className='text-red-500'>* </span></label>
                                     <textarea
                                         maxLength={maxChar}
                                         className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg h-30  max-w-4xl block w-full p-2.5"
@@ -222,8 +226,9 @@ export default function Contact() {
                                     <div className="formBtn ">
                                         <button type='submit' className={` p-5 font-tajawal font-bold cursor-pointer rounded-xl transition-all duration-500 ease-in-out
                                                 ${darkMode ? "text-[#f4af0f] bg-[#091048]  " :
-                                                "text-[#ffcc00] bg-[#2b2873] "}
-                            `} >  {t("send")} </button>
+                                                "text-[#ffcc00] bg-[#2b2873] "}`} >
+                                            {t("send")}
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -234,38 +239,26 @@ export default function Contact() {
                     {/* Third */}
                     <div className="grid grid-cols-12 relative gap-3 ">
                         {/* hotLine */}
-                        <div className={`  col-span-12 lg:col-span-6 p-5 rounded-2xl border-2  ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]   border-[#091048] "
+                        <div className={`  col-span-12 lg:col-span-12 p-5 rounded-2xl border-2  ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]   border-[#091048] "
                             : " hover:text-[#ffcc00] hover:bg-[#2b2873] bg-[#ffcc00] text-[#2b2873] border-[#2b2873] "} transition-all duration-500 ease-in-out `}>
                             <div className={`msgIcon  mx-auto flex justify-center items-center text-[20px] p-5 transition-all duration-500 ease-in-out rounded-2xl
                                                                     lg:col-span-1 lg:m-0 
                                                                     xl:col-span-1 xl:m-0 xl:mt-3
                                                                     2xl:col-span-1 2xl:mt-0
                                                                     `}>
-                                <FontAwesomeIcon icon={faPhoneVolume} size="2xl" />
+                                <FontAwesomeIcon icon={faPhoneVolume} className='text-2xl sm:text-5xl' />
                             </div>
                             <div className="flex flex-col justify-center items-center ">
-                                <a href="tel:19" target='_blank' className='p-2 text-sm lg:text-[16px] font-almarai font-bold '> {t("hotline")} </a>
-                                <p className='font-almarai font-bold'>17418</p>
+                                <a href="tel:19" target='_blank' className='p-2 text-sm sm:text-3xl lg:text-[16px] font-almarai font-bold '> {t("hotline")} </a>
+                                <p className='font-almarai text-sm sm:text-3xl lg:text-[16px] font-bold'>17418</p>
                             </div>
                         </div>
                         {/* location */}
-                        <div className={`  col-span-12 lg:col-span-6 p-5 rounded-2xl border-2 ${darkMode ? "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]   border-[#091048] "
-                            : " hover:text-[#ffcc00] hover:bg-[#2b2873] bg-[#ffcc00] text-[#2b2873] border-[#2b2873] "} transition-all duration-500 ease-in-out `}>
-                            <div className={`msgIcon  mx-auto flex  justify-center items-center text-[20px] p-5 transition-all duration-500 ease-in-out rounded-2xl
-                                                                    lg:col-span-1 lg:m-0 
-                                                                    xl:col-span-1 xl:m-0 xl:mt-3
-                                                                    2xl:col-span-1 2xl:mt-0
-                                                                    `}>
-                                <FontAwesomeIcon icon={faLocationDot} size="2xl" />
-                            </div>
-                            <div className="flex flex-col justify-center items-center ">
-                                <a href="https://maps.app.goo.gl/gHBC8f1FLKZKHC5EA" target='_blank' className='p-2 text-sm lg:text-[16px] font-almarai font-bold '> {t("OfficeAddress")} </a>
-                            </div>
+
+                        {/* map */}
+                        <div className="map col-span-12 mt-5 ">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7300.4093962072275!2d30.985869!3d30.800193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7cb771388b987%3A0x264d5576a6d5071a!2z2YXYr9in2LHYsyDYsdmI2YrYp9mEINi32YbYt9inINin2YTYrtin2LXYqSDZhNmE2LrYp9iq!5e1!3m2!1sar!2seg!4v1755109070096!5m2!1sar!2seg" width={600} height={450} style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='w-full rounded-2xl' />
                         </div>
-                    {/* map */}
-                    <div className="map col-span-12 mt-5 ">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7300.4093962072275!2d30.985869!3d30.800193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7cb771388b987%3A0x264d5576a6d5071a!2z2YXYr9in2LHYsyDYsdmI2YrYp9mEINi32YbYt9inINin2YTYrtin2LXYqSDZhNmE2LrYp9iq!5e1!3m2!1sar!2seg!4v1755109070096!5m2!1sar!2seg" width={600} height={450} style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className='w-full rounded-2xl' />
-                    </div>
                     </div>
 
 
