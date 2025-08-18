@@ -47,7 +47,7 @@ export default function Gallery() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">

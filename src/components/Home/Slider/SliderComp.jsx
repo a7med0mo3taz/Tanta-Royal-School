@@ -27,9 +27,10 @@ export default function SliderComp() {
     return (
         <div className="w-full px-4 md:px-10 overflow-hidden">
             <Swiper
+                dir="rtl"
                 modules={[Autoplay]}
                 spaceBetween={20}
-                slidesPerView={1}   // ✅ البداية للموبايل
+                slidesPerView={1}
                 loop={true}
                 autoplay={{ delay: 2000, disableOnInteraction: false }}
                 breakpoints={{

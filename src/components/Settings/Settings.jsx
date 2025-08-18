@@ -49,12 +49,15 @@ export default function Settings() {
             {isSettingsOpen && (
                 <>
                     {/* Dark mode toggle */}
-                    <div onClick={toggleTheme} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
+                    <div onClick={() => {
+                        toggleTheme();
+                        setIsSettingsOpen(!isSettingsOpen);
+                    }} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-3  '>
                         {darkMode ? (
-                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] '/> 
-                        ): (
-                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' /> 
+                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] ' />
+                        ) : (
+                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' />
                         )}
                     </div>
 
@@ -63,18 +66,31 @@ export default function Settings() {
                     <div className=" animate-slide-up px-3 py-4 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-5
                     ">
+
                         {currentLang === 'en' ? (
-                            <div onClick={() => changeLanguage('ar')}>
-                                <img src={Ar} alt="englishLan" />
+                            <div
+                                onClick={() => {
+                                    changeLanguage('ar');
+                                    setIsSettingsOpen(!isSettingsOpen);
+                                }}
+                            >
+                                <img src={Ar} alt="arabicLan" />
                             </div>
                         ) : (
-                            <div onClick={() => changeLanguage('en')}>
+                            <div
+                                onClick={() => {
+                                    changeLanguage('en');
+                                    setIsSettingsOpen(!isSettingsOpen);
+                                }}
+                            >
                                 <img src={En} alt="englishLan" />
                             </div>
                         )}
+
                     </div>
                 </>
-            )}
+            )
+            }
             {/* Settings  */}
             <button
                 onClick={() => setIsSettingsOpen(!isSettingsOpen)}
@@ -106,6 +122,6 @@ export default function Settings() {
 
 
 
-        </div>
+        </div >
     )
 }

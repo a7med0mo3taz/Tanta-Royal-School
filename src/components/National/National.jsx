@@ -139,7 +139,7 @@ export default function National() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -175,8 +175,9 @@ export default function National() {
                         </div>
 
                         <div className=" flex flex-col gap-3 px-3 lg:p-0">
-                            <h2 className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                lg:text-start
+                            <h2 className={` text-3xl mb-5  text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                sm:text-4xl 
+                                lg:text-start lg:text-[38px]
                                 ${darkMode ? "text-white" : "text-black "}
                                 `}> {t("NationalSchools")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                 ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
@@ -185,6 +186,7 @@ export default function National() {
 
                         <div className="">
                             <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                                sm:px-1 sm:text-lg
                                 lg:text-start
                                 '> {t("NationalP1")} </p>
                         </div>
@@ -192,17 +194,11 @@ export default function National() {
                     </div>
                     <div className="right mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                         lg:col-span-7 lg:items-start">
-                        <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
-                                    sm:left-5 sm:top-17  rtl:sm:top-17
-                                    md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
-                                    xl:left-5 
-                                    2xl:left-5 
-                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                                    `}></div>
+                        
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}>
-                            <img src={school} style={style} alt="international" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl border" loading='lazy' />
+                            <img src={school} style={style} alt="international" className=" w-[250px]  sm:w-[400px] mx-auto h-full object-cover rounded-xl border" loading='lazy' />
                         </div>
 
                     </div>

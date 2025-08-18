@@ -3,7 +3,7 @@ import "./Navbar.css"
 import 'flowbite/dist/flowbite.min.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faLanguage, faUpRightFromSquare, faQuestion, faPeopleGroup, faHeadset, faEllipsis, faXmark, faPhoneVolume, faMoon, faSun, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { } from '@fortawesome/free-regular-svg-icons';
 import logo from "../../assets/Photos/pho/Logo.webp"
 import BRLogo from "../../assets/Photos/pho/UK.webp"
@@ -32,7 +32,7 @@ export default function Navbar() {
     // dark mode
     const { darkMode, toggleTheme } = useModeContext();
 
-// scroll to top
+    // scroll to top
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -114,7 +114,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-center md:gap-100 gap-19 sm:gap-85 py-2 sm:py-1 md:order-2">
                         <div className="logo lg:hidden">
                             <Link to={""}>
-                                <img src={logo} alt="schoolLogo"  loading='lazy' className='w-full h-10 mb-2' />
+                                <img src={logo} alt="schoolLogo" loading='lazy' className='w-full h-10 mb-2' />
                             </Link>
                         </div>
                         <div className="icons relative flex items-center">
@@ -175,9 +175,7 @@ export default function Navbar() {
                             )}
                             {/* search */}
                             <button type="button" onClick={() => setShowSearch(!showSearch)} data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className=" lg:text-black  text-[#ffcc00] cursor-pointer text-sm p-2.5 me-1">
-                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                                </svg>
+                                <FontAwesomeIcon icon={faSearch} size="lg"/>
                                 <span className="sr-only">Search</span>
                             </button>
                             {showSearch && (
@@ -185,13 +183,13 @@ export default function Navbar() {
                                     className={`mt-10 top-4 flex justify-center items-center gap-2 px-4 py-2 rounded-lg shadow-sm w-64 absolute
                                     ${isArabic ? 'arSearchBar' : 'searchBar'}`}
                                 >
+                                    
                                     <input
                                         type="text"
-                                        className=" border  mt-1  py-1 border-yellow-400 rounded-sm shadow-sm rtl:text-right"
+                                        className="p-2 w-full sm:w-auto flex-1 ring ring-[#2b2873] focus:ring-amber-300 outline-none rounded-lg"
+                                        placeholder={t("search")}
                                     />
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                                    </svg>
+                                    <FontAwesomeIcon icon={faSearch} size="lg" className='px-1'/>
                                 </div>
                             )}
                             {/* White/Dark mode */}
@@ -563,7 +561,7 @@ export default function Navbar() {
             <div className={`fixed flex bottom-0  border-t border-white left-0 z-8 w-full justify-start items-center  overflow-hidden h-22 bg-[#2b2873] lg:hidden  transition-all duration-500 ease-in-out
             ${darkMode ? "bg-[#091048] " : "bg-[##2b2873]"}
             `}>
-                <div className=" flex justify-center items-center gap-2 sm:gap-10 md:gap-18 w-full overflow-hidden h-22 font-medium ">
+                <div className=" flex justify-center items-center  sm:gap-10 md:gap-18 w-full overflow-hidden h-22 font-medium ">
                     <NavLink to={""} onClick={() => scrollToTop()} className={({ isActive }) =>
                         `inline-flex flex-col items-center  justify-center h-full px-3.75 py-7 group transition-colors duration-500
                         ${isActive ? `${darkMode ? "text-[#f4af0f] " : "text-[#ffcc00] "}`
@@ -603,7 +601,7 @@ export default function Navbar() {
                         className={`inline-flex flex-col items-center justify-center px-3.75 py-7 
                     ${darkMode ? "text-white hover:text-[#f4af0f]" : "text-white hover:text-[#ffcc00] "}
                     `}>
-                        <FontAwesomeIcon icon={faWhatsapp}  className="text-lg sm:text-2xl  w-5 h-5 mb-2  transition-colors duration-300" />
+                        <FontAwesomeIcon icon={faWhatsapp} className="text-lg sm:text-2xl  w-5 h-5 mb-2  transition-colors duration-300" />
                         <span className="text-[12px] sm:text-lg  text-current transition-colors duration-300">{t("whatsapp")}</span>
                     </a>
                 </div>
