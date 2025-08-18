@@ -144,7 +144,6 @@ export default function FAQS() {
                     </div>
                 </div>
 
-
             </section>
 
             {/* FAQ section  */}

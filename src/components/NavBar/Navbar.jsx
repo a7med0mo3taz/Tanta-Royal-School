@@ -563,7 +563,7 @@ export default function Navbar() {
             <div className={`fixed flex bottom-0  border-t border-white left-0 z-8 w-full justify-start items-center  overflow-hidden h-22 bg-[#2b2873] lg:hidden  transition-all duration-500 ease-in-out
             ${darkMode ? "bg-[#091048] " : "bg-[##2b2873]"}
             `}>
-                <div className=" flex justify-center items-center sm:gap-10 md:gap-18 w-full overflow-hidden h-22 font-medium ">
+                <div className=" flex justify-center items-center gap-2 sm:gap-10 md:gap-18 w-full overflow-hidden h-22 font-medium ">
                     <NavLink to={""} onClick={() => scrollToTop()} className={({ isActive }) =>
                         `inline-flex flex-col items-center  justify-center h-full px-3.75 py-7 group transition-colors duration-500
                         ${isActive ? `${darkMode ? "text-[#f4af0f] " : "text-[#ffcc00] "}`
