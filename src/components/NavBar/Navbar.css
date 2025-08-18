@@ -29,6 +29,11 @@
   transform: translateX(360px);
 }
 
+:dir(rtl) .hiDDen {
+  transform: translateX(-360px);
+}
+
+
 .FBIcon:hover {
   color: #0866ff;
   transition: transform 0.5s ease;
@@ -171,12 +176,6 @@
   .custom-navbar{
     width: 100%;
   }
-  /* .bottomNav{
-  left: 0px;
-  right: 0px;
-  top: 100px;
-  padding: 0px 10px;
-} */
   .searchBar {
     padding: 10px;
     margin-right: -10px;
@@ -198,7 +197,7 @@
   margin-right: -26px;
   margin-left: -26px;
   top: 30px;
-  right: -110px;
+  right: -80px;
   position: absolute;
 }
 .arSearchBar::before {
