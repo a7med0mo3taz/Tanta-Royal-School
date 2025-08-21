@@ -131,6 +131,7 @@ export default function Navbar() {
 
 
             <nav className={`bottomNav z-10 transition-all duration-500 ease-in-out border-b border-white 
+                            
                             lg:mr-15 lg:rounded-r-full lg:top-42 lg:right-0 lg:left-0 lg:mt-3 lg:border-0
                             xl:mr-10
                             2xl:mr-38
@@ -148,7 +149,7 @@ export default function Navbar() {
                         <a href="https://www.facebook.com/trs2030/" target='_blank'><FontAwesomeIcon icon={faInstagram} size="xl" className='INIcon' /></a>
                         <a href="https://api.whatsapp.com/send/?phone=201090196772&text&type=phone_number&app_absent=0" target='_blank'><FontAwesomeIcon icon={faWhatsapp} size="xl" className='WAIcon' /></a>
                     </div>
-                    <div className="flex items-center justify-center md:gap-100 gap-19 sm:gap-77 py-2 sm:py-1 md:order-2">
+                    <div className="flex items-center justify-center md:gap-100 gap-19 sm:gap-65 py-2 sm:py-1 md:order-2">
                         <div className="logo lg:hidden">
                             <Link to={""}>
                                 <img src={logo} alt="schoolLogo" loading='lazy' className='w-full h-10  sm:h-14 mb-2' />
@@ -303,7 +304,7 @@ export default function Navbar() {
                                 ${isActive ? ' text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
                                     }>{t("about")}
-                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenDropdown(!openDropdown) }} className=""
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenDropdown(!openDropdown) ;setOpenLearn(false) ; setOpenGallery(false) ; setOpenBlog(false) }} className=""
                                             icon={openDropdown ? faChevronUp : faChevronDown} size="lg" />
                                     </NavLink>
 
@@ -368,14 +369,14 @@ export default function Navbar() {
                             xl:mr-5 rtl:xl:ml-5
                             '>
                                 <div className='flex flex-col justify-center items-center'>
-                                    <NavLink onClick={() => { setOpenLearn(!openLearn) }} className={
-                                        ` py-2.5 px-5 border-b  flex justify-between items-center  w-full  hover:pl-6   transition-all duration-300 ease-out
+                                    <NavLink onClick={() => { setOpenLearn(!openLearn)}}
+                                    className={` py-2.5 px-5 border-b  flex justify-between items-center  w-full  hover:pl-6   transition-all duration-300 ease-out
                                         lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                         xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2 
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 `
                                     }>{t("learning")}
-                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenLearn(!openLearn) }} className=""
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenLearn(!openLearn); setOpenDropdown(false) ; setOpenGallery(false) ; setOpenBlog(false)  }} className=""
                                             icon={openLearn ? faChevronUp : faChevronDown} size="lg" />
                                     </NavLink>
                                     {/* Dropdown menu */}
@@ -412,7 +413,7 @@ export default function Navbar() {
                                 ${darkMode ? "bg-[#091048] border-b-[#43417d] hover:text-[#f4af0f] hover:bg-[#3c397e95] lg:bg-transparent " : "bg-[#2b2873] border-b-[#43417d] hover:text-[#ffcc00]  lg:bg-transparent"}
                                 ${isActive ? ' text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
-                                    }>{t("gallery")} <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenGallery(!openGallery) }} className=""
+                                    }>{t("gallery")} <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenGallery(!openGallery) ; setOpenDropdown(false) ;setOpenLearn(false)  ; setOpenBlog(false) }} className=""
                                         icon={openGallery ? faChevronUp : faChevronDown} size="lg" /></NavLink>
                                     {/* Dropdown menu */}
                                     <div className={`lg:py-0 lg:text-sm lg:text-yellow-400 w-full  transition-all duration-500 ${openGallery ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 hiDDen lg:hidden'
@@ -512,7 +513,7 @@ export default function Navbar() {
                                 ${isActive ? 'text-yellow-400 bg-[#3c397e] lg:text-[#3c397e] lg:bg-transparent lg:border-b-2 lg:border-[#3c397e] xl:border-b-2' : ''}
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}`
                                     }>{t("Blog")}
-                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenBlog(!openBlog) }} className=""
+                                        <FontAwesomeIcon onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpenBlog(!openBlog) ; setOpenDropdown(false) ;setOpenLearn(false) ; setOpenGallery(false)  }} className=""
                                             icon={openBlog ? faChevronUp : faChevronDown} size="lg" />
                                     </NavLink>
                                     {/* Dropdown menu */}
@@ -581,9 +582,9 @@ export default function Navbar() {
                                 ${isActive && darkMode ? 'text-[#f4af0f]' : ''}
                                 `} aria-current="page"><FontAwesomeIcon icon={faHeadset} className='lg:mr-2' /> {t("contact")} </NavLink>
                             </li>
-
+                        </ul>
                             {/* socials */}
-                            <li className='mt-30 pt-7.5 sm:mt-70 md:mt-100 lg:hidden flex flex-col justify-center items-center translate-y-120  absolute sideSocials'>
+                            <li className='mt-30 pt-7.5 sm:mt-100 md:mt-100 lg:hidden flex flex-col justify-center items-center translate-y-120  absolute sideSocials'>
                                 <div className=' text-center mb-2 lg:hidden flex justify-center items-center gap-2'>
                                     <a className='bg-[#3c397e] p-3 text-white rounded-lg FBSIcon' href="https://www.facebook.com/trs2030/" target='_blank'><FontAwesomeIcon icon={faFacebookF} size="xl" className='FBIcon2' /></a>
                                     <a className='bg-[#3c397e] p-3 text-white rounded-lg LISIcon' href="https://www.linkedin.com/company/tanta-royal-international-schools/" target='_blank'><FontAwesomeIcon icon={faLinkedinIn} size="xl" className='LIIcon2' /></a>
@@ -593,7 +594,6 @@ export default function Navbar() {
                                 <p className=' text-[10px] px-5 sm:px-15  text- text-white'> {t("footer")} </p>
                                 <Link to={"/privacy-policy"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={`text-white ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"} transition-all duration-500 ease-in-out`} > {t("policy")} </Link>
                             </li>
-                        </ul>
                     </div>
                 </div >
             </nav >
