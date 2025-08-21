@@ -26,6 +26,7 @@ export default function Navbar() {
     const [openBlog, setOpenBlog] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false);
 
+
     // language
     const { currentLang, isArabic, changeLanguage, openLang, t, setOpenLang } = useLanguageContext();
 
@@ -49,6 +50,7 @@ export default function Navbar() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
 
     // no scrolling when side nav opened 
     // useEffect(() => {
