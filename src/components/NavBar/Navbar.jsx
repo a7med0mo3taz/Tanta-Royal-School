@@ -26,7 +26,13 @@ export default function Navbar() {
     const [openBlog, setOpenBlog] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // fixed navbar
+    // language
+    const { currentLang, isArabic, changeLanguage, openLang, t, setOpenLang } = useLanguageContext();
+
+    // dark mode
+    const { darkMode, toggleTheme } = useModeContext();
+
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -35,24 +41,29 @@ export default function Navbar() {
                 setIsScrolled(false);
             }
         };
+
         window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     // no scrolling when side nav opened 
-    useEffect(() => {
-        if (openNav) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+    // useEffect(() => {
+    //     if (openNav) {
+    //         document.body.style.overflow = "hidden";
+    //     } else {
+    //         document.body.style.overflow = "auto";
+    //     }
 
-        return () => {
-            document.body.style.overflow = "auto";
-        };
-    }, [openNav]);
+    //     return () => {
+    //         document.body.style.overflow = "auto";
+    //     };
+    // }, [openNav]);
 
-// scroll to top
+    // scroll to top
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -226,9 +237,7 @@ export default function Navbar() {
                             {/* side nav btn */}
                             <button type="button" onClick={() => setOpenNav(prev => !prev)} className="inline-flex cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden text-[#ffcc00]"
                             >                                <span className="sr-only">Open main menu</span>
-                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 1h15M1 7h15M1 13h15" />
-                                </svg>
+                                <FontAwesomeIcon icon={faBars} className='text-lg sm:text-3xl lg:text-lg' />
                             </button>
                         </div>
                     </div>
@@ -250,7 +259,7 @@ export default function Navbar() {
                     >
 
                         {/* nav links */}
-                        <div className={`lg:hidden text-3xl  absolute  ${isArabic ? 'arExitBtn' : 'exitBtn'}`}><FontAwesomeIcon icon={faXmark} className='cursor-pointer text-white' onClick={() => {setOpenNav(prev => !prev)}} />
+                        <div className={`lg:hidden text-3xl  absolute  ${isArabic ? 'arExitBtn' : 'exitBtn'}`}><FontAwesomeIcon icon={faXmark} className='cursor-pointer text-white' onClick={() => { setOpenNav(prev => !prev) }} />
                         </div>
                         <ul className="flex  flex-col mt-0 font-medium 
                         lg:flex-row  lg:border-0 lg:items-center lg:justify-center lg:bg-transparent lg:space-x-8 
@@ -261,7 +270,7 @@ export default function Navbar() {
                             lg:mr-3 rtl:lg:mr-0
                             xl:mr-5  rtl:xl:ml-5
                             '>
-                                <NavLink to={""} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                <NavLink to={""} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                     `block border-b py-2.5 px-5 w-full hover:pl-6 transition-all duration-300 ease-in-out  
                                     lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                     xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2
@@ -281,7 +290,7 @@ export default function Navbar() {
                             xl:mr-5 rtl:xl:ml-5
                             '>
                                 <div className='flex flex-col justify-center items-center'>
-                                    <NavLink to={"about-us"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                    <NavLink to={"about-us"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                         ` py-2.5 px-5 border-b  flex justify-between items-center  w-full  hover:pl-6   transition-all duration-300 ease-out
                                         lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                         xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2 
@@ -335,7 +344,7 @@ export default function Navbar() {
                             lg:mr-3 rtl:lg:mr-0 
                             xl:mr-5 rtl:xl:ml-5
                             '>
-                                <NavLink to={"faq"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                <NavLink to={"faq"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                     ` block border-b  py-2.5 px-5 w-full   hover:pl-6  transition-all duration-300 ease-in-out  
                                 lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                 xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2
@@ -391,7 +400,7 @@ export default function Navbar() {
                             xl:mr-5 rtl:xl:ml-5
                             '>
                                 <div className='flex flex-col justify-center items-center'>
-                                    <NavLink to={"gallery"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                    <NavLink to={"gallery"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                         ` py-2.5 px-5 border-b  flex justify-between items-center  w-full  hover:pl-6   transition-all duration-300 ease-out
                                         lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                         xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2 
@@ -410,11 +419,11 @@ export default function Navbar() {
                                         ${openGallery ? 'lg:top-14 max-h-[500px] opacity-100 ' : 'max-h-0 opacity-0 hiDDen lg:hidden'}`}>
                                             <li className='text-white opacity-50 p-2 pl-5 border-b text-sm  cursor-pointer hover:opacity-100 
                                             lg:border-b-0 lg:p-2 '>
-                                                <NavLink to={"/gallery/photos"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className="lg:block  lg:px-4 lg:py-2 lg:text-black ">{t("Photos")}</NavLink>
+                                                <NavLink to={"/gallery/photos"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className="lg:block  lg:px-4 lg:py-2 lg:text-black ">{t("Photos")}</NavLink>
                                             </li>
                                             <li className='text-white opacity-50 p-2 pl-5 border-b text-sm  cursor-pointer hover:opacity-100 
                                             lg:border-b-0 lg:p-2'>
-                                                <NavLink to={"/gallery/videos"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className="lg:block lg:px-4 lg:py-2 lg:text-black ">{t("Videos")}</NavLink>
+                                                <NavLink to={"/gallery/videos"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className="lg:block lg:px-4 lg:py-2 lg:text-black ">{t("Videos")}</NavLink>
                                             </li>
                                         </ul>
 
@@ -427,7 +436,7 @@ export default function Navbar() {
                             lg:mr-3 rtl:lg:mr-0
                             xl:mr-5 rtl:xl:ml-5
                             '>
-                                <NavLink to={"careers"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                <NavLink to={"careers"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                     ` block border-b  py-2.5 px-5 w-full   hover:pl-6  transition-all duration-300 ease-in-out  
                                 lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                 xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2
@@ -446,10 +455,10 @@ export default function Navbar() {
                                     <ul className="py-2 text-sm text-yellow-400 ">
                                         <li>
                                             <div>
-                                                <NavLink to={"blog"} onClick={() =>  scrollToTop()} id="dropdownBlogLink" data-dropdown-toggle="dropdownBlog"
+                                                <NavLink to={"blog"} onClick={() => scrollToTop()} id="dropdownBlogLink" data-dropdown-toggle="dropdownBlog"
                                                     className="flex cursor-pointer hover:border-b-blue-800 text-black items-center justify-between w-full py-2.5 px-5 border-b border-b-[#43417d] rounded-sm 
                                                     lg:py-1  md:hover:bg-transparent md:border-0  md:p-0 md:w-auto  "
-                                                >{t("Blog")} <svg onClick={(e) => { e.preventDefault(); setOpenBlog(!openBlog) ; scrollToTop() }} className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                >{t("Blog")} <svg onClick={(e) => { e.preventDefault(); setOpenBlog(!openBlog); scrollToTop() }} className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 1 4 4 4-4" />
                                                     </svg></NavLink>
                                                 {/* Dropdown menu */}
@@ -464,20 +473,20 @@ export default function Navbar() {
                                                     xl:hidden`}
                                                     >
                                                         <li>
-                                                            <NavLink to={"blog/articles"} onClick={() =>  scrollToTop()} className="block px-4 py-2 text-black ">{t("Articles")}</NavLink>
+                                                            <NavLink to={"blog/articles"} onClick={() => scrollToTop()} className="block px-4 py-2 text-black ">{t("Articles")}</NavLink>
                                                         </li>
                                                         <li>
-                                                            <NavLink to={"blog/news"} onClick={() =>  scrollToTop()} className="block px-4 py-2 text-black ">{t("News & Event")}</NavLink>
+                                                            <NavLink to={"blog/news"} onClick={() => scrollToTop()} className="block px-4 py-2 text-black ">{t("News & Event")}</NavLink>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <NavLink to={"uniform"} onClick={() =>  scrollToTop()} className="block lg:py-1 px-4   rounded-sm md:bg-transparent md:text-black md:p-0"><FontAwesomeIcon icon={faPeopleGroup} /> {t("Uniform")} </NavLink>
+                                            <NavLink to={"uniform"} onClick={() => scrollToTop()} className="block lg:py-1 px-4   rounded-sm md:bg-transparent md:text-black md:p-0"><FontAwesomeIcon icon={faPeopleGroup} /> {t("Uniform")} </NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to={"contact-us"} onClick={() =>  scrollToTop()} className="block lg:py-1 px-4   rounded-sm md:bg-transparent md:text-black md:p-0"><FontAwesomeIcon icon={faHeadset} /> {t("contact")} </NavLink>
+                                            <NavLink to={"contact-us"} onClick={() => scrollToTop()} className="block lg:py-1 px-4   rounded-sm md:bg-transparent md:text-black md:p-0"><FontAwesomeIcon icon={faHeadset} /> {t("contact")} </NavLink>
                                         </li>
                                     </ul>
                                 </div>
@@ -490,7 +499,7 @@ export default function Navbar() {
                             xl:mr-5 xl:block rtl:xl:ml-5
                             '>
                                 <div className='flex flex-col justify-center items-center'>
-                                    <NavLink to={"blog"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                    <NavLink to={"blog"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                         ` py-2.5 px-5 border-b  flex justify-between items-center  w-full  hover:pl-6   transition-all duration-300 ease-out
                                         lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                         xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2 
@@ -512,11 +521,11 @@ export default function Navbar() {
                                         ${openBlog ? 'lg:top-14 max-h-[500px] opacity-100 ' : 'max-h-0 opacity-0 hiDDen lg:hidden'}`}>
                                             <li className='text-white opacity-50 p-2 pl-5 border-b text-sm  cursor-pointer hover:opacity-100 
                                             xl:border-b-0 xl:p-2 '>
-                                                <NavLink to={"blog/articles"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className="xl:block xl:px-4 xl:py-2 xl:text-black xl:hover:text[#3c397e] ">{t("Articles")}</NavLink>
+                                                <NavLink to={"blog/articles"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className="xl:block xl:px-4 xl:py-2 xl:text-black xl:hover:text[#3c397e] ">{t("Articles")}</NavLink>
                                             </li>
                                             <li className='text-white opacity-50 p-2 pl-5 border-b text-sm  cursor-pointer hover:opacity-100 
                                             xl:border-b-0 xl:p-2 '>
-                                                <NavLink to={"blog/news"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className="xl:block xl:px-4 xl:py-2 xl:text-black ">{t("News & Event")}</NavLink>
+                                                <NavLink to={"blog/news"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className="xl:block xl:px-4 xl:py-2 xl:text-black ">{t("News & Event")}</NavLink>
                                             </li>
                                         </ul>
                                     </div>
@@ -528,7 +537,7 @@ export default function Navbar() {
                             rtl:lg:mr-0                             
                             xl:mr-5 rtl:xl:ml-5
                             '>
-                                <NavLink to={"uniform"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                <NavLink to={"uniform"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                     ` block border-b  py-2.5 px-5 w-full   hover:pl-6  transition-all duration-300 ease-in-out  
                                 lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                 xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2
@@ -558,7 +567,7 @@ export default function Navbar() {
                             {/* contact */}
                             <li className='2xl:hidden lg:hidden  text-white contact
                             '>
-                                <NavLink to={"contact-us"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={({ isActive }) =>
+                                <NavLink to={"contact-us"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={({ isActive }) =>
                                     ` block border-b  py-2.5 px-5 w-full   hover:pl-6  transition-all duration-300 ease-in-out  
                                 lg:flex lg:items-center lg:px-0 lg:text-black lg:hover:pl-0 lg:hover:bg-transparent lg:hover:text-[#3c397e] lg:border-b-0 lg:hover:border-b-2 
                                 xl:flex xl:items-center xl:px-0 xl:text-black xl:hover:pl-0 xl:hover:bg-transparent xl:hover:text-[#3c397e] xl:border-b-0 xl:hover:border-b-2
@@ -577,7 +586,7 @@ export default function Navbar() {
                                     <a className='bg-[#3c397e] p-3 text-white rounded-lg WASIcon' href="https://api.whatsapp.com/send/?phone=201090196772&text&type=phone_number&app_absent=0" target='_blank'><FontAwesomeIcon icon={faWhatsapp} size="xl" className='WAIcon2' /></a>
                                 </div>
                                 <p className=' text-[10px] px-5 sm:px-15  text- text-white'> {t("footer")} </p>
-                                <Link to={"/privacy-policy"} onClick={() => {setOpenNav(prev => !prev) ; scrollToTop()}} className={`text-white ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"} transition-all duration-500 ease-in-out`} > {t("policy")} </Link>
+                                <Link to={"/privacy-policy"} onClick={() => { setOpenNav(prev => !prev); scrollToTop() }} className={`text-white ${darkMode ? "hover:text-[#f4af0f]" : "hover:text-[#ffcc00]"} transition-all duration-500 ease-in-out`} > {t("policy")} </Link>
                             </li>
                         </ul>
                     </div>
