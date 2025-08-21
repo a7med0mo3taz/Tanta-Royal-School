@@ -53,17 +53,20 @@ export default function Navbar() {
 
 
     // no scrolling when side nav opened 
-    // useEffect(() => {
-    //     if (openNav) {
-    //         document.body.style.overflow = "hidden";
-    //     } else {
-    //         document.body.style.overflow = "auto";
-    //     }
+    useEffect(() => {
+    const isSmallScreen = window.innerWidth < 1024; 
 
-    //     return () => {
-    //         document.body.style.overflow = "auto";
-    //     };
-    // }, [openNav]);
+    if (openNav && isSmallScreen) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+
+    return () => {
+        document.body.style.overflow = "auto";
+    };
+}, [openNav]);
+
 
     // scroll to top
     const scrollToTop = () => {

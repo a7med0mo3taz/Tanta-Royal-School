@@ -43,24 +43,24 @@ export default function Settings() {
 
 
     return (
-        <div className="fixed flex flex-col items-center gap-3 z-50 bottom-24 left-2 rtl:right-2
-        lg:bottom-2 lg:left-6  rtl:lg:right-6  ">
-
+        <div
+            className="fixed flex flex-col justify-start items-center gap-3 z-50 bottom-24 start-2
+                        lg:bottom-2 lg:start-6">
             {isSettingsOpen && (
                 <>
                     {/* Dark mode toggle */}
-                    <div onClick={toggleTheme} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
+                    <div  onClick={ ()=> {toggleTheme() ; setIsSettingsOpen(!isSettingsOpen) }} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-3  '>
                         {darkMode ? (
-                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] '/> 
-                        ): (
-                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' /> 
+                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] ' />
+                        ) : (
+                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' />
                         )}
                     </div>
 
                     {/* Language toggle */}
 
-                    <div className=" animate-slide-up px-3 py-4 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
+                    <div onClick={() => setIsSettingsOpen(!isSettingsOpen)} className=" animate-slide-up px-3 py-4 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-5
                     ">
                         {currentLang === 'en' ? (
