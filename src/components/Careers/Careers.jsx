@@ -61,43 +61,41 @@ export default function Photos() {
   return (
     <div className={` CareersPage  ${darkMode ? "bg-[#030712]" : "bg-white "}  transition-all duration-500 ease-in-out`}>
       {/* heading section */}
-      <section className={` relative w-full overflowHidden  h-[400px] transition-all duration-500 ease-in-out  ${darkMode ? "bg-[#030712]" : "bg-white "}
-                        md:h-[600px]
-                        xl:h-[650px]  `}>
-        <img src={mainPhoto} loading='lazy' alt="mainPhoto" className="mainPhoto absolute  w-full object-contain h-[550px]  
-                            md:h-[700px]
-                            xl:object-cover xl:h-full "/>
-        {/* Heading */}
-        <div
-          className="relative z-11 flex flex-col justify-center items-center text-center top-48
-          sm:top-50 
-          lg:top-70 "
-        >
-          <div className="container mx-auto xl:px-15">
-            <div className=" mx-auto  flex flex-col  justify-center items-center">
-              <div className="imgDiv flex justify-center items-center  h-10">
-                <img loading='lazy' src={tag} alt="School selection tag" className='w-10 sm:w-15 mb-5' />
-              </div>
+      <section className={`relative w-full overflow-hidden h-[400px] transition-all duration-500 ease-in-out ${darkMode ? "bg-[#030712]" : "bg-white "}
+    md:h-[600px] xl:h-[650px]`}>
+    
+    <img src={mainPhoto} loading='lazy' alt="mainPhoto" className="mainPhoto absolute w-full object-contain h-[550px] md:h-[700px] xl:object-cover xl:h-full "/>
 
-              <div className=" flex flex-col gap-1">
-                <span className='text-white text-[10px] md:text-lg text-center px-10 font-tajawal font-bold
-                          lg:px-0 '>
-                  {t("join")} </span>
-                <span className='text-white text-lg sm:text-[30px] md:text-[40px] text-center font-tajawal font-bold'> {t("carer")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
-                  ${darkMode ? "text-[#f4af0f]" : " text-[#ffcc00] "}`}>
-                  {t("Opportunities")} </span> </span>
-              </div>
+    {/* Heading */}
+    <div className="relative z-11 flex flex-col justify-center items-center text-center top-48 sm:top-50 lg:top-70">
+        <div className="container mx-auto xl:px-15">
+            <div className="mx-auto flex flex-col justify-center items-center">
+                <div className="imgDiv flex justify-center items-center h-10">
+                    <img loading='lazy' src={tag} alt="School selection tag" className='w-10 sm:w-15 mb-5' />
+                </div>
 
-              <div className="  mb-5">
-                <p className='text-white text-[10px] sm:text-sm md:text-lg text-center font-tajawal px-3 w-full'>
-                  {t("carerP")} </p>
-              </div>
+                <div className="flex flex-col gap-1">
+                    <span className='text-white text-[10px] md:text-lg text-center px-10 font-tajawal font-bold lg:px-0 '>
+                        {t("join")}
+                    </span>
+                    <span className='text-white text-lg sm:text-[30px] md:text-[40px] text-center font-tajawal font-bold'>
+                        {t("carer")}
+                        <span className={`font-tajawal font-bold transition-all duration-500 ease-in-out ${darkMode ? "text-[#f4af0f]" : "text-[#ffcc00]"}`}>
+                            {t("Opportunities")}
+                        </span>
+                    </span>
+                </div>
 
-
+                <div className="mb-5">
+                    <p className='text-white text-[10px] sm:text-sm md:text-lg text-center font-tajawal px-3 w-full'>
+                        {t("carerP")}
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
+
 
 
       {/* careers Section */}

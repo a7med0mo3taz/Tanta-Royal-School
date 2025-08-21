@@ -24,6 +24,7 @@ export default function NewsSlider() {
     return (
         <div className="w-full px-4 md:px-10 mx-auto">
             <Swiper
+                dir="rtl" 
                 modules={[Autoplay]}
                 spaceBetween={20}
                 loop={true}
@@ -36,6 +37,7 @@ export default function NewsSlider() {
                     640: { slidesPerView: 1 },
                 }}
             >
+
                 {blogData.map((item, index) => (
                     <SwiperSlide key={index}>
                         <article className="flex justify-center items-center pb-20 lg:pb-0 p-2">
@@ -53,8 +55,8 @@ export default function NewsSlider() {
                                 {/* Blog Title */}
                                 <div
                                     className={`blogTitle p-7 mx-auto text-center rounded-2xl shadow-xl font-tajawal font-bold transition-all duration-500 -translate-y-7 lg:w-[360px] ${darkMode
-                                            ? "bg-[#091048] text-white hover:bg-[#f4af0f] hover:text-[#091048]"
-                                            : "bg-[#ffcc00] text-[#2b2873] hover:bg-[#2b2873] hover:text-[#ffcc00]"
+                                        ? "bg-[#091048] text-white hover:bg-[#f4af0f] hover:text-[#091048]"
+                                        : "bg-[#ffcc00] text-[#2b2873] hover:bg-[#2b2873] hover:text-[#ffcc00]"
                                         }`}
                                 >
                                     <h3 className="text-lg">{item.title}</h3>

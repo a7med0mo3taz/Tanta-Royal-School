@@ -130,7 +130,7 @@ export default function FAQS() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-4xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -143,7 +143,6 @@ export default function FAQS() {
                         <span className='font-almarai font-bold my-auto'>  {t("FAQTitle")} </span>
                     </div>
                 </div>
-
 
             </section>
 
@@ -163,17 +162,21 @@ export default function FAQS() {
                         </div>
                         {/* first */}
                         <div className=" flex flex-col gap-3 px-3 lg:p-0">
-                            <span className={`${darkMode ? "text-white" : "text-black "}   text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
-                                                lg:px-0 lg:text-start`}> {t("freeContact")} </span>
-                            <span className={` text-3xl text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                            <h3 className={`${darkMode ? "text-white" : "text-black "} text-xl  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                                lg:px-0 lg:text-start`}>
+                                {t("freeContact")}
+                            </h3>
+                            <h2 className={` text-3xl mb-5 text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                            sm:text-4xl 
                                             lg:text-start lg:text-[38px]
                                             ${darkMode ? "text-white" : "text-black "}
                                             `}> {t("question")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                             ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
-                                            `}> {t("questions")} </span> </span>
+                                            `}> {t("questions")} </span> </h2>
                         </div>
                         <div className="mb-5">
                             <p className='text-[#666666] text-center font-tajawal font-bold w-full 
+                                            sm:px-1 sm:text-lg
                                             lg:text-start
                                             '> {t("questionP")} </p>
                         </div>
@@ -193,6 +196,7 @@ export default function FAQS() {
                                             `}> {t("FAQ")}  </span>
                                 <div className="WhoP  mb-5">
                                     <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full  transition-all duration-500 ease-in-out
+                                            sm:px-1 sm:text-lg
                                             lg:text-start`}>
                                         {t("FAQSubT")}
                                     </p>
@@ -217,9 +221,7 @@ export default function FAQS() {
                                     >
                                         <h2 className="flex justify-between items-center">
                                             {t(key)}
-                                            <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"
-
-                                            />
+                                            <FontAwesomeIcon className="" icon={isOpen ? faChevronUp : faChevronDown} size="xl"/>
                                         </h2>
                                     </div>
 
@@ -255,18 +257,12 @@ export default function FAQS() {
                                     lg:col-span-6  lg:m-0 lg:mt-20  rtl:lg:col-span-6 lg:mx-auto 
                                     xl:col-span-6 xl:mx-auto 
                                     2xl:col-span-4  ">
-                        <div className={` w-[250px]  h-[310px] top-5 left-10    rtl:w-[270px] rtl:h-[315px]  rtl:right-5 rounded-lg absolute  transition-all duration-500 ease-in-out 
-                                    sm:left-50
-                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:right-10 rtl:md:top-7 rtl:md:right-15                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
-                                    xl:left-5 
-                                    2xl:left-5 
-                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                                    `}></div>
+
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}
                             className="schoolImg   mx-auto ">
-                            <img src={faq} style={style} alt="school" loading='lazy' className={`w-[250px] mx-auto h-full object-cover rounded-xl border-5 
+                            <img src={faq} style={style} alt="school" loading='lazy' className={`w-[250px]  sm:w-[400px] mx-auto h-full object-cover rounded-xl border-5 
                                 md:w-[395px]
                                 ${darkMode ? "border-[#091048]" : "border-[#2b2873]"}
                                 `} />
@@ -288,6 +284,7 @@ export default function FAQS() {
                                             `}> {t("ask")}  </span>
                                 <div className="WhoP  mb-5">
                                     <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full 
+                                            sm:px-1 sm:text-lg
                                             lg:text-start`}>
                                         {t("quick")}
                                     </p>

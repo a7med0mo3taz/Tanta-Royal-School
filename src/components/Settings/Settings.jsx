@@ -13,7 +13,7 @@ export default function Settings() {
     const { darkMode, toggleTheme } = useModeContext();
 
     // language
-    const { currentLang, changeLanguage } = useLanguageContext();
+    const { currentLang, changeLanguage, isArabic } = useLanguageContext();
 
 
     // open settings
@@ -43,18 +43,27 @@ export default function Settings() {
 
 
     return (
+<<<<<<< HEAD
         <div className="fixed flex flex-col items-center gap-3 z-50 bottom-24 right-2
         lg:bottom-2 lg:right-6  ">
+=======
+        <div className={`fixed flex flex-col items-center gap-3 z-50 bottom-24
+                        ${isArabic ? "right-2 lg:right-6 left-auto" : "left-2 lg:left-6 right-auto"}
+`}>
+>>>>>>> 4e0a5fd49dd44b4fd7e56d1b887799da19aaccbe
 
             {isSettingsOpen && (
                 <>
                     {/* Dark mode toggle */}
-                    <div onClick={toggleTheme} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
+                    <div onClick={() => {
+                        toggleTheme();
+                        setIsSettingsOpen(!isSettingsOpen);
+                    }} className='toggle animate-slide-up px-3.5 py-2.5 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-3  '>
                         {darkMode ? (
-                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] '/> 
-                        ): (
-                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' /> 
+                            <FontAwesomeIcon icon={faSun} size="lg" className='text-[#f4af0f] ' />
+                        ) : (
+                            <FontAwesomeIcon icon={faMoon} size="lg" className='text-blue-400' />
                         )}
                     </div>
 
@@ -63,18 +72,31 @@ export default function Settings() {
                     <div className=" animate-slide-up px-3 py-4 rounded-full transition-all duration-500 ease-in-out bg-white cursor-pointer
                     lg:px-4 lg:py-5
                     ">
+
                         {currentLang === 'en' ? (
-                            <div onClick={() => changeLanguage('ar')}>
-                                <img src={Ar} alt="englishLan" />
+                            <div
+                                onClick={() => {
+                                    changeLanguage('ar');
+                                    setIsSettingsOpen(!isSettingsOpen);
+                                }}
+                            >
+                                <img src={Ar} alt="arabicLan" />
                             </div>
                         ) : (
-                            <div onClick={() => changeLanguage('en')}>
+                            <div
+                                onClick={() => {
+                                    changeLanguage('en');
+                                    setIsSettingsOpen(!isSettingsOpen);
+                                }}
+                            >
                                 <img src={En} alt="englishLan" />
                             </div>
                         )}
+
                     </div>
                 </>
-            )}
+            )
+            }
             {/* Settings  */}
             <button
                 onClick={() => setIsSettingsOpen(!isSettingsOpen)}
@@ -106,6 +128,6 @@ export default function Settings() {
 
 
 
-        </div>
+        </div >
     )
 }

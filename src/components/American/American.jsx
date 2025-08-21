@@ -99,7 +99,7 @@ export default function American() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -135,7 +135,8 @@ export default function American() {
                         </div>
 
                         <div className=" flex flex-col gap-3 px-3 lg:p-0">
-                            <h2 className={`mb-3 text-2xl text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                            <h2 className={` text-3xl mb-5  text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                sm:text-4xl 
                                 lg:text-start lg:text-[38px]
                                 ${darkMode ? "text-white" : "text-black "}
                                 `}> {t("AmericanEducation")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
@@ -145,11 +146,13 @@ export default function American() {
 
                         <div className="mb-3">
                             <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                                sm:px-1 sm:text-lg
                                 lg:text-start
                                 '> {t("AmericanP1")} </p>
                         </div>
                         <div className="">
                             <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                                sm:px-1 sm:text-lg
                                 lg:text-start
                                 '> {t("AmericanP2")} </p>
                         </div>
@@ -157,17 +160,11 @@ export default function American() {
                     </div>
                     <div className="right mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                         lg:col-span-7 lg:items-start">
-                        <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
-                                    sm:left-5 sm:top-17  rtl:sm:top-17
-                                    md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
-                                    xl:left-5 
-                                    2xl:left-5 
-                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                                    `}></div>
+
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}>
-                            <img src={international2} style={style} alt="international" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl border" loading='lazy' />
+                            <img src={international2} style={style} alt="international" className=" w-[250px]  sm:w-[400px] mx-auto h-full object-cover rounded-xl border" loading='lazy' />
                         </div>
                     </div>
                 </div>
@@ -220,57 +217,52 @@ export default function American() {
 
             {/* section 4 */}
             <section className={` relative mb-10 overflow-hidden min-h-[1050px] transition-all duration-500 ease-in-out
-                                  lg:min-h-[616px]
-                                  ${darkMode ? "bg-[#030712]" : "bg-white "}
-                                  `}>
+                                    lg:min-h-[616px]
+                                    ${darkMode ? "bg-[#030712]" : "bg-white "}
+                                    `}>
                 <div className="container grid  mx-auto p-3  inset-0  z-20 absolute
-                                      lg:grid-cols-12 lg:p-5
-                                      xl:p-15
-                                      ">
-                    <div className="left my-20 mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
-                                          lg:col-span-6 lg:items-start
-                                      ">
-                        <div className={` w-[250px]  h-[260px] top-10 left-5  rtl:w-[250px] rtl:h-[265px] rtl:top-15 rtl:right-7 rounded-lg absolute  transition-all duration-500 ease-in-out 
-                                                sm:left-5 sm:top-17  rtl:sm:top-17
-                                                md:w-[356px] md:h-[340px] rtl:md:w-[380px] rtl:md:h-[350px] md:top-23 md:right-10 rtl:md:top-25 rtl:md:right-5                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
-                                                xl:left-5 
-                                                2xl:left-5 
-                                                ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                                                `}></div>
+                                        lg:grid-cols-12 lg:p-5
+                                        xl:p-15">
+                    <div className="left  mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
+                                            lg:col-span-6 lg:items-start">
+
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}
                             className="schoolImg   mx-auto ">
-                            <img src={international1} style={style} alt="school" className="w-[250px] md:w-[350px] mx-auto h-full object-cover rounded-xl " loading='lazy' />
+                            <img src={international1} style={style} alt="school" className=" w-[250px]  sm:w-[400px] mx-auto h-full object-cover rounded-xl " loading='lazy' />
                         </div>
 
                     </div>
                     <div className="right m-5 col-span-12 
-                                          lg:col-span-6 lg:m-0 lg:my-auto
-                                          xl:col-span-5
-                                          ">
+                                            lg:col-span-6 lg:m-0 lg:my-auto
+                                            xl:col-span-5">
                         <div className="imgDiv flex justify-center items-center lg:justify-start  h-20">
                             <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
                         </div>
 
                         <div className=" flex flex-col gap-3 px-3 lg:p-0">
 
-                            <h3 className={` text-4xl text-center mb-5 font-tajawal font-bold transition-all duration-500 ease-in-out
-                                                  lg:text-start
-                                                  ${darkMode ? "text-white" : "text-black "}
-                                                  `}>{t("Comparison")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
-                                                  ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}
-                                                  `}>{t("EducationSystems")} </span> </h3>
+                            <h3 className={` text-3xl text-center mb-5 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                                    sm:text-4xl
+                                                    lg:text-start
+                                                    ${darkMode ? "text-white" : "text-black "}`}>
+                                {t("Comparison")}
+                                <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
+                                                    ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}>
+                                    {t("EducationSystems")}
+                                </span>
+                            </h3>
                         </div>
 
                         <div className="  mb-5">
-                            <p className={`${darkMode ? "text-white" : "text-black "} text-center font-tajawal font-bold w-full 
-                                                  lg:text-start`}>
+                            <p className={`${darkMode ? "text-white" : "text-black "} text-center text-xl font-tajawal font-bold w-full 
+                                                lg:text-start`}>
                                 {t("Introduction")}
                             </p>
                         </div>
                         <div className="  mb-5">
-                            <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                            <p className='text-[#aaaaaa] text-xl text-center font-tajawal font-bold w-full 
                                                   lg:text-start
                                                   '> {t("IntroductionP")} </p>
                         </div>

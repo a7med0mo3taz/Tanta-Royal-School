@@ -53,7 +53,7 @@ export default function Policy() {
         >
           <h1
             className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -74,18 +74,18 @@ export default function Policy() {
             {PolicyData.map((item) => (
               <div key={item.key} className="flex flex-col gap-2 w-full lg:px-5">
                 
-                <h1 className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-2xl text-center px-10 font-tajawal font-bold lg:px-0 lg:text-start transition-all duration-500 ease-in-out`}>
+                <h1 className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-2xl sm:text-4xl text-center px-10 font-tajawal font-bold lg:px-0 lg:text-start transition-all duration-500 ease-in-out`}>
                   {t(item.key)}
                 </h1>
 
                 {Array.isArray(item.content) ? (
                   item.content.map((c, idx) => (
-                    <p key={idx} className={`${darkMode ? "text-white" : "text-black "} transition-all duration-500 ease-in-out text-base text-center px-10 lg:px-0 lg:text-start`}>
+                    <p key={idx} className={` sm:text-xl ${darkMode ? "text-white" : "text-black "} transition-all duration-500 ease-in-out text-base text-center px-10 lg:px-0 lg:text-start`}>
                       {t(c)}
                     </p>
                   ))
                 ) : (
-                  <p className={`${darkMode ? "text-white" : "text-black "} text-base text-center px-10 lg:px-0 lg:text-start transition-all duration-500 ease-in-out`}>
+                  <p className={` sm:text-xl ${darkMode ? "text-white" : "text-black "} text-base text-center px-10 lg:px-0 lg:text-start transition-all duration-500 ease-in-out`}>
                     {t(item.content)}
                   </p>
                 )}

@@ -167,28 +167,27 @@ export default function Home() {
                         initial={{ x: -200, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="font-almarai font-bold text-xl rtl:text-3xl mb-15 text-white
-                        sm:text-3xl rtl:sm:text-4xl
-                        md:text-4xl rtl:md:text-5xl
+                        className="font-almarai font-bold text-3xl rtl:text-3xl mb-15 text-white
+                        
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
                         {t("title1")}
                     </motion.h1>
 
-                    <motion.span
+                    <motion.p
                         initial={{ x: 1100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.25, ease: "easeOut" }}
-                        className={`font-tajawal font-bold text-lg  mb-7 transition-all duration-500 ease-in-out
-                            sm:text2xl
-                            md:text-3xl
+                        className={`font-tajawal font-bold text-xl  mb-7 transition-all duration-500 ease-in-out
+                            sm:text-3xl
                             lg:text-4xl
                             xl:text-5xl
                             ${darkMode ? "text-[#f4af0f]" : "text-[#ffcc00]"}`}
                     >
                         {t("title2")}
-                    </motion.span>
+                    </motion.p>
 
                     <motion.p
                         initial={{ x: -200, opacity: 0 }}
@@ -313,7 +312,7 @@ export default function Home() {
             {/* section 3 */}
             <section
                 className={`py-20 px-2.5 transition-all duration-500 ease-in-out
-    ${darkMode ? "bg-[#030712]" : "bg-white "}`}
+                      ${darkMode ? "bg-[#030712]" : "bg-white "}`}
             >
                 <div className="container mx-auto">
                     <div className="flex flex-col justify-center items-center gap-5">
@@ -327,9 +326,9 @@ export default function Home() {
                         {/* Main heading */}
                         <h2
                             className={`text-3xl font-bold mt-6  px-3 text-center flex flex-wrap gap-3 rtl:gap-0 leading-relaxed transition-all duration-500 ease-in-out
-                                    sm:mx-auto  
-                                    md:px-0
-                                    ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
+                                                      sm:mx-auto  
+                                                      md:px-0
+                                                      ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
                         >
                             <span className="flex justify-center items-center gap-2 mx-auto">
                                 <span className=" ">
@@ -337,8 +336,8 @@ export default function Home() {
                                 </span>
                                 <span
                                     className={`block relative w-30 h-12.5 rtl:w-23 rtl:h-13 overflow-hidden m-0  rtl:ml-2 transition-all duration-500 ease-in-out 
-                                                md:w-30 md:rtl:w-25
-                                                ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
+                                                                  md:w-30 md:rtl:w-25
+                                                                  ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}
                                 >
                                     <span className="animate animation-1">{t("SELECT")}</span>
                                     <span className="animate animation-2">{t("CHOOSE")}</span>
@@ -350,9 +349,10 @@ export default function Home() {
 
                         {/* Paragraph */}
                         <p
-                            className="text-[16px] text-[#848484] px-3 text-center
-                                        md:px-17.5
-                                        lg:px-37.5">
+                            className=" text-[#848484] px-4 text-center
+                          sm:text-lg sm:px-3
+                          md:px-17.5
+                          lg:px-37.5">
                             {t("p-1")}
                             <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                                 {t("title1")}
@@ -715,7 +715,7 @@ export default function Home() {
                         {/* Titles */}
                         <div className="flex flex-col gap-1">
                             <h3
-                                className={` text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
+                                className={` text-xl sm:text-2xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
                             >
                                 {t("eng")}
                                 <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"} text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl`}>
@@ -739,7 +739,7 @@ export default function Home() {
 
                         {/* Paragraph */}
                         <div className="founderP max-w-[623px] mb-5">
-                            <p className="text-[#aaaaaa] text-center font-tajawal font-bold w-full lg:text-start">
+                            <p className="text-[#aaaaaa] sm:text-lg  text-center font-tajawal font-bold w-full lg:text-start">
                                 {t("founderMsg")}
                             </p>
                         </div>

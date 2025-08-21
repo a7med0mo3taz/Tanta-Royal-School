@@ -95,7 +95,7 @@ export default function Uniform() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -138,6 +138,7 @@ export default function Uniform() {
                                         ">
                             <div className="mb-5">
                                 <p className='text-[#666666] text-center max-w-[740px] font-tajawal font-bold w-full 
+                                                sm:text-xl 
                                                 lg:text-start
                                                 '><span className='text-3xl'>👕</span> {t("uniformP")} </p>
                             </div>
@@ -171,17 +172,19 @@ export default function Uniform() {
 
                                 </ol>
                                 <div className="flex flex-col justify-start items-start ">
-                                    <h2 className={` text-[45px] font-tajawal  transition-all duration-500 ease-in-out 
+                                    <h2 className={` text-4xl mb-5 font-tajawal  transition-all duration-500 ease-in-out 
+                                                    sm:text-5xl 
+                                                    lg:text-start lg:text-[45px]
                                     ${darkMode ? "text-[#091048] " : "text-[#091048]"} `}>
                                         {t("stuInfo")} </h2>
-                                    <p className={`  font-tajawal  transition-all duration-500 ease-in-out 
+                                    <p className={` sm:text-xl font-tajawal  transition-all duration-500 ease-in-out 
                                     ${darkMode ? "text-[#091048] " : "text-[#091048]"} `}> 📌 {t("fill")} </p>
                                 </div>
 
                                 <form action="#" className="space-y-8 mt-5">
                                     {/* name */}
                                     <div className="relative z-0 w-full mb-5 group ">
-                                        <label htmlFor="name" className={`block mb-2 text-[12px] font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("StudentName")} <span className='text-red-500'>* </span> </label>
+                                        <label htmlFor="name" className={`block mb-2 text-[12px] sm:text-lg  ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("StudentName")} <span className='text-red-500'>* </span> </label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.name} type="text" name="name" id="name" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg max-w-4xl block w-full p-2.5" placeholder={` ${t("StudentNamePlace")} `} required />
                                         {
                                             formic.errors.name && (
@@ -192,7 +195,7 @@ export default function Uniform() {
 
                                     {/* ID */}
                                     <div className="relative z-0 w-full mb-5 group ">
-                                        <label htmlFor="ID" className={`block mb-2 text-[12px] font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("stuId")} <span className='text-red-500'>* </span> </label>
+                                        <label htmlFor="ID" className={`block mb-2 text-[12px] sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}> {t("stuId")} <span className='text-red-500'>* </span> </label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.ID} type="number" name="ID" id="ID" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg max-w-4xl block w-full p-2.5" placeholder={` ${t("stuId")} `} required />
                                         {
                                             formic.errors.name && (
@@ -203,7 +206,7 @@ export default function Uniform() {
 
                                     {/* email */}
                                     <div className="relative z-0 w-full mb-5 group">
-                                        <label htmlFor="email" className={`block mb-2 text-[12px] font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("Parent’sEmail")} <span className='text-red-500'>* </span></label>
+                                        <label htmlFor="email" className={`block mb-2 text-[12px] sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("Parent’sEmail")} <span className='text-red-500'>* </span></label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.email} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full max-w-4xl p-2.5" placeholder={` ${t("Parent’sEmailPlace")} `} required />
                                     </div>
                                     {
@@ -215,7 +218,7 @@ export default function Uniform() {
 
                                     {/* Phone number */}
                                     <div className="relative z-0 w-full mb-5 group">
-                                        <label htmlFor="Phone" className={`block mb-2 text-[12px] font-medium ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("Parent’sPhoneNumber")} <span className='text-red-500'>* </span></label>
+                                        <label htmlFor="Phone" className={`block mb-2 text-[12px] sm:text-lg ${darkMode ? "text-white" : "text-gray-900"}  transition-all duration-500 ease-in-out `}>{t("Parent’sPhoneNumber")} <span className='text-red-500'>* </span></label>
                                         <input onChange={formic.handleChange} onBlur={formic.handleBlur} value={formic.values.Phone} type="text" name="Phone" id="Phone" className="bg-gray-50 border mb-4 border-gray-300 text-gray-900 text-sm rounded-lg  max-w-4xl block w-full p-2.5" placeholder={` ${t("Parent’sPhoneNumberPlace")} `} required />
                                         {
                                             formic.errors.name && (
@@ -224,11 +227,8 @@ export default function Uniform() {
                                             )}
                                     </div>
 
-
-
-
                                     <div className="formBtn flex justify-end items-end ">
-                                        <button type='submit' className={` px-8 py-3  cursor-pointer rounded-xl transition-all duration-500 ease-in-out
+                                        <button type='submit' className={` px-8 py-3  sm:text-xl cursor-pointer rounded-xl transition-all duration-500 ease-in-out
                                                 ${darkMode ? "text-[#f4af0f] bg-[#091048] hover:text-[#ffcc00] hover:bg-[#2b2873] " :
                                                 "text-[#ffcc00] bg-[#2b2873] hover:text-[#f4af0f] hover:bg-[#091048]"}
                             `} >  {t("next")} </button>
@@ -236,12 +236,6 @@ export default function Uniform() {
                                 </form>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
 
 
@@ -249,19 +243,11 @@ export default function Uniform() {
                                     lg:col-span-6  lg:m-0   rtl:lg:col-span-6 lg:mx-auto 
                                     xl:col-span-6 xl:mx-auto 
                                     2xl:col-span-4  ">
-                        <div className={` w-[250px]  h-[310px] top-5 left-10    rtl:w-[270px] rtl:h-[315px]  rtl:right-5 rounded-lg absolute  transition-all duration-500 ease-in-out 
-                                    sm:left-50
-                                    md:w-[406px] md:h-[500px] rtl:md:w-[380px] rtl:md:h-[500px] md:top-7 md:right-10 rtl:md:top-7 rtl:md:right-15
-                                    lg:top-5 lg:left-5 lg:rounded-2xl  rtl:lg:top-5  rtl:lg:right-10 lg:mb-10
-                                    xl:left-5 
-                                    2xl:left-5 
-                                    ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                                    `}></div>
                         <div onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             style={{ perspective: "1000px" }}
                             className=" mx-auto ">
-                            <img src={uniform} style={style} alt="school" loading='lazy' className={`w-[250px] mx-auto h-full object-cover rounded-xl border-5 
+                            <img src={uniform} style={style} alt="school" loading='lazy' className={`w-[250px] sm:w-[400px] mx-auto h-full object-cover rounded-xl border-5 
                                                             md:w-[395px]
                                                             ${darkMode ? "border-[#091048]" : "border-[#2b2873]"}
                                                             `} />

@@ -30,13 +30,13 @@ export default function About() {
     { key: "Comprehensive", content: "ComprehensiveP" },
     { key: "Supportive", content: "SupportiveP" },
   ];
-// scroll to top
-const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
+  // scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
   // scroll to section
   const location = useLocation();
@@ -107,7 +107,7 @@ const scrollToTop = () => {
         >
           <h1
             className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -126,7 +126,7 @@ const scrollToTop = () => {
 
       {/* section 1 */}
       <section className={` relative overflow-hidden min-h-[1050px] transition-all duration-500 ease-in-out
-                  sm:min-h-[850px]
+                  sm:min-h-[920px]
                   lg:min-h-[600px]
                   ${darkMode ? "bg-[#030712]" : "bg-white "}
                   `}>
@@ -137,17 +137,12 @@ const scrollToTop = () => {
           <div className="left mx-auto col-span-12  relative max-w-[640px] gap-5 flex flex-col  justify-center items-center 
                           lg:col-span-6 lg:items-start
                       ">
-            <div className={` w-full h-[300px] rounded-lg absolute top-13 right-5 rtl:top-23 transition-all duration-500 ease-in-out
-                          sm:top-20 rtl:sm:top-25
-                          md:top-25 md:right-10 rtl:md:top-30
-                          lg:top-30 lg:rounded-2xl  rtl:lg:top-30  rtl:lg:-right-10 
-                          ${darkMode ? "bg-[#f4af0f]" : " bg-[#ffcc00] "}
-                          `}></div>
+
             <div onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               style={{ perspective: "1000px" }}
               className="schoolImg   mx-auto ">
-              <img src={school} style={style} alt="school" className="w-[300px] h-full object-cover rounded-xl " loading="lazy" />
+              <img src={school} style={style} alt="school" className="w-[250px]  sm:w-[400px] h-full object-cover rounded-xl " loading="lazy" />
             </div>
 
           </div>
@@ -160,11 +155,12 @@ const scrollToTop = () => {
             </div>
 
             <div className=" flex flex-col gap-3 px-3 lg:p-0">
-              <h3 className={`${darkMode ? "text-white " : "text-black"} text-lg  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+              <h3 className={`${darkMode ? "text-white " : "text-black"} text-xl  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
                                   lg:px-0 lg:text-start`}>
                 {t("Who")}
               </h3>
-              <h2 className={`text-3xl  text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+              <h2 className={`text-3xl mb-5 text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  sm:text-4xl 
                                   lg:text-start lg:text-[38px]
                                   ${darkMode ? "text-white" : "text-black "}
                                   `}> {t("building")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
@@ -174,6 +170,7 @@ const scrollToTop = () => {
 
             <div className="WhoP  mb-5">
               <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                                  sm:px-1 sm:text-lg
                                   lg:text-start
                                   '> {t("WhoP")}
               </p>
@@ -202,10 +199,11 @@ const scrollToTop = () => {
 
             <div className=" flex flex-col gap-1 w-full
                                 ">
-              <span className='text-white text-lg  text-center px-10 font-tajawal font-bold
+              <span className='text-white text-xl  text-center px-10 font-tajawal font-bold
                                     lg:px-0 lg:text-start
                                     '> {t("who2")} </span>
-              <span className='text-white  text-3xl text-center font-tajawal font-bold
+              <span className='text-white  text-3xl mb-5 text-center font-tajawal font-bold
+                                    sm:text-4xl
                                     lg:text-start lg:text-[40px]
                                     '> {t("core")}  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                     ${darkMode ? "text-[#f4af0f]" : " text-[#ffcc00] "}
@@ -214,6 +212,7 @@ const scrollToTop = () => {
 
             <div className=" mb-5">
               <p className='text-[#aaaaaa] text-center font-tajawal font-bold w-full 
+                                    sm:px-1 sm:text-lg
                                     lg:text-start
                                     '> {t("whoP2")} </p>
             </div>
@@ -227,12 +226,14 @@ const scrollToTop = () => {
                             ${darkMode ? "text-[#f4af0f] border-[#f4af0f]" : " text-[#ffcc00] border-[#ffcc00] "}
                             `} />
                 <div className='content px-1 flex flex-col justify-start '>
-                  <h2 className={`font-tajawal text-center text-3xl font-bold border-b-2 pb-4 mb-4 border-[#4b4888]  text-white transition-all duration-500 ease-in-out
+                  <h2 className={`font-tajawal text-center text-3xl  font-bold border-b-2 pb-4 mb-4 border-[#4b4888]  text-white transition-all duration-500 ease-in-out
+                                                                  sm:text-4xl
                                                                   lg:text-2xl lg:max-w-[233px] lg:text-start
                                                                   ${darkMode ? "hover:text-[#f4af0f] hover:border-[#f4af0f]" : " hover:text-[#ffcc00] hover:border-[#ffcc00] "}
                                                                   `} > {t("visionTitle")} </h2>
 
                   <p className={` text-[#c0bfd5] text-center font-tajawal font-bold leading-8 
+                                                                      sm:px-1 sm:text-lg
                                                                       lg:text-start
                                                                       `}> {t("visionP")} </p>
                 </div>
@@ -246,11 +247,13 @@ const scrollToTop = () => {
                             `} />
                 <div className='content px-1 flex flex-col justify-start '>
                   <h2 className={`font-tajawal text-center text-3xl font-bold border-b-2 pb-4 mb-4 border-[#4b4888]  text-white transition-all duration-500 ease-in-out
+                                                                  sm:text-4xl
                                                                   lg:text-2xl lg:max-w-[233px] lg:text-start
                                                                   ${darkMode ? "hover:text-[#f4af0f] hover:border-[#f4af0f]" : " hover:text-[#ffcc00] hover:border-[#ffcc00] "}
                                                                   `} > {t("missionTitle")} </h2>
 
                   <p className={` text-[#c0bfd5] text-center font-tajawal font-bold leading-8 
+                                                                      sm:px-1 sm:text-lg
                                                                       lg:text-start
                                                                       `}> {t("missionP")} </p>
                 </div>
@@ -264,14 +267,17 @@ const scrollToTop = () => {
                             `} />
                 <div className='content px-1 flex flex-col justify-start '>
                   <h2 className={`font-tajawal text-center text-3xl font-bold border-b-2 pb-4 mb-4 border-[#4b4888]  text-white transition-all duration-500 ease-in-out
+                                                                  sm:text-4xl
                                                                   lg:text-2xl lg:max-w-[233px] lg:text-start
                                                                   ${darkMode ? "hover:text-[#f4af0f] hover:border-[#f4af0f]" : " hover:text-[#ffcc00] hover:border-[#ffcc00] "}
                                                                   `} > {t("valuesTitle")} </h2>
 
                   <p className={` text-[#c0bfd5] text-center font-tajawal font-bold leading-8 mb-7.5 
+                      sm:px-1 sm:text-lg
                       lg:text-start
                     `}> {t("valuesP")} </p>
                   <p className={` text-[#c0bfd5] text-center font-tajawal font-bold leading-8 
+                      sm:px-1 sm:text-lg
                       lg:text-start
                     `}> {t("PillarsP")} </p>
                 </div>
@@ -300,17 +306,20 @@ const scrollToTop = () => {
               <img src={tag} alt="School selection tag" className='w-18' loading='lazy' />
             </div>
 
-            <div className=" flex flex-col gap-3 px-3 lg:p-0">
-              <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-lg  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
-                                  lg:px-0 lg:text-start`}> {t("lead")} </span>
-              <span className={` text-[38px] text-center font-tajawal font-bold transition-all duration-500 ease-in-out
-                                  lg:text-start
+            <div className=" flex flex-col gap-3  lg:p-0">
+              <h3 className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-xl  text-center px-10 font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  lg:px-0 lg:text-start`}>
+                {t("lead")}
+              </h3>
+              <h2 className={` text-4xl mb-5 text-center font-tajawal font-bold transition-all duration-500 ease-in-out
+                                  sm:text-5xl 
+                                  lg:text-start lg:text-[38px]
                                   text-black
                                   `}> +25  <span className={` font-tajawal font-bold transition-all duration-500 ease-in-out
                                   ${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "}`}>
                   {t("Excellence")}
                 </span>
-              </span>
+              </h2>
             </div>
 
             <div className="w-full mb-5">
@@ -404,9 +413,10 @@ const scrollToTop = () => {
 
             {/* Paragraph */}
             <p
-              className="text-[16px] text-[#848484] px-3 text-center
-                                              md:px-17.5
-                                              lg:px-37.5">
+              className=" text-[#848484] px-4 text-center
+              sm:text-lg sm:px-3
+              md:px-17.5
+              lg:px-37.5">
               {t("p-1")}
               <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873] "} text-[16px] font-tajawal mx-1 font-bold transition-all duration-500 ease-in-out`}>
                 {t("title1")}
@@ -655,7 +665,7 @@ const scrollToTop = () => {
             {/* Titles */}
             <div className="flex flex-col gap-1">
               <h3
-                className={` text-xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
+                className={` text-xl sm:text-2xl font-tajawal font-bold mx-auto transition-all duration-500 ease-in-out lg:text-2xl lg:mx-0 ${darkMode ? "text-white" : "text-black"}`}
               >
                 {t("eng")}
                 <span className={`${darkMode ? "text-[#f4af0f]" : "text-[#2b2873]"} text-xl text-center mx-auto font-tajawal font-bold lg:px-0 lg:text-2xl`}>
@@ -679,7 +689,7 @@ const scrollToTop = () => {
 
             {/* Paragraph */}
             <div className="founderP max-w-[623px] mb-5">
-              <p className="text-[#aaaaaa] text-center font-tajawal font-bold w-full lg:text-start">
+              <p className="text-[#aaaaaa] sm:text-lg  text-center font-tajawal font-bold w-full lg:text-start">
                 {t("founderMsg")}
               </p>
             </div>

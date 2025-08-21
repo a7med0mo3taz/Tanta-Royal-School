@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 import { faHouse, faArrowRight, faArrowLeft, faLink } from '@fortawesome/free-solid-svg-icons';
 import mainPhoto from "../../assets/Photos/pho/15.webp"
@@ -86,7 +86,7 @@ export default function Blog() {
                 >
                     <h1
                         className="font-almarai font-bold text-3xl rtl:text-4xl mb-7 text-[#f4af0f]
-                        md:text-4xl rtl:md:text-5xl
+                        sm:text-5xl rtl:sm:text-5xl
                         lg:text-5xl rtl:lg:text-6xl
                         xl:text-6xl rtl:xl:text-7xl
                     ">
@@ -117,16 +117,14 @@ export default function Blog() {
 
                         {blogs.map((blog, index) => (
                             <div key={index} className={`blog${index + 1} mb-10 border-b border-[#e4e4e4]`}>
-
-
                                 <div className="flex justify-center items-center">
                                     <Link to={blog.link} className="relative group mb-5 mx-auto">
                                         <img
                                             src={blog.img}
                                             alt="blogImg"
                                             className={`w-[840px] mx-auto h-[324px] object-cover rounded-xl border-5 
-                        lg:h-[524px]
-                        ${darkMode ? "border-[#f4af0f]" : "border-[#2b2873]"}`}
+                                                        lg:h-[524px]
+                                                        ${darkMode ? "border-[#f4af0f]" : "border-[#2b2873]"}`}
                                         />
                                         <div className="bg-overlay flex flex-col justify-center items-center gap-20 bg-[#2b2873]/0 translate-y-5 rounded-lg h-full absolute inset-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:bg-[#2b2873]/80">
                                             <FontAwesomeIcon
@@ -143,17 +141,17 @@ export default function Blog() {
                                 </h1>
 
 
-                                <div className={`${darkMode ? "bg-[#f4af0f] text-[#091048]" : "bg-[#ffcc00] text-[#2b2873]"} mb-5 text-sm w-fit font-tajawal p-3 rounded-2xl transition-all duration-500 ease-in-out mx-auto lg:mx-0`}>
+                                <div className={`${darkMode ? "bg-[#f4af0f] text-[#091048]" : "bg-[#ffcc00] text-[#2b2873]"} mb-5 text-sm sm:text-xl w-fit font-tajawal p-3 rounded-2xl transition-all duration-500 ease-in-out mx-auto lg:mx-0`}>
                                     {blog.date}
                                 </div>
 
 
-                                <p className={`text-[#606060] text-[18px] font-tajawal mb-5 transition-all duration-500 ease-in-out max-w-[826px] text-center lg:text-start`}>
+                                <p className={`text-[#606060] text-lg sm:text-2xl font-tajawal mb-5 transition-all duration-500 ease-in-out max-w-[826px] text-center lg:text-start`}>
                                     {t(blog.textKey)}
                                 </p>
 
 
-                                <Link to={blog.link} className={`mb-10 w-fit mx-auto lg:mx-0 bg-[#eeeef4] p-3 rounded-2xl flex ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#2b2873]"} hover:text-white transition-all duration-500 ease-in-out`}>
+                                <Link to={blog.link} className={`mb-10 w-fit sm:text-2xl mx-auto lg:mx-0 bg-[#eeeef4] p-3 rounded-2xl flex ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#2b2873]"} hover:text-white transition-all duration-500 ease-in-out`}>
                                     <h2 className='transition-all duration-500 ease-in-out hover:pr-3 rtl:hover:pl-3 rtl:hover:pr-0'>
                                         {t("readMoreBtn")}
                                     </h2>
@@ -181,19 +179,19 @@ export default function Blog() {
                             <div className="search flex flex-wrap justify-center items-center p-5 sm:p-10 gap-3">
                                 <input
                                     type="text"
-                                    className="p-3 w-full sm:w-auto flex-1 ring ring-[#2b2873] focus:ring-amber-300 outline-none rounded-lg"
+                                    className="p-3 sm:p-4 lg:p-3 w-full sm:w-auto flex-1 ring ring-[#2b2873] focus:ring-amber-300 outline-none rounded-lg"
                                     placeholder={t("search")}
                                 />
                                 <div className={`searchBtn ${darkMode ?
                                     "text-[#091048] bg-[#f4af0f] hover:text-[#f4af0f] hover:bg-[#091048]" :
                                     "text-[#091048] bg-[#ffcc00] hover:text-[#ffcc00] hover:bg-[#2b2873]"} 
-                p-4 cursor-pointer rounded-2xl transition-all duration-500 ease-in-out`}>
+                p-4 cursor-pointer sm:text-2xl lg:text-[16px] rounded-2xl transition-all duration-500 ease-in-out`}>
                                     {t("searchBtn")}
                                 </div>
                             </div>
 
                             {/* Categories */}
-                            <div className={`${darkMode ? "text-[#f4af0f] bg-[#091048]" :
+                            <div className={` sm:text-2xl lg:text-[16px] ${darkMode ? "text-[#f4af0f] bg-[#091048]" :
                                 "text-[#ffcc00] bg-[#2b2873]"} w-full p-5 sm:p-7 transition-all duration-500 ease-in-out`}>
                                 {t("Categories")}
                             </div>
@@ -201,17 +199,17 @@ export default function Blog() {
                             {/* list */}
                             <ul className="py-10 px-3 text-sm decoration-dotted">
                                 <li className='decoration-dotted'>
-                                    <Link to={"/blog/articles"} onClick={() => scrollToTop()} className="block font-tajawal font-bold border-b border-[#e4e4e4] px-4 py-2 text-black">
+                                    <Link to={"/blog/articles"} onClick={() => scrollToTop()} className="block  sm:text-2xl lg:text-[16px]  font-tajawal font-bold border-b border-[#e4e4e4] px-4 py-2 text-black">
                                         {t("blogArticles")}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={"/blog/news"} onClick={() => scrollToTop()} className="block font-tajawal font-bold px-4 border-b border-[#e4e4e4] py-2 text-black">
+                                    <Link to={"/blog/news"} onClick={() => scrollToTop()} className="block  sm:text-2xl lg:text-[16px] font-tajawal font-bold px-4 border-b border-[#e4e4e4] py-2 text-black">
                                         {t("blogNews")}
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to={"/blog/tutorials"} onClick={() => scrollToTop()} className="block font-tajawal font-bold px-4 py-2 text-black">
+                                    <Link to={"/blog/tutorials"} onClick={() => scrollToTop()} className="block  sm:text-2xl lg:text-[16px] font-tajawal font-bold px-4 py-2 text-black">
                                         {t("blogTutorials")}
                                     </Link>
                                 </li>
