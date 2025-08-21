@@ -26,19 +26,7 @@ export default function Navbar() {
     const [openBlog, setOpenBlog] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false);
 
-    // fixed navbar
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
+    
     // no scrolling when side nav opened 
     useEffect(() => {
         if (openNav) {
