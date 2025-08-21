@@ -44,7 +44,7 @@ export default function Settings() {
 
     return (
         <div className="fixed flex flex-col items-center gap-3 z-50 bottom-24 right-2
-        lg:bottom-6 lg:right-6  ">
+        lg:bottom-2 lg:right-6  ">
 
             {isSettingsOpen && (
                 <>

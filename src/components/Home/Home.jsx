@@ -27,7 +27,6 @@ import img9 from "../../assets/Photos/pho/9.webp"
 import img10 from "../../assets/Photos/pho/10.webp"
 import img11 from "../../assets/Photos/pho/11.webp"
 import img12 from "../../assets/Photos/pho/12.webp"
-
 import Footer from '../Footer/Footer';
 import { useModeContext } from '../../context/modeContext';
 import { useLanguageContext } from '../../context/langContext';
