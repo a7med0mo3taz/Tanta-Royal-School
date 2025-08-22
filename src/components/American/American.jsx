@@ -216,7 +216,7 @@ export default function American() {
             </section>
 
             {/* section 4 */}
-            <section className={` relative mb-10 overflow-hidden min-h-[1050px] transition-all duration-500 ease-in-out
+            <section className={` relative  overflow-hidden min-h-[1050px] transition-all duration-500 ease-in-out
                                     lg:min-h-[616px]
                                     ${darkMode ? "bg-[#030712]" : "bg-white "}
                                     `}>

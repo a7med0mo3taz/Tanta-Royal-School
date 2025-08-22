@@ -141,17 +141,17 @@ export default function Blog() {
                                 </h1>
 
 
-                                <div className={`${darkMode ? "bg-[#f4af0f] text-[#091048]" : "bg-[#ffcc00] text-[#2b2873]"} mb-5 text-sm sm:text-xl w-fit font-tajawal p-3 rounded-2xl transition-all duration-500 ease-in-out mx-auto lg:mx-0`}>
+                                <div className={`${darkMode ? "bg-[#f4af0f] text-[#091048]" : "bg-[#ffcc00] text-[#2b2873]"} mb-5 text-sm sm:text-xl lg:text-[16px] w-fit font-tajawal p-3 rounded-2xl transition-all duration-500 ease-in-out mx-auto lg:mx-0`}>
                                     {blog.date}
                                 </div>
 
 
-                                <p className={`text-[#606060] text-lg sm:text-2xl font-tajawal mb-5 transition-all duration-500 ease-in-out max-w-[826px] text-center lg:text-start`}>
+                                <p className={`text-[#606060] text-lg sm:text-2xl lg:text-[16px] font-tajawal mb-5 transition-all duration-500 ease-in-out max-w-[826px] text-center lg:text-start`}>
                                     {t(blog.textKey)}
                                 </p>
 
 
-                                <Link to={blog.link} className={`mb-10 w-fit sm:text-2xl mx-auto lg:mx-0 bg-[#eeeef4] p-3 rounded-2xl flex ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#2b2873]"} hover:text-white transition-all duration-500 ease-in-out`}>
+                                <Link to={blog.link} className={`mb-10 w-fit sm:text-2xl lg:text-[16px] mx-auto lg:mx-0 bg-[#eeeef4] p-3 rounded-2xl flex ${darkMode ? "hover:bg-[#f4af0f]" : "hover:bg-[#2b2873]"} hover:text-white transition-all duration-500 ease-in-out`}>
                                     <h2 className='transition-all duration-500 ease-in-out hover:pr-3 rtl:hover:pl-3 rtl:hover:pr-0'>
                                         {t("readMoreBtn")}
                                     </h2>
@@ -168,10 +168,11 @@ export default function Blog() {
 
                     </div>
 
-                    <div className="right my-5 col-span-12 relative mb-10 top-0 rtl:mx-auto
-    lg:col-span-6 lg:m-0 lg:mt-20 rtl:lg:col-span-6 lg:mx-auto 
-    xl:col-span-6 xl:mx-auto 
-    2xl:col-span-5">
+                    <div className="
+                    right my-5 col-span-12 relative mb-10 top-0 rtl:mx-auto
+                    xl:col-span-6 xl:mx-auto 
+                    lg:col-span-6 lg:m-0 lg:mt-20 rtl:lg:col-span-6 lg:mx-auto 
+                    2xl:col-span-5">
 
                         <div className="font-tajawal font-bold border rounded-2xl mb-10 bg-white w-full ">
 
